@@ -41,9 +41,12 @@
       "box_space": "none"
     },
     "OCR": {
-      "kind": "paddleocr",
-      "model_id": "paddleocr-en",
-      "revision": "3.7.0",
+      "kind": "tesseract",
+      "executable": "/home1/pkandpal/.conda/envs/paperwork-ocr-v1/bin/tesseract",
+      "tessdata_dir": "/home1/pkandpal/.conda/envs/paperwork-ocr-v1/share/tessdata",
+      "language": "eng+ind",
+      "psm": 3,
+      "revision": "tesseract-5.5.3",
       "box_space": "none"
     }
   },
