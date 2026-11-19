@@ -1,0 +1,14 @@
+{
+  "experiment": "E1",
+  "directory": "E1",
+  "units": "9890d98fa4a73b4e3ad4f85d2e883c5e06e0302d64af185343f78d2787a6916f",
+  "config": "c29cef734092b2b29bc977d44bc2c29785d63bbb36699a584a70cd138c467092",
+  "code": "c2da00277951eabd91f026bb4fc4dbe7675d644823ce2f97bdd598d47690321d",
+  "sets": "0013b93179c3ea1fc1ad624706ba88669fe1db2f017028b773ed56f430c571cc",
+  "manifests": {},
+  "policy": null,
+  "git": {
+    "commit": "58c013b10dbd8d4e0f42cda4820d6a8b3a79dd17",
+    "dirty": false
+  }
+}
