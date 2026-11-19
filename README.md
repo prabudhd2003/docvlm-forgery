@@ -1,8 +1,5 @@
 # Poisoned Paperwork: targeted pixel attacks on document VLMs, and evidence-band verification
 
-Working repository for the paper version of the USC CSCI 566 project (Fall 2026).
-Prabudhd Krishna Kandpal · Gary Fenton · Saaketh Kanduri · Khalid Ali · Shail Shah
-
 This folder holds every piece of code we ran (cluster and Colab, in one tree), the frozen
 data lists, and the per-case result records. The paper plan, with exact models, set sizes
 and budgets, is in [`PLAN.md`](PLAN.md).
