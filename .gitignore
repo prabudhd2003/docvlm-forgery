@@ -5,6 +5,7 @@ data/*
 !data/annotations/
 !data/receipt_study/
 !data/processed/
+!data/paper_v1/
 data/processed/**/*.png
 data/processed/**/*.jpg
 data/receipt_study/staging/
@@ -41,3 +42,12 @@ __pycache__/
 *.py[cod]
 .DS_Store
 
+
+# paper_v1: keep contracts, units, merged records and tables; not per-unit files
+results/paper_v1/*/records/
+results/paper_v1/*/errors/
+results/paper_v1/*/logs/
+results/paper_v1/attack_runs/*/records/
+results/paper_v1/attack_runs/*/errors/
+results/paper_v1/attack_runs/*/logs/
+results/paper_v1/attack_runs/**/.*.lock

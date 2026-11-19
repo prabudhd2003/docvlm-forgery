@@ -13,7 +13,7 @@ An attack counts only if the **saved and reloaded PNG** returns the **exact** ta
 Every defense is scored three ways: **C** correct and accepted, **W** wrong but accepted,
 **R** rejected (sent to a person).
 
-**CBVR** (Contextual-Band Verified Recovery; called `csev` in the code) asks the model where
+**EBV** (Evidence-Band Verification; called CBVR in the course write-ups and `csev` in the course code) asks the model where
 the answer is printed, cuts a tight band and a taller band around it, reads each band
 separately, and returns the answer only if both agree.
 
@@ -35,7 +35,7 @@ receipts 110/114. Donut: CORD 75/100, SROIE 46/126, ours 90/114.
 re-worded questions cut success at ε=16 from 73.4% to 40–55%. On CORD at ε=16, uniform JPEG-aware
 EOT beats all four at once on 87.5% of documents.
 
-**CBVR, reserved evaluation** (45 collected receipts frozen before evaluation; 396 saved attacks =
+**EBV, reserved evaluation** (45 collected receipts frozen before evaluation; 396 saved attacks =
 standard / uniform EOT / hard-view EOT × ε 4/8/16)
 
 | Method | Clean C/W/R (45) | Attacked C/W/R (396) | Attacker's total accepted |
@@ -44,9 +44,9 @@ standard / uniform EOT / hard-view EOT × ε 4/8/16)
 | JPEG | | 115 / 281 / 0 | 260 |
 | Full page and band must agree | | 60 / 0 / 336 | 0 |
 | One located band | | 356 / 28 / 12 | 0 |
-| **CBVR** | **39 / 1 / 5** | **354 / 7 / 35** | **0** |
+| **EBV** | **39 / 1 / 5** | **354 / 7 / 35** | **0** |
 
-**Direct attacks on CBVR** (100 gradient steps on both bands + 100 pipeline queries, 2 tries,
+**Direct attacks on EBV** (100 gradient steps on both bands + 100 pipeline queries, 2 tries,
 19 eligible receipts in a frozen hash order): broken on **4/19 at ε=4** (95% CI 9–43%) and
 **8/19 at ε=8** (23–64%). Every success was the exact 10× target accepted by both bands;
 every other run returned the true total. 80 runs, 11.7 A100-hours.
@@ -55,7 +55,7 @@ every other run returned the true total. 80 runs, 11.7 A100-hours.
 Direct attack on recovery: **0/40 runs** (10 resumes, ε 8/16) produced the fake degree.
 
 **Donut as reader** (Qwen locates, Donut reads): Qwen-built attacks do not transfer
-(0 targeted under every method), so CBVR only costs answers there (344 → 276 correct).
+(0 targeted under every method), so EBV only costs answers there (344 → 276 correct).
 
 Not done yet: InternVL or any second white-box model, direct attacks on the comparison
 defenses (5 exploratory runs only), direct attacks on the Donut pipeline.
@@ -64,19 +64,19 @@ defenses (5 exploratory runs only), direct attacks on the Donut pipeline.
 
 | Path | What |
 |---|---|
-| `src/` | models (Qwen, Donut, InternVL wrapper), differentiable preprocessing, attacks (PGD, EOT, hard-view, patch, adaptive), defenses, CBVR (`src/csev/`), staged pipeline (`src/stages/`) |
+| `src/` | course code: models, attacks, defenses, CBVR/EBV (`src/csev/`), staged pipeline (`src/stages/`). **`src/paper/`**: the paper's evaluation code (frozen sets, readers, EBV, runner, reports) |
 | `scripts/` | cluster launchers (`submit_stage.sh`, `slurm/`), stage config builders, merge/status tools, Colab runners (`colab_*.py`), input bundling (`colab_inputs/`), diagnostics (localization, band, Donut geometry, method figure), and superseded versions we also ran (`earlier_versions/`) |
 | `configs/` | frozen JSON config for every cluster run |
 | `notebooks/` | 01–03 data; 04–05 receipt CBVR study and direct attack; 06–08 resumes; 09–10 Donut; `earlier_versions/` |
 | `analysis/` | midterm reporting package and the cluster-era analysis notebooks (run them from `analysis/`) |
 | `data/` | our 114 receipt photos + labels, `processed/` manifests and splits (`master_manifest.*`, degree mapping, exclusions), receipt-study role lists and hashes |
-| `results/` | summaries and contracts per study, plus `raw/` per-case records (JSON/CSV/logs) |
+| `results/` | summaries and contracts per study, plus `raw/` per-case records (JSON/CSV/logs). `results/cluster/` = the CARC `outputs/`, `reports/` and `logs/` trees as merged tables, each record with runtime, peak GPU memory, SSIM/LPIPS and model revision. `results/paper_v1/` = paper experiments |
 | `figures/` | poster and figures |
-| `inputs/` | **not in Git.** Frozen input bundles with the saved attacks: `csev_full_inputs.zip` (4.4 GB), `resume_complete_inputs_v1.zip` (1.2 GB), `resume_development_inputs_v1.zip` |
+| `inputs/` | **not in Git.** Frozen input bundles with the saved attacks: `csev_full_inputs.zip` (4.4 GB), `resume_complete_inputs_v1.zip` (1.2 GB), `resume_development_inputs_v1.zip`; and `carc_records_full_2026-11-19.tar.gz` (all CARC records including per-worker shards) |
 | `tests/` | CPU tests (`python -m pytest tests -q`; `analysis/` has its own) |
 
-Kept elsewhere: CORD / SROIE / resume images (re-download with `notebooks/01`), the CARC
-`outputs/` tree (159 GB of perturbation tensors and attack PNGs on `/scratch1`), and the
+Kept elsewhere: CORD / SROIE / resume images (re-download with `notebooks/01`), the attack PNGs in the CARC
+`outputs/` tree (`/scratch1`), and the
 Colab working folders on Drive (optimizer state, attacked PNGs from the direct attacks).
 
 ## Running
@@ -95,3 +95,22 @@ a folder whose contract differs; change anything → new study ID.
 
 Pinned readers: `Qwen/Qwen2.5-VL-3B-Instruct`, `naver-clova-ix/donut-base-finetuned-docvqa` (revisions in `configs/`).
 Environment: torch 2.6.0+cu124, transformers 5.x (exact versions in `env/requirements.lock.txt`).
+
+## Paper experiments (`src/paper/`)
+
+Frozen sets, six readers + OCR, EBV and the comparison defenses, a Slurm array runner, and
+the tables. Attacked images come in through attack manifests written by separate attack code
+(format in `src/paper/manifest.py`). The attack producers now live in `src/attacks/paper_*.py`,
+`src/attacks/surrogates.py`, and `scripts/paper_attacks/`. They cover E2a/b/c, E3b, E5a/b/c,
+E6 and E7; pretrained GPU parity, memory and attack-success measurements remain to be run.
+See the [attack commands and implementation notes](scripts/paper_attacks/README.md), then
+[`PLAN.md`](PLAN.md#code) for the evaluation order.
+
+```bash
+export PYTHONPATH="$PWD/src"
+python -m pytest tests/test_paper.py -q      # CPU
+python -m paper.sets freeze                  # once
+python -m paper.run plan E1 && python -m paper.run submit E1
+python -m paper.run status E1 && python -m paper.run merge E1
+python -m paper.report all                   # results/paper_v1/tables.md, tables/, figures/
+```
