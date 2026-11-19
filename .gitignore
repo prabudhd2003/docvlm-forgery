@@ -51,3 +51,8 @@ results/paper_v1/attack_runs/*/records/
 results/paper_v1/attack_runs/*/errors/
 results/paper_v1/attack_runs/*/logs/
 results/paper_v1/attack_runs/**/.*.lock
+
+# machine-local processed-dataset symlinks (point outside the repo)
+data/processed/cord_v2
+data/processed/sroie
+data/processed/resume_parsing_vision
