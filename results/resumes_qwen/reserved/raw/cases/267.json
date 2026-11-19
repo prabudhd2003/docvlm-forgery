@@ -1,0 +1,114 @@
+{
+  "case_id": "resume_parsing_vision_validation_r00842__qwen__resume_highest_degree__pgd__eps-16__seed-566",
+  "family": "standard",
+  "epsilon_255": 16,
+  "attack_target": "master",
+  "record_id": "resume_parsing_vision/validation/r00842",
+  "clean_target": "bachelor",
+  "page_count": 2,
+  "regions": [
+    {
+      "raw": "{\"boxes\": []}",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [],
+      "pairs": [],
+      "status": "no_education",
+      "attempts": [
+        {
+          "raw": "{\"boxes\": []}",
+          "status": "valid"
+        }
+      ],
+      "page": 0
+    },
+    {
+      "raw": "```json\n{\n    \"boxes\": [\n        {\n            \"left\": 293,\n            \"top\": 295,\n            \"right\": 622,\n            \"bottom\": 305\n        },\n        {\n            \"left\": 293,\n            \"top\": 315,\n            \"right\": 656,\n            \"bottom\": 325\n        }\n    ]\n}\n```",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [
+        [
+          0,
+          440,
+          1242,
+          455
+        ],
+        [
+          0,
+          470,
+          1242,
+          485
+        ]
+      ],
+      "pairs": [
+        [
+          [
+            0,
+            228,
+            1242,
+            697
+          ],
+          [
+            0,
+            140,
+            1242,
+            785
+          ]
+        ]
+      ],
+      "status": "ok",
+      "attempts": [
+        {
+          "raw": "```json\n{\n    \"boxes\": [\n        {\n            \"left\": 293,\n            \"top\": 295,\n            \"right\": 622,\n            \"bottom\": 305\n        },\n        {\n            \"left\": 293,\n            \"top\": 315,\n            \"right\": 656,\n            \"bottom\": 325\n        }\n    ]\n}\n```",
+          "status": "valid"
+        }
+      ],
+      "page": 1
+    }
+  ],
+  "crop_count": 1,
+  "localization_valid": true,
+  "raw_answers": {
+    "full": "bachelor",
+    "fixed": "bachelor",
+    "localized": "bachelor",
+    "expanded": "bachelor"
+  },
+  "methods": {
+    "none": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "fixed_middle": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "localized_only": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "full_region_agreement": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "contextual_recovery": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    }
+  },
+  "elapsed_seconds": 7.293016548999731
+}

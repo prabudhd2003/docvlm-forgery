@@ -1,0 +1,226 @@
+{
+  "record_id": "collected_receipts/external_test/c00020",
+  "dataset": "collected_receipts",
+  "family": "standard",
+  "epsilon": 16,
+  "clean_target": "12.06",
+  "attack_target": "120.60",
+  "input_sha256": "c2aed993266fae83f15c0817395aa8b9957c13794217ace5b21e85f196c6402c",
+  "methods": {
+    "none": {
+      "prediction": "12.06",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "jpeg": {
+      "prediction": "12.06",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "resize_vote": {
+      "prediction": "12.06",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "selective_multiview": {
+      "prediction": "12.06",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "semantic_consistency": {
+      "prediction": "12.06",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "ocr_only": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "evidence": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "fixed_band": {
+      "prediction": "12.06",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "band_answer": {
+      "prediction": "12.06",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "band_agreement": {
+      "prediction": "12.06",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "verified_recovery": {
+      "prediction": "12.06",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "smaller_expansion": {
+      "prediction": "12.06",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "taller_18": {
+      "prediction": "12.06",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "taller_24": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    }
+  },
+  "variants": {
+    "smaller_expansion": {
+      "boxes": [
+        [
+          0,
+          1248,
+          1762,
+          1549
+        ],
+        [
+          0,
+          1226,
+          1762,
+          1571
+        ]
+      ],
+      "answers": [
+        "12.06",
+        "12.06"
+      ]
+    },
+    "taller_18": {
+      "boxes": [
+        [
+          0,
+          1200,
+          1762,
+          1597
+        ],
+        [
+          0,
+          1134,
+          1762,
+          1663
+        ]
+      ],
+      "answers": [
+        "12.06",
+        "12.06"
+      ]
+    },
+    "taller_24": {
+      "boxes": [
+        [
+          0,
+          1134,
+          1762,
+          1663
+        ],
+        [
+          0,
+          1068,
+          1762,
+          1729
+        ]
+      ],
+      "answers": [
+        "12.06",
+        "74753.00"
+      ]
+    }
+  },
+  "crops": [
+    {
+      "box": [
+        0,
+        1248,
+        1762,
+        1549
+      ],
+      "prediction": "12.06",
+      "raw": "$ 12.06",
+      "reused": true
+    },
+    {
+      "box": [
+        0,
+        1182,
+        1762,
+        1615
+      ],
+      "prediction": "12.06",
+      "raw": "$ 12.06",
+      "reused": true
+    },
+    {
+      "box": [
+        0,
+        1226,
+        1762,
+        1571
+      ],
+      "prediction": "12.06",
+      "raw": "$ 12.06",
+      "reused": false
+    },
+    {
+      "box": [
+        0,
+        1200,
+        1762,
+        1597
+      ],
+      "prediction": "12.06",
+      "raw": "$ 12.06",
+      "reused": false
+    },
+    {
+      "box": [
+        0,
+        1134,
+        1762,
+        1663
+      ],
+      "prediction": "12.06",
+      "raw": "$12.06",
+      "reused": false
+    },
+    {
+      "box": [
+        0,
+        1068,
+        1762,
+        1729
+      ],
+      "prediction": "74753.00",
+      "raw": "074753",
+      "reused": false
+    }
+  ],
+  "elapsed_seconds": 1.7956876040000225
+}

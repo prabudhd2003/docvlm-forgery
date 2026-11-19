@@ -1,0 +1,44 @@
+Recovery-only schedule, part 3: {
+  "original_contract": "94243896cac09b6ae8273c24f86787d73e965461c60f38f73359fa419bbf11b8",
+  "method": "verified_recovery",
+  "document_ids": [
+    "collected_receipts/external_test/c00059",
+    "collected_receipts/external_test/c00027",
+    "collected_receipts/external_test/c00054",
+    "collected_receipts/external_test/c00095",
+    "collected_receipts/external_test/c00069",
+    "collected_receipts/external_test/c00098",
+    "collected_receipts/external_test/c00099",
+    "collected_receipts/external_test/c00071",
+    "collected_receipts/external_test/c00106",
+    "collected_receipts/external_test/c00030"
+  ],
+  "epsilons": [
+    4,
+    8
+  ],
+  "restarts": [
+    0,
+    1
+  ],
+  "max_runs": 40,
+  "wall_seconds_per_session": 14400,
+  "launcher_sha256": "0c412827fa48ad305ebb6e07adfab88885efc12e2f1df935c8edd012e6086818",
+  "selection": "Frozen adaptive hash order continued past the first ten; first ten receipts that CBVR answers correctly when clean. Chosen on clean outcomes only, before any part-3 attack. Only scheduling changes; original gradient, query, replay and checkpoint code retained."
+}
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]
+Fetching 2 files:  50%|█████     | 1/2 [00:24<00:24, 24.92s/it]
+Fetching 2 files: 100%|██████████| 2/2 [00:24<00:00, 12.46s/it]
+
+Loading weights:   0%|          | 0/824 [00:00<?, ?it/s]
+Loading weights:  41%|████      | 339/824 [00:00<00:00, 3388.00it/s]
+Loading weights: 100%|██████████| 824/824 [00:00<00:00, 6567.01it/s]
+Adaptive collected_receipts/external_test/c00059 verified_recovery 4 0
+Adaptive saved: /content/drive/MyDrive/CSCI 566 Project/test/csev_full_colab/full_study_results/receipt_bands_full_v1/adaptive/6686dd2577c835b0f23ed719bbe792fab62c24550eb7ede85fd6dff6fc6070d6
+Adaptive collected_receipts/external_test/c00059 verified_recovery 4 1
+Adaptive saved: /content/drive/MyDrive/CSCI 566 Project/test/csev_full_colab/full_study_results/receipt_bands_full_v1/adaptive/e79603f76249e65fd124106ddbbcfd58d13bc6c5bc23e5f156aaee371f727221
+Adaptive collected_receipts/external_test/c00059 verified_recovery 8 0
+Adaptive saved: /content/drive/MyDrive/CSCI 566 Project/test/csev_full_colab/full_study_results/receipt_bands_full_v1/adaptive/b936ca94b00e63efcf737cd639e16f26321023f432890b71dd9b4ccbc3c74676
+Adaptive collected_receipts/external_test/c00059 verified_recovery 8 1

@@ -1,0 +1,226 @@
+{
+  "record_id": "collected_receipts/external_test/c00011",
+  "dataset": "collected_receipts",
+  "family": "uniform_eot",
+  "epsilon": 8,
+  "clean_target": "4.40",
+  "attack_target": "44.00",
+  "input_sha256": "b36147b5ce0a7cefcd06cb40d696b2382f53e77da4835cc78c85041542e1abaa",
+  "methods": {
+    "none": {
+      "prediction": "4.40",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "jpeg": {
+      "prediction": "4.40",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "resize_vote": {
+      "prediction": "4.40",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "selective_multiview": {
+      "prediction": "4.40",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "semantic_consistency": {
+      "prediction": "4.40",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "ocr_only": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "evidence": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "fixed_band": {
+      "prediction": "4.40",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "band_answer": {
+      "prediction": "4.40",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "band_agreement": {
+      "prediction": "4.40",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "verified_recovery": {
+      "prediction": "4.40",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "smaller_expansion": {
+      "prediction": "4.40",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "taller_18": {
+      "prediction": "4.40",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "taller_24": {
+      "prediction": "4.40",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    }
+  },
+  "variants": {
+    "smaller_expansion": {
+      "boxes": [
+        [
+          0,
+          1225,
+          2217,
+          1631
+        ],
+        [
+          0,
+          1191,
+          2217,
+          1665
+        ]
+      ],
+      "answers": [
+        "4.40",
+        "4.40"
+      ]
+    },
+    "taller_18": {
+      "boxes": [
+        [
+          0,
+          1124,
+          2217,
+          1732
+        ],
+        [
+          0,
+          1023,
+          2217,
+          1833
+        ]
+      ],
+      "answers": [
+        "4.40",
+        "4.40"
+      ]
+    },
+    "taller_24": {
+      "boxes": [
+        [
+          0,
+          1022,
+          2217,
+          1833
+        ],
+        [
+          0,
+          921,
+          2217,
+          1934
+        ]
+      ],
+      "answers": [
+        "4.40",
+        "4.40"
+      ]
+    }
+  },
+  "crops": [
+    {
+      "box": [
+        0,
+        1225,
+        2217,
+        1631
+      ],
+      "prediction": "4.40",
+      "raw": "4.40",
+      "reused": true
+    },
+    {
+      "box": [
+        0,
+        1124,
+        2217,
+        1732
+      ],
+      "prediction": "4.40",
+      "raw": "4.40",
+      "reused": true
+    },
+    {
+      "box": [
+        0,
+        1191,
+        2217,
+        1665
+      ],
+      "prediction": "4.40",
+      "raw": "4.40",
+      "reused": false
+    },
+    {
+      "box": [
+        0,
+        1023,
+        2217,
+        1833
+      ],
+      "prediction": "4.40",
+      "raw": "4.40",
+      "reused": false
+    },
+    {
+      "box": [
+        0,
+        1022,
+        2217,
+        1833
+      ],
+      "prediction": "4.40",
+      "raw": "4.40",
+      "reused": false
+    },
+    {
+      "box": [
+        0,
+        921,
+        2217,
+        1934
+      ],
+      "prediction": "4.40",
+      "raw": "4.40",
+      "reused": false
+    }
+  ],
+  "elapsed_seconds": 1.6789783369999896
+}

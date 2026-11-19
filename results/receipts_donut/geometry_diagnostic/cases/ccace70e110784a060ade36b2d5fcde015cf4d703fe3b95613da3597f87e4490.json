@@ -1,0 +1,226 @@
+{
+  "record_id": "collected_receipts/external_test/c00006",
+  "dataset": "collected_receipts",
+  "family": "hardview",
+  "epsilon": 8,
+  "clean_target": "7.70",
+  "attack_target": "77.00",
+  "input_sha256": "b7a8e8475ae65685178d5a7028a96db822be09bb5e9362844c6f0cf37493c198",
+  "methods": {
+    "none": {
+      "prediction": "7.70",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "jpeg": {
+      "prediction": "7.70",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "resize_vote": {
+      "prediction": "7.70",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "selective_multiview": {
+      "prediction": "7.70",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "semantic_consistency": {
+      "prediction": "7.70",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "ocr_only": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "evidence": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "fixed_band": {
+      "prediction": "7.70",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "band_answer": {
+      "prediction": "7.70",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "band_agreement": {
+      "prediction": "7.70",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "verified_recovery": {
+      "prediction": "7.70",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "smaller_expansion": {
+      "prediction": "7.70",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "taller_18": {
+      "prediction": "7.70",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "taller_24": {
+      "prediction": "7.70",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    }
+  },
+  "variants": {
+    "smaller_expansion": {
+      "boxes": [
+        [
+          0,
+          1398,
+          2104,
+          1790
+        ],
+        [
+          0,
+          1365,
+          2104,
+          1823
+        ]
+      ],
+      "answers": [
+        "7.70",
+        "7.70"
+      ]
+    },
+    "taller_18": {
+      "boxes": [
+        [
+          0,
+          1300,
+          2104,
+          1888
+        ],
+        [
+          0,
+          1202,
+          2104,
+          1986
+        ]
+      ],
+      "answers": [
+        "7.70",
+        "7.70"
+      ]
+    },
+    "taller_24": {
+      "boxes": [
+        [
+          0,
+          1202,
+          2104,
+          1985
+        ],
+        [
+          0,
+          1104,
+          2104,
+          2083
+        ]
+      ],
+      "answers": [
+        "7.70",
+        "7.70"
+      ]
+    }
+  },
+  "crops": [
+    {
+      "box": [
+        0,
+        1398,
+        2104,
+        1790
+      ],
+      "prediction": "7.70",
+      "raw": "7.70",
+      "reused": true
+    },
+    {
+      "box": [
+        0,
+        1300,
+        2104,
+        1888
+      ],
+      "prediction": "7.70",
+      "raw": "7.70",
+      "reused": true
+    },
+    {
+      "box": [
+        0,
+        1365,
+        2104,
+        1823
+      ],
+      "prediction": "7.70",
+      "raw": "7.70",
+      "reused": false
+    },
+    {
+      "box": [
+        0,
+        1202,
+        2104,
+        1986
+      ],
+      "prediction": "7.70",
+      "raw": "7.70",
+      "reused": false
+    },
+    {
+      "box": [
+        0,
+        1202,
+        2104,
+        1985
+      ],
+      "prediction": "7.70",
+      "raw": "7.70",
+      "reused": false
+    },
+    {
+      "box": [
+        0,
+        1104,
+        2104,
+        2083
+      ],
+      "prediction": "7.70",
+      "raw": "7.70",
+      "reused": false
+    }
+  ],
+  "elapsed_seconds": 1.704516058000081
+}

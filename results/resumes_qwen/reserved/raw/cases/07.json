@@ -1,0 +1,126 @@
+{
+  "case_id": "clean_7",
+  "family": "clean",
+  "epsilon_255": 0,
+  "attack_target": null,
+  "record_id": "resume_parsing_vision/validation/r00143",
+  "clean_target": "master",
+  "page_count": 2,
+  "regions": [
+    {
+      "raw": "{\"boxes\": []}",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [],
+      "pairs": [],
+      "status": "no_education",
+      "attempts": [
+        {
+          "raw": "{\"boxes\": []}",
+          "status": "valid"
+        }
+      ],
+      "page": 0
+    },
+    {
+      "raw": "```json\n{\n  \"boxes\": [\n    {\n      \"left\": 315,\n      \"top\": 629,\n      \"right\": 766,\n      \"bottom\": 641\n    },\n    {\n      \"left\": 315,\n      \"top\": 649,\n      \"right\": 766,\n      \"bottom\": 661\n    },\n    {\n      \"left\": 315,\n      \"top\": 679,\n      \"right\": 766,\n      \"bottom\": 691\n    },\n    {\n      \"left\": 315,\n      \"top\": 709,\n      \"right\": 766,\n      \"bottom\": 721\n    }\n  ]\n}\n```",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [
+        [
+          0,
+          939,
+          1242,
+          957
+        ],
+        [
+          0,
+          969,
+          1242,
+          987
+        ],
+        [
+          0,
+          1014,
+          1242,
+          1032
+        ],
+        [
+          0,
+          1059,
+          1242,
+          1077
+        ]
+      ],
+      "pairs": [
+        [
+          [
+            0,
+            728,
+            1242,
+            1287
+          ],
+          [
+            0,
+            640,
+            1242,
+            1375
+          ]
+        ]
+      ],
+      "status": "ok",
+      "attempts": [
+        {
+          "raw": "```json\n{\n  \"boxes\": [\n    {\n      \"left\": 315,\n      \"top\": 629,\n      \"right\": 766,\n      \"bottom\": 641\n    },\n    {\n      \"left\": 315,\n      \"top\": 649,\n      \"right\": 766,\n      \"bottom\": 661\n    },\n    {\n      \"left\": 315,\n      \"top\": 679,\n      \"right\": 766,\n      \"bottom\": 691\n    },\n    {\n      \"left\": 315,\n      \"top\": 709,\n      \"right\": 766,\n      \"bottom\": 721\n    }\n  ]\n}\n```",
+          "status": "valid"
+        }
+      ],
+      "page": 1
+    }
+  ],
+  "crop_count": 1,
+  "localization_valid": true,
+  "raw_answers": {
+    "full": "master",
+    "fixed": "master",
+    "localized": "master",
+    "expanded": "master"
+  },
+  "methods": {
+    "none": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "fixed_middle": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "localized_only": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "full_region_agreement": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "contextual_recovery": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    }
+  },
+  "elapsed_seconds": 9.33191068300016
+}

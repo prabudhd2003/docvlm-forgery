@@ -1,0 +1,70 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]
+Fetching 2 files:  50%|█████     | 1/2 [00:23<00:23, 23.56s/it]
+Fetching 2 files: 100%|██████████| 2/2 [00:23<00:00, 11.78s/it]
+
+Loading weights:   0%|          | 0/824 [00:00<?, ?it/s]
+Loading weights:  24%|██▍       | 196/824 [00:00<00:00, 1948.31it/s]
+Loading weights: 100%|██████████| 824/824 [00:00<00:00, 5363.04it/s]
+DONE 1/40 resume_parsing_vision/validation/r00474 eps=8 restart=0
+DONE 2/40 resume_parsing_vision/validation/r00474 eps=16 restart=0
+DONE 3/40 resume_parsing_vision/validation/r00373 eps=8 restart=0
+DONE 4/40 resume_parsing_vision/validation/r00373 eps=16 restart=0
+DONE 5/40 resume_parsing_vision/validation/r00291 eps=8 restart=0
+DONE 6/40 resume_parsing_vision/validation/r00291 eps=16 restart=0
+DONE 7/40 resume_parsing_vision/validation/r00496 eps=8 restart=0
+DONE 8/40 resume_parsing_vision/validation/r00496 eps=16 restart=0
+DONE 9/40 resume_parsing_vision/validation/r00842 eps=8 restart=0
+DONE 10/40 resume_parsing_vision/validation/r00842 eps=16 restart=0
+DONE 11/40 resume_parsing_vision/validation/r00793 eps=8 restart=0
+DONE 12/40 resume_parsing_vision/validation/r00793 eps=16 restart=0
+DONE 13/40 resume_parsing_vision/validation/r00201 eps=8 restart=0
+DONE 14/40 resume_parsing_vision/validation/r00201 eps=16 restart=0
+DONE 15/40 resume_parsing_vision/validation/r00063 eps=8 restart=0
+DONE 16/40 resume_parsing_vision/validation/r00063 eps=16 restart=0
+ATTACK 17/40 resume_parsing_vision/validation/r00599 eps=8 restart=0 target=master
+SAVED resume_parsing_vision/validation/r00599 eps=8 restart=0 recovery=bachelor full=bachelor steps=100 queries=40 seconds=1234
+ATTACK 18/40 resume_parsing_vision/validation/r00599 eps=16 restart=0 target=master
+SAVED resume_parsing_vision/validation/r00599 eps=16 restart=0 recovery=bachelor full=bachelor steps=100 queries=40 seconds=662
+ATTACK 19/40 resume_parsing_vision/validation/r00288 eps=8 restart=0 target=doctorate
+SAVED resume_parsing_vision/validation/r00288 eps=8 restart=0 recovery=master full=master steps=100 queries=40 seconds=433
+ATTACK 20/40 resume_parsing_vision/validation/r00288 eps=16 restart=0 target=doctorate
+SAVED resume_parsing_vision/validation/r00288 eps=16 restart=0 recovery=master full=master steps=100 queries=40 seconds=358
+ATTACK 21/40 resume_parsing_vision/validation/r00474 eps=8 restart=1 target=master
+SAVED resume_parsing_vision/validation/r00474 eps=8 restart=1 recovery=bachelor full=bachelor steps=100 queries=40 seconds=431
+ATTACK 22/40 resume_parsing_vision/validation/r00474 eps=16 restart=1 target=master
+SAVED resume_parsing_vision/validation/r00474 eps=16 restart=1 recovery=bachelor full=bachelor steps=100 queries=40 seconds=440
+ATTACK 23/40 resume_parsing_vision/validation/r00373 eps=8 restart=1 target=master
+SAVED resume_parsing_vision/validation/r00373 eps=8 restart=1 recovery=bachelor full=bachelor steps=100 queries=40 seconds=282
+ATTACK 24/40 resume_parsing_vision/validation/r00373 eps=16 restart=1 target=master
+SAVED resume_parsing_vision/validation/r00373 eps=16 restart=1 recovery=bachelor full=bachelor steps=100 queries=40 seconds=284
+ATTACK 25/40 resume_parsing_vision/validation/r00291 eps=8 restart=1 target=master
+SAVED resume_parsing_vision/validation/r00291 eps=8 restart=1 recovery=bachelor full=bachelor steps=100 queries=40 seconds=441
+ATTACK 26/40 resume_parsing_vision/validation/r00291 eps=16 restart=1 target=master
+SAVED resume_parsing_vision/validation/r00291 eps=16 restart=1 recovery=bachelor full=bachelor steps=100 queries=40 seconds=438
+ATTACK 27/40 resume_parsing_vision/validation/r00496 eps=8 restart=1 target=master
+SAVED resume_parsing_vision/validation/r00496 eps=8 restart=1 recovery=bachelor full=bachelor steps=100 queries=40 seconds=345
+ATTACK 28/40 resume_parsing_vision/validation/r00496 eps=16 restart=1 target=master
+SAVED resume_parsing_vision/validation/r00496 eps=16 restart=1 recovery=bachelor full=bachelor steps=100 queries=40 seconds=361
+ATTACK 29/40 resume_parsing_vision/validation/r00842 eps=8 restart=1 target=master
+SAVED resume_parsing_vision/validation/r00842 eps=8 restart=1 recovery=bachelor full=bachelor steps=100 queries=40 seconds=497
+ATTACK 30/40 resume_parsing_vision/validation/r00842 eps=16 restart=1 target=master
+SAVED resume_parsing_vision/validation/r00842 eps=16 restart=1 recovery=bachelor full=bachelor steps=100 queries=40 seconds=445
+ATTACK 31/40 resume_parsing_vision/validation/r00793 eps=8 restart=1 target=master
+SAVED resume_parsing_vision/validation/r00793 eps=8 restart=1 recovery=bachelor full=bachelor steps=100 queries=40 seconds=427
+ATTACK 32/40 resume_parsing_vision/validation/r00793 eps=16 restart=1 target=master
+SAVED resume_parsing_vision/validation/r00793 eps=16 restart=1 recovery=bachelor full=bachelor steps=100 queries=40 seconds=360
+ATTACK 33/40 resume_parsing_vision/validation/r00201 eps=8 restart=1 target=master
+SAVED resume_parsing_vision/validation/r00201 eps=8 restart=1 recovery=bachelor full=bachelor steps=100 queries=40 seconds=304
+ATTACK 34/40 resume_parsing_vision/validation/r00201 eps=16 restart=1 target=master
+SAVED resume_parsing_vision/validation/r00201 eps=16 restart=1 recovery=bachelor full=bachelor steps=100 queries=40 seconds=345
+ATTACK 35/40 resume_parsing_vision/validation/r00063 eps=8 restart=1 target=master
+SAVED resume_parsing_vision/validation/r00063 eps=8 restart=1 recovery=bachelor full=bachelor steps=100 queries=40 seconds=286
+ATTACK 36/40 resume_parsing_vision/validation/r00063 eps=16 restart=1 target=master
+SAVED resume_parsing_vision/validation/r00063 eps=16 restart=1 recovery=bachelor full=bachelor steps=100 queries=40 seconds=340
+ATTACK 37/40 resume_parsing_vision/validation/r00599 eps=8 restart=1 target=master
+SAVED resume_parsing_vision/validation/r00599 eps=8 restart=1 recovery=bachelor full=bachelor steps=100 queries=40 seconds=596
+ATTACK 38/40 resume_parsing_vision/validation/r00599 eps=16 restart=1 target=master
+SAVED resume_parsing_vision/validation/r00599 eps=16 restart=1 recovery=bachelor full=bachelor steps=100 queries=40 seconds=1064
+ATTACK 39/40 resume_parsing_vision/validation/r00288 eps=8 restart=1 target=doctorate

@@ -1,0 +1,90 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]
+Fetching 2 files:  50%|█████     | 1/2 [00:23<00:23, 23.55s/it]
+Fetching 2 files: 100%|██████████| 2/2 [00:26<00:00, 11.54s/it]
+Fetching 2 files: 100%|██████████| 2/2 [00:26<00:00, 13.34s/it]
+
+Loading weights:   0%|          | 0/824 [00:00<?, ?it/s]
+Loading weights:  34%|███▍      | 282/824 [00:00<00:00, 2812.34it/s]
+Loading weights: 100%|██████████| 824/824 [00:00<00:00, 5356.51it/s]
+DONE 1/40 resume_parsing_vision/validation/r00474 eps=8 restart=0
+DONE 2/40 resume_parsing_vision/validation/r00474 eps=16 restart=0
+DONE 3/40 resume_parsing_vision/validation/r00373 eps=8 restart=0
+DONE 4/40 resume_parsing_vision/validation/r00373 eps=16 restart=0
+DONE 5/40 resume_parsing_vision/validation/r00291 eps=8 restart=0
+DONE 6/40 resume_parsing_vision/validation/r00291 eps=16 restart=0
+DONE 7/40 resume_parsing_vision/validation/r00496 eps=8 restart=0
+DONE 8/40 resume_parsing_vision/validation/r00496 eps=16 restart=0
+DONE 9/40 resume_parsing_vision/validation/r00842 eps=8 restart=0
+DONE 10/40 resume_parsing_vision/validation/r00842 eps=16 restart=0
+DONE 11/40 resume_parsing_vision/validation/r00793 eps=8 restart=0
+DONE 12/40 resume_parsing_vision/validation/r00793 eps=16 restart=0
+DONE 13/40 resume_parsing_vision/validation/r00201 eps=8 restart=0
+DONE 14/40 resume_parsing_vision/validation/r00201 eps=16 restart=0
+DONE 15/40 resume_parsing_vision/validation/r00063 eps=8 restart=0
+DONE 16/40 resume_parsing_vision/validation/r00063 eps=16 restart=0
+DONE 17/40 resume_parsing_vision/validation/r00599 eps=8 restart=0
+DONE 18/40 resume_parsing_vision/validation/r00599 eps=16 restart=0
+DONE 19/40 resume_parsing_vision/validation/r00288 eps=8 restart=0
+DONE 20/40 resume_parsing_vision/validation/r00288 eps=16 restart=0
+DONE 21/40 resume_parsing_vision/validation/r00474 eps=8 restart=1
+DONE 22/40 resume_parsing_vision/validation/r00474 eps=16 restart=1
+DONE 23/40 resume_parsing_vision/validation/r00373 eps=8 restart=1
+DONE 24/40 resume_parsing_vision/validation/r00373 eps=16 restart=1
+DONE 25/40 resume_parsing_vision/validation/r00291 eps=8 restart=1
+DONE 26/40 resume_parsing_vision/validation/r00291 eps=16 restart=1
+DONE 27/40 resume_parsing_vision/validation/r00496 eps=8 restart=1
+DONE 28/40 resume_parsing_vision/validation/r00496 eps=16 restart=1
+DONE 29/40 resume_parsing_vision/validation/r00842 eps=8 restart=1
+DONE 30/40 resume_parsing_vision/validation/r00842 eps=16 restart=1
+DONE 31/40 resume_parsing_vision/validation/r00793 eps=8 restart=1
+DONE 32/40 resume_parsing_vision/validation/r00793 eps=16 restart=1
+DONE 33/40 resume_parsing_vision/validation/r00201 eps=8 restart=1
+DONE 34/40 resume_parsing_vision/validation/r00201 eps=16 restart=1
+DONE 35/40 resume_parsing_vision/validation/r00063 eps=8 restart=1
+DONE 36/40 resume_parsing_vision/validation/r00063 eps=16 restart=1
+DONE 37/40 resume_parsing_vision/validation/r00599 eps=8 restart=1
+DONE 38/40 resume_parsing_vision/validation/r00599 eps=16 restart=1
+ATTACK 39/40 resume_parsing_vision/validation/r00288 eps=8 restart=1 target=doctorate
+SAVED resume_parsing_vision/validation/r00288 eps=8 restart=1 recovery=master full=master steps=100 queries=40 seconds=497
+ATTACK 40/40 resume_parsing_vision/validation/r00288 eps=16 restart=1 target=doctorate
+SAVED resume_parsing_vision/validation/r00288 eps=16 restart=1 recovery=master full=master steps=100 queries=40 seconds=499
+{
+  "complete": true,
+  "runs_completed": 40,
+  "runs_planned": 40,
+  "groups": [
+    {
+      "epsilon_255": 8,
+      "documents_planned": 10,
+      "documents_with_any_restart": 10,
+      "documents_with_all_restarts": 10,
+      "success_documents_all": 0,
+      "eligible_documents": 10,
+      "success_documents_eligible": 0,
+      "runs_completed": 20,
+      "runs_succeeded": 0,
+      "runs_rejected": 0,
+      "runs_correct": 20,
+      "saved_standard_attack_undefended_targeted": 1,
+      "success_ids": []
+    },
+    {
+      "epsilon_255": 16,
+      "documents_planned": 10,
+      "documents_with_any_restart": 10,
+      "documents_with_all_restarts": 10,
+      "success_documents_all": 0,
+      "eligible_documents": 10,
+      "success_documents_eligible": 0,
+      "runs_completed": 20,
+      "runs_succeeded": 0,
+      "runs_rejected": 1,
+      "runs_correct": 19,
+      "saved_standard_attack_undefended_targeted": 1,
+      "success_ids": []
+    }
+  ],
+  "note": "Bounded direct attack on frozen v4 resume contextual recovery. First ten reserved resumes with saved attacks in the frozen order, not selected on outcomes. Missing runs are not attack failures. A document counts as a success if any completed restart yields an accepted target on the saved, reloaded pages. Not a robustness guarantee."
+}

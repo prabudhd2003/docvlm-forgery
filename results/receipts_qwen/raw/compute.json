@@ -1,0 +1,6 @@
+{
+  "gpu": "NVIDIA A100-SXM4-80GB",
+  "recorded_comparison_seconds": 13521.049822546003,
+  "adaptive_seconds": 2987.061839974049,
+  "note": "Recorded stage time excludes setup/model load and may undercount interrupted work; not whole-project GPU accounting."
+}

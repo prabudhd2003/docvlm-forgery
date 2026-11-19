@@ -1,0 +1,63 @@
+{
+  "record_id": "resume_parsing_vision/validation/r00065",
+  "clean_target": "bachelor",
+  "page_count": 2,
+  "regions": [
+    {
+      "page": 0,
+      "raw": "```json\n[\n  {\n    \"left\": 235,\n    \"top\": 900,\n    \"right\": 330,\n    \"bottom\": 915\n  }\n]\n```",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "status": "invalid",
+      "error": "list indices must be integers or slices, not str"
+    },
+    {
+      "page": 1,
+      "raw": "There are no regions indicating completed education qualifications or awarded degrees on this resume page. The provided information includes language proficiency, certifications, job search preferences, and hobbies but does not mention any educational background. Therefore, there are no boxes to describe in terms of education.\n\n```json\n[]\n```",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "status": "invalid",
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    }
+  ],
+  "crop_count": 0,
+  "localization_valid": false,
+  "raw_answers": {
+    "full": "bachelor",
+    "fixed": "associate",
+    "localized": null,
+    "expanded": null
+  },
+  "methods": {
+    "none": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true
+    },
+    "fixed_middle": {
+      "prediction": "associate",
+      "correct": false,
+      "accepted": true
+    },
+    "localized_only": {
+      "prediction": null,
+      "correct": false,
+      "accepted": false
+    },
+    "full_region_agreement": {
+      "prediction": null,
+      "correct": false,
+      "accepted": false
+    },
+    "contextual_recovery": {
+      "prediction": null,
+      "correct": false,
+      "accepted": false
+    }
+  },
+  "elapsed_seconds": 5.690746763999982
+}

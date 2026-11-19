@@ -1,0 +1,237 @@
+{
+  "record_id": "cord_v2/validation/cord_v2-validation-0099",
+  "dataset": "cord_v2",
+  "family": "clean",
+  "epsilon": 0,
+  "clean_target": "39000",
+  "attack_target": "390000",
+  "input_sha256": "dda70416dce57da701ab39aa913e6a05339f6324a4b37825929ee0d96a237f77",
+  "methods": {
+    "none": {
+      "prediction": "39000",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "jpeg": {
+      "prediction": "39000",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "resize_vote": {
+      "prediction": "39000",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "selective_multiview": {
+      "prediction": "39000",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "semantic_consistency": {
+      "prediction": "39000",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "ocr_only": {
+      "prediction": "39000",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "evidence": {
+      "prediction": "39000",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "fixed_band": {
+      "prediction": "0",
+      "accepted": true,
+      "correct": false,
+      "targeted": false
+    },
+    "band_answer": {
+      "prediction": "39000",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "band_agreement": {
+      "prediction": "39000",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "verified_recovery": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "smaller_expansion": {
+      "prediction": "39000",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "taller_18": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "taller_24": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    }
+  },
+  "variants": {
+    "smaller_expansion": {
+      "boxes": [
+        [
+          0,
+          1008,
+          864,
+          1164
+        ],
+        [
+          0,
+          995,
+          864,
+          1177
+        ]
+      ],
+      "answers": [
+        "39000",
+        "39000"
+      ]
+    },
+    "taller_18": {
+      "boxes": [
+        [
+          0,
+          970,
+          864,
+          1203
+        ],
+        [
+          0,
+          931,
+          864,
+          1242
+        ]
+      ],
+      "answers": [
+        null,
+        null
+      ]
+    },
+    "taller_24": {
+      "boxes": [
+        [
+          0,
+          930,
+          864,
+          1241
+        ],
+        [
+          0,
+          891,
+          864,
+          1280
+        ]
+      ],
+      "answers": [
+        null,
+        null
+      ]
+    }
+  },
+  "crops": [
+    {
+      "box": [
+        0,
+        1008,
+        864,
+        1164
+      ],
+      "prediction": "39000",
+      "raw": "rp. 39.000",
+      "reused": true
+    },
+    {
+      "box": [
+        0,
+        969,
+        864,
+        1203
+      ],
+      "prediction": null,
+      "raw": "rp. 39. 000",
+      "reused": true
+    },
+    {
+      "box": [
+        0,
+        995,
+        864,
+        1177
+      ],
+      "prediction": "39000",
+      "raw": "rp. 39.000",
+      "reused": false
+    },
+    {
+      "box": [
+        0,
+        970,
+        864,
+        1203
+      ],
+      "prediction": null,
+      "raw": "rp. 39. 000",
+      "reused": false
+    },
+    {
+      "box": [
+        0,
+        931,
+        864,
+        1242
+      ],
+      "prediction": null,
+      "raw": "rp. 39. 000",
+      "reused": false
+    },
+    {
+      "box": [
+        0,
+        930,
+        864,
+        1241
+      ],
+      "prediction": null,
+      "raw": "rp. 39. 000",
+      "reused": false
+    },
+    {
+      "box": [
+        0,
+        891,
+        864,
+        1280
+      ],
+      "prediction": null,
+      "raw": "rp. 39. 000",
+      "reused": false
+    }
+  ],
+  "elapsed_seconds": 2.0252275709999594
+}

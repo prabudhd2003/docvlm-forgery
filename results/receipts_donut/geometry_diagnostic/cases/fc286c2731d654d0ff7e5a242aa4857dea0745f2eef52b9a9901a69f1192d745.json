@@ -1,0 +1,237 @@
+{
+  "record_id": "sroie/train/X51006913051",
+  "dataset": "sroie",
+  "family": "clean",
+  "epsilon": 0,
+  "clean_target": "31.00",
+  "attack_target": "310.00",
+  "input_sha256": "e8f957ee2ea6d7723e283da1d2cf668f7220c462b018d064356e40ad2634ee6d",
+  "methods": {
+    "none": {
+      "prediction": "31.00",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "jpeg": {
+      "prediction": "31.00",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "resize_vote": {
+      "prediction": "31.00",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "selective_multiview": {
+      "prediction": "31.00",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "semantic_consistency": {
+      "prediction": "51.00",
+      "accepted": true,
+      "correct": false,
+      "targeted": false
+    },
+    "ocr_only": {
+      "prediction": "4.00",
+      "accepted": true,
+      "correct": false,
+      "targeted": false
+    },
+    "evidence": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "fixed_band": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "band_answer": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "band_agreement": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "verified_recovery": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "smaller_expansion": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "taller_18": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "taller_24": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    }
+  },
+  "variants": {
+    "smaller_expansion": {
+      "boxes": [
+        [
+          0,
+          3111,
+          4961,
+          3953
+        ],
+        [
+          0,
+          3041,
+          4961,
+          4023
+        ]
+      ],
+      "answers": [
+        null,
+        null
+      ]
+    },
+    "taller_18": {
+      "boxes": [
+        [
+          0,
+          2900,
+          4961,
+          4163
+        ],
+        [
+          0,
+          2690,
+          4961,
+          4373
+        ]
+      ],
+      "answers": [
+        null,
+        null
+      ]
+    },
+    "taller_24": {
+      "boxes": [
+        [
+          0,
+          2690,
+          4961,
+          4374
+        ],
+        [
+          0,
+          2480,
+          4961,
+          4584
+        ]
+      ],
+      "answers": [
+        null,
+        null
+      ]
+    }
+  },
+  "crops": [
+    {
+      "box": [
+        0,
+        3111,
+        4961,
+        3953
+      ],
+      "prediction": null,
+      "raw": "please come against",
+      "reused": true
+    },
+    {
+      "box": [
+        0,
+        2901,
+        4961,
+        4163
+      ],
+      "prediction": null,
+      "raw": "please come against",
+      "reused": true
+    },
+    {
+      "box": [
+        0,
+        3041,
+        4961,
+        4023
+      ],
+      "prediction": null,
+      "raw": "please come against",
+      "reused": false
+    },
+    {
+      "box": [
+        0,
+        2900,
+        4961,
+        4163
+      ],
+      "prediction": null,
+      "raw": "please come against",
+      "reused": false
+    },
+    {
+      "box": [
+        0,
+        2690,
+        4961,
+        4373
+      ],
+      "prediction": null,
+      "raw": "please come against",
+      "reused": false
+    },
+    {
+      "box": [
+        0,
+        2690,
+        4961,
+        4374
+      ],
+      "prediction": null,
+      "raw": "please come against",
+      "reused": false
+    },
+    {
+      "box": [
+        0,
+        2480,
+        4961,
+        4584
+      ],
+      "prediction": null,
+      "raw": "please come against",
+      "reused": false
+    }
+  ],
+  "elapsed_seconds": 2.4546163139999635
+}

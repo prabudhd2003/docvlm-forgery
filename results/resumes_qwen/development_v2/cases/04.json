@@ -1,0 +1,93 @@
+{
+  "record_id": "resume_parsing_vision/validation/r00773",
+  "clean_target": "bachelor",
+  "page_count": 2,
+  "regions": [
+    {
+      "page": 0,
+      "raw": "There are no regions indicating completed education qualifications or awarded degrees on this resume page.",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [],
+      "pairs": [],
+      "status": "no_education"
+    },
+    {
+      "page": 1,
+      "raw": "```json\n[\n  {\n    \"boxes\": [\n      [65, 372, 455, 392]\n    ]\n  },\n  {\n    \"boxes\": [\n      [65, 424, 455, 443]\n    ]\n  }\n]\n```",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [
+        [
+          0,
+          555,
+          1242,
+          585
+        ],
+        [
+          0,
+          633,
+          1242,
+          661
+        ]
+      ],
+      "pairs": [
+        [
+          [
+            0,
+            350,
+            1242,
+            867
+          ],
+          [
+            0,
+            262,
+            1242,
+            955
+          ]
+        ]
+      ],
+      "status": "ok"
+    }
+  ],
+  "crop_count": 1,
+  "localization_valid": true,
+  "raw_answers": {
+    "full": "bachelor",
+    "fixed": "bachelor",
+    "localized": "bachelor",
+    "expanded": "bachelor"
+  },
+  "methods": {
+    "none": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true
+    },
+    "fixed_middle": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true
+    },
+    "localized_only": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true
+    },
+    "full_region_agreement": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true
+    },
+    "contextual_recovery": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true
+    }
+  },
+  "elapsed_seconds": 5.527637248000019
+}

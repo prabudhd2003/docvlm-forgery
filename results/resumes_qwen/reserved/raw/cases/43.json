@@ -1,0 +1,125 @@
+{
+  "case_id": "clean_43",
+  "family": "clean",
+  "epsilon_255": 0,
+  "attack_target": null,
+  "record_id": "resume_parsing_vision/validation/r00732",
+  "clean_target": "bachelor",
+  "page_count": 2,
+  "regions": [
+    {
+      "raw": "```json\n{\n  \"boxes\": []\n}\n```",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [],
+      "pairs": [],
+      "status": "no_education",
+      "attempts": [
+        {
+          "raw": "```json\n{\n  \"boxes\": []\n}\n```",
+          "status": "valid"
+        }
+      ],
+      "page": 0
+    },
+    {
+      "raw": "```json\n{\n  \"boxes\": [\n    {\n      \"left\": 295,\n      \"top\": 723,\n      \"right\": 767,\n      \"bottom\": 740\n    },\n    {\n      \"left\": 295,\n      \"top\": 740,\n      \"right\": 767,\n      \"bottom\": 757\n    },\n    {\n      \"left\": 295,\n      \"top\": 757,\n      \"right\": 767,\n      \"bottom\": 774\n    }\n  ]\n}\n```",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [
+        [
+          0,
+          1080,
+          1242,
+          1105
+        ],
+        [
+          0,
+          1105,
+          1242,
+          1130
+        ],
+        [
+          0,
+          1130,
+          1242,
+          1156
+        ]
+      ],
+      "pairs": [
+        [
+          [
+            0,
+            873,
+            1242,
+            1363
+          ],
+          [
+            0,
+            785,
+            1242,
+            1451
+          ]
+        ]
+      ],
+      "status": "ok",
+      "attempts": [
+        {
+          "raw": "```json\n{\"boxes\": [[302, 719, 656, 740], [302, 745, 656, 766], [302, 771, 656, 792], [302, 797, 656, 818], [302, 823, 656, 844], [302, 849, 656, 870], [302, 875, 656, 896], [302, 899, 656, 920], [302, 925, 656, 946], [302, 951, 656, 972], [302, 977, 656, 998], [302, 1003, 656, 1024], [302, 1029, 656, 1050], [302, 1055, 656, 1076], [302, 1081, 656, 1102], [302, 1107, 656, 1128], [302, 1133, 656, 1154], [302, 1159, 656, 1180], [302, 1185, 656, 1206], [302, 1211, 656, 1232], [302, 1237, 656, 1258], [302, 1263, 656, 1284], [302, 1289, 656, 1310], [302, 1315, 656, 1336], [302, 1341, 656, 1362], [302, 1367, 656, 1388], [302, 1393, 656, 1414], [302, 1419, 656, 1440], [302, 1445, 656, 1466], [302, 1471, 656, 1492], [302, 1497, 656, 1518], [302, 1523, 656, 1544], [302, 1549, 656, 1570], [302, 1575, 656, 1596], [302, 1601, 656, 1622], [302, 1627, 65",
+          "status": "invalid",
+          "error": "Expecting value: line 1 column 1 (char 0)"
+        },
+        {
+          "raw": "```json\n{\n  \"boxes\": [\n    {\n      \"left\": 295,\n      \"top\": 723,\n      \"right\": 767,\n      \"bottom\": 740\n    },\n    {\n      \"left\": 295,\n      \"top\": 740,\n      \"right\": 767,\n      \"bottom\": 757\n    },\n    {\n      \"left\": 295,\n      \"top\": 757,\n      \"right\": 767,\n      \"bottom\": 774\n    }\n  ]\n}\n```",
+          "status": "valid"
+        }
+      ],
+      "page": 1
+    }
+  ],
+  "crop_count": 1,
+  "localization_valid": true,
+  "raw_answers": {
+    "full": "bachelor",
+    "fixed": "bachelor",
+    "localized": "bachelor",
+    "expanded": "bachelor"
+  },
+  "methods": {
+    "none": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "fixed_middle": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "localized_only": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "full_region_agreement": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "contextual_recovery": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    }
+  },
+  "elapsed_seconds": 38.866531886000075
+}

@@ -1,0 +1,99 @@
+{
+  "record_id": "resume_parsing_vision/validation/r00018",
+  "clean_target": "master",
+  "page_count": 2,
+  "regions": [
+    {
+      "page": 0,
+      "raw": "There are no regions stating completed education qualifications or awarded degrees on this resume page.",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [],
+      "pairs": [],
+      "status": "no_education"
+    },
+    {
+      "page": 1,
+      "raw": "```json\n[\n    {\n        \"left\": 235,\n        \"top\": 342,\n        \"right\": 419,\n        \"bottom\": 360\n    },\n    {\n        \"left\": 235,\n        \"top\": 398,\n        \"right\": 419,\n        \"bottom\": 416\n    },\n    {\n        \"left\": 235,\n        \"top\": 464,\n        \"right\": 419,\n        \"bottom\": 482\n    }\n]\n```",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [
+        [
+          0,
+          511,
+          1242,
+          538
+        ],
+        [
+          0,
+          594,
+          1242,
+          621
+        ],
+        [
+          0,
+          693,
+          1242,
+          720
+        ]
+      ],
+      "pairs": [
+        [
+          [
+            0,
+            305,
+            1242,
+            926
+          ],
+          [
+            0,
+            217,
+            1242,
+            1014
+          ]
+        ]
+      ],
+      "status": "ok"
+    }
+  ],
+  "crop_count": 1,
+  "localization_valid": true,
+  "raw_answers": {
+    "full": "master",
+    "fixed": "postgraduate",
+    "localized": "master",
+    "expanded": "master"
+  },
+  "methods": {
+    "none": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true
+    },
+    "fixed_middle": {
+      "prediction": "postgraduate",
+      "correct": false,
+      "accepted": true
+    },
+    "localized_only": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true
+    },
+    "full_region_agreement": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true
+    },
+    "contextual_recovery": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true
+    }
+  },
+  "elapsed_seconds": 7.5914433210000425
+}

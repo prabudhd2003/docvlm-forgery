@@ -1,0 +1,237 @@
+{
+  "record_id": "collected_receipts/external_test/c00019",
+  "dataset": "collected_receipts",
+  "family": "standard",
+  "epsilon": 16,
+  "clean_target": "120.00",
+  "attack_target": "1200.00",
+  "input_sha256": "17def51b81c26c0b49a2afc4fa5f86651a90e8c85eab1bbf7e817b8fe227ded9",
+  "methods": {
+    "none": {
+      "prediction": "120.00",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "jpeg": {
+      "prediction": "120.00",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "resize_vote": {
+      "prediction": "120.00",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "selective_multiview": {
+      "prediction": "120.00",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "semantic_consistency": {
+      "prediction": "120.00",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "ocr_only": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "evidence": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "fixed_band": {
+      "prediction": "0.00",
+      "accepted": true,
+      "correct": false,
+      "targeted": false
+    },
+    "band_answer": {
+      "prediction": "120.00",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "band_agreement": {
+      "prediction": "120.00",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "verified_recovery": {
+      "prediction": "120.00",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "smaller_expansion": {
+      "prediction": "120.00",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "taller_18": {
+      "prediction": "120.00",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "taller_24": {
+      "prediction": "120.00",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    }
+  },
+  "variants": {
+    "smaller_expansion": {
+      "boxes": [
+        [
+          0,
+          3152,
+          1524,
+          3611
+        ],
+        [
+          0,
+          3114,
+          1524,
+          3649
+        ]
+      ],
+      "answers": [
+        "120.00",
+        "120.00"
+      ]
+    },
+    "taller_18": {
+      "boxes": [
+        [
+          0,
+          3038,
+          1524,
+          3726
+        ],
+        [
+          0,
+          2923,
+          1524,
+          3823
+        ]
+      ],
+      "answers": [
+        "120.00",
+        "120.00"
+      ]
+    },
+    "taller_24": {
+      "boxes": [
+        [
+          0,
+          2905,
+          1524,
+          3823
+        ],
+        [
+          0,
+          2790,
+          1524,
+          3823
+        ]
+      ],
+      "answers": [
+        "120.00",
+        "120.00"
+      ]
+    }
+  },
+  "crops": [
+    {
+      "box": [
+        0,
+        3152,
+        1524,
+        3611
+      ],
+      "prediction": "120.00",
+      "raw": "$120.00",
+      "reused": true
+    },
+    {
+      "box": [
+        0,
+        3037,
+        1524,
+        3726
+      ],
+      "prediction": "120.00",
+      "raw": "$120.00",
+      "reused": true
+    },
+    {
+      "box": [
+        0,
+        3114,
+        1524,
+        3649
+      ],
+      "prediction": "120.00",
+      "raw": "$120.00",
+      "reused": false
+    },
+    {
+      "box": [
+        0,
+        3038,
+        1524,
+        3726
+      ],
+      "prediction": "120.00",
+      "raw": "$120.00",
+      "reused": false
+    },
+    {
+      "box": [
+        0,
+        2923,
+        1524,
+        3823
+      ],
+      "prediction": "120.00",
+      "raw": "$120.00",
+      "reused": false
+    },
+    {
+      "box": [
+        0,
+        2905,
+        1524,
+        3823
+      ],
+      "prediction": "120.00",
+      "raw": "$120.00",
+      "reused": false
+    },
+    {
+      "box": [
+        0,
+        2790,
+        1524,
+        3823
+      ],
+      "prediction": "120.00",
+      "raw": "$120.00",
+      "reused": false
+    }
+  ],
+  "elapsed_seconds": 1.9457474820000016
+}

@@ -1,0 +1,88 @@
+{
+  "record_id": "resume_parsing_vision/validation/r00941",
+  "clean_target": "bachelor",
+  "page_count": 1,
+  "regions": [
+    {
+      "raw": "```json\n{\n  \"boxes\": [\n    {\n      \"left\": 52,\n      \"top\": 390,\n      \"right\": 788,\n      \"bottom\": 408\n    },\n    {\n      \"left\": 52,\n      \"top\": 414,\n      \"right\": 788,\n      \"bottom\": 428\n    }\n  ]\n}\n```",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [
+        [
+          0,
+          582,
+          1242,
+          609
+        ],
+        [
+          0,
+          618,
+          1242,
+          639
+        ]
+      ],
+      "pairs": [
+        [
+          [
+            0,
+            376,
+            1242,
+            848
+          ],
+          [
+            0,
+            288,
+            1242,
+            936
+          ]
+        ]
+      ],
+      "status": "ok",
+      "attempts": [
+        {
+          "raw": "```json\n{\n  \"boxes\": [\n    {\n      \"left\": 52,\n      \"top\": 390,\n      \"right\": 788,\n      \"bottom\": 408\n    },\n    {\n      \"left\": 52,\n      \"top\": 414,\n      \"right\": 788,\n      \"bottom\": 428\n    }\n  ]\n}\n```",
+          "status": "valid"
+        }
+      ],
+      "page": 0
+    }
+  ],
+  "crop_count": 1,
+  "localization_valid": true,
+  "raw_answers": {
+    "full": "bachelor",
+    "fixed": "bachelor",
+    "localized": "bachelor",
+    "expanded": "bachelor"
+  },
+  "methods": {
+    "none": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true
+    },
+    "fixed_middle": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true
+    },
+    "localized_only": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true
+    },
+    "full_region_agreement": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true
+    },
+    "contextual_recovery": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true
+    }
+  },
+  "elapsed_seconds": 5.227956210000002
+}

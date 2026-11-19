@@ -1,0 +1,596 @@
+{
+  "contract": "8e7e5c489930d2dfa4ab8804b9f9552740637ad48f3a66d4e75a81101c2a8f17",
+  "record_id": "resume_parsing_vision/validation/r00599",
+  "clean_target": "bachelor",
+  "attack_target": "master",
+  "method_attacked": "contextual_recovery",
+  "epsilon_255": 8,
+  "restart": 0,
+  "steps": 100,
+  "queries": 40,
+  "runtime_seconds": 1234.312386131,
+  "linf_255": 8,
+  "images": [
+    {
+      "path": "runs/9d95a89f76bdc0b3687f028e91eacbfd924174db98cd13813a28c536d69c565d/page_00.png",
+      "sha256": "eeaa5716e592115630bbe148cb5a41d354312236eec97481a4c06a8e83210e14"
+    },
+    {
+      "path": "runs/9d95a89f76bdc0b3687f028e91eacbfd924174db98cd13813a28c536d69c565d/page_01.png",
+      "sha256": "46c9b2d6d8f2683948bf74bc506d70a08f5a3dc5e3096e910fd693a576e2948b"
+    }
+  ],
+  "candidate_rank": [
+    0,
+    0
+  ],
+  "saved_png_matches_candidate": true,
+  "methods": {
+    "none": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "localized_only": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "full_region_agreement": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "contextual_recovery": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    }
+  },
+  "raw_answers": {
+    "full": "bachelor",
+    "localized": "bachelor",
+    "expanded": "bachelor"
+  },
+  "regions": [
+    {
+      "raw": "```json\n{\n  \"boxes\": [\n    [73, 1125, 386, 1139],\n    [73, 1142, 767, 1163]\n  ]\n}\n```",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [
+        [
+          0,
+          1680,
+          1242,
+          1701
+        ],
+        [
+          0,
+          1705,
+          1242,
+          1737
+        ]
+      ],
+      "pairs": [
+        [
+          [
+            0,
+            1317,
+            1242,
+            1756
+          ],
+          [
+            0,
+            1229,
+            1242,
+            1756
+          ]
+        ]
+      ],
+      "status": "ok",
+      "attempts": [
+        {
+          "raw": "```json\n{\n  \"boxes\": [\n    [\n      73, 112, 765, 116,\n      \"Summary\"\n    ],\n    [\n      73, 212, 765, 216,\n      \"Experience\"\n    ],\n    [\n      73, 309, 765, 313,\n      \"Junior Full Stack Developer \u2014 Silkbridge Software Studio\\nTashkent, Uzbekistan\\nJan 2025 - Present\\nBuilds and maintains features across the front end and back end of an internal product suite. Picks up bug fixes, writes endpoints, and wires up interfaces under senior review. Joins code reviews to learn the team's conventions and sharpen habits.\"\n    ],\n    [\n      73, 406, 765, 410,\n      \"Web Developer (Contract) \u2014 Oasis Logic Technologies\\nSamarkand, Uzbekistan\\nJun 2024 - Dec 2024\\nDelivered responsive interfaces and small services for client-facing web tools on short timelines.\\nTranslated rough mockups into working pages and connected them to existing APIs. Fixed layout and data issues flagged during client demos.\"\n    ],\n    [\n      73, 503, 765, 507,\n      \"Junior Software Developer \u2014 Greenmarket Apps Collective\\nTashkent, Uzbekistan\\nOct 2023 - Apr 2024\\nStarted out fixing defects and adding minor features to a growing web application. Wrote simple data queries and learned version-control discipline on a shared codebase. Gradually took on whole small tickets end to end.\"\n    ],\n    [\n      73, 610, 765, 614,\n      \"Projects\"\n    ],\n    [\n      73, 697, 765, 701,\n      \"Team Workflow Dashboard\\nBuilt a shared dashboard that pulled task and deployment status into one view for a software team. As full stack developer, shaped both the interface and the services feeding it. Made the daily standup faster by surfacing blockers automatically.\\nTech: TypeScript, Ansible, WCF, Photoshop, Nginx\"\n    ],\n    [\n      73, 784, 765, 788,\n      \"Green Grid Monitor\\nWorked on a monitoring tool tracking output from small renewable installations with an eye on secure access. As full stack developer, built the data pipeline and a clean operator view. Added safeguards so only authorized users could change thresholds.\\nTech: Rust, Html, Haskell, Scala, Ruby\"\n    ],\n    [\n      73, 871, 765, 875,\n      \"Course Trainer Portal\\nHelped build a portal where trainers scheduled sessions and tracked learner progress. As full stack developer, delivered booking flows and automated the build-and-release path. Tightened feedback loops so fixes reached users within the day.\\nTech: Vue.js, Agile Scrum, Kotlin, CI/CD (Gitlab, Jenkins), Ruby\"\n    ],\n    [\n      73, 1032, 765, 1036,\n      \"Education\"\n    ],\n    [\n      73, 1123, 765, 1127,\n      \"Bachelor of Science in Software Engineering\\n2020 - 2022\"\n    ]\n  ]\n}\n```",
+          "status": "invalid",
+          "error": "Invalid box representation"
+        },
+        {
+          "raw": "```json\n{\n  \"boxes\": [\n    [73, 1125, 386, 1139],\n    [73, 1142, 767, 1163]\n  ]\n}\n```",
+          "status": "valid"
+        }
+      ],
+      "page": 0
+    },
+    {
+      "raw": "```json\n{\n  \"boxes\": [\n    {\n      \"left\": 72,\n      \"top\": 30,\n      \"right\": 759,\n      \"bottom\": 67\n    },\n    {\n      \"left\": 72,\n      \"top\": 72,\n      \"right\": 759,\n      \"bottom\": 109\n    }\n  ]\n}\n```",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [
+        [
+          0,
+          45,
+          1242,
+          100
+        ],
+        [
+          0,
+          108,
+          1242,
+          163
+        ]
+      ],
+      "pairs": [
+        [
+          [
+            0,
+            0,
+            1242,
+            439
+          ],
+          [
+            0,
+            0,
+            1242,
+            527
+          ]
+        ]
+      ],
+      "status": "ok",
+      "attempts": [
+        {
+          "raw": "```json\n{\n  \"boxes\": [\n    {\n      \"left\": 72,\n      \"top\": 30,\n      \"right\": 759,\n      \"bottom\": 67\n    },\n    {\n      \"left\": 72,\n      \"top\": 72,\n      \"right\": 759,\n      \"bottom\": 109\n    }\n  ]\n}\n```",
+          "status": "valid"
+        }
+      ],
+      "page": 1
+    }
+  ],
+  "crop_count": 2,
+  "localization_valid": true,
+  "diagnostics": {
+    "surrogate_mean_max": 0.003967144526541233,
+    "steps_on_regions": 100,
+    "steps_on_full_pages": 0
+  },
+  "trace": [
+    {
+      "phase": "initial",
+      "step": 0,
+      "query": 1,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 2,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "gradient",
+      "step": 10,
+      "query": 2,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 2,
+      "surrogate_loss": 6.828125
+    },
+    {
+      "phase": "gradient",
+      "step": 20,
+      "query": 3,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 2,
+      "surrogate_loss": 4.953125
+    },
+    {
+      "phase": "gradient",
+      "step": 30,
+      "query": 4,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 2,
+      "surrogate_loss": 5.5
+    },
+    {
+      "phase": "gradient",
+      "step": 40,
+      "query": 5,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 2,
+      "surrogate_loss": 6.171875
+    },
+    {
+      "phase": "gradient",
+      "step": 50,
+      "query": 6,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 2,
+      "surrogate_loss": 5.046875
+    },
+    {
+      "phase": "gradient",
+      "step": 60,
+      "query": 7,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 2,
+      "surrogate_loss": 5.921875
+    },
+    {
+      "phase": "gradient",
+      "step": 70,
+      "query": 8,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 2,
+      "surrogate_loss": 6.3125
+    },
+    {
+      "phase": "gradient",
+      "step": 80,
+      "query": 9,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 2,
+      "surrogate_loss": 3.8515625
+    },
+    {
+      "phase": "gradient",
+      "step": 90,
+      "query": 10,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 2,
+      "surrogate_loss": 5.265625
+    },
+    {
+      "phase": "gradient",
+      "step": 100,
+      "query": 11,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 2,
+      "surrogate_loss": 5.640625
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 12,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 2,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 13,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 2,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 14,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 2,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 15,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 2,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 16,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 2,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 17,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 2,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 18,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 2,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 19,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 2,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 20,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 2,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 21,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 2,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 22,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 2,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 23,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 2,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 24,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 2,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 25,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 2,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 26,
+      "prediction": "associate",
+      "crop": "associate",
+      "wide": "associate",
+      "localization_valid": true,
+      "crops": 2,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 27,
+      "prediction": "associate",
+      "crop": "associate",
+      "wide": "associate",
+      "localization_valid": true,
+      "crops": 2,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 28,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 2,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 29,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 2,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 30,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 2,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 31,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 2,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 32,
+      "prediction": "associate",
+      "crop": "associate",
+      "wide": "associate",
+      "localization_valid": true,
+      "crops": 2,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 33,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 2,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 34,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 2,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 35,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 2,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 36,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 2,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 37,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 2,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 38,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 2,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 39,
+      "prediction": "associate",
+      "crop": "associate",
+      "wide": "associate",
+      "localization_valid": true,
+      "crops": 2,
+      "surrogate_loss": null
+    }
+  ],
+  "clean_recovery": "correct",
+  "attack_note": "Bounded surrogate PGD on localized and expanded views plus verifier query search. Boxes fixed between verifier queries. Not an exhaustive adaptive attack or a robustness certificate."
+}

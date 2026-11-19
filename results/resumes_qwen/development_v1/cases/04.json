@@ -1,0 +1,63 @@
+{
+  "record_id": "resume_parsing_vision/validation/r00773",
+  "clean_target": "bachelor",
+  "page_count": 2,
+  "regions": [
+    {
+      "page": 0,
+      "raw": "There are no regions indicating completed education qualifications or awarded degrees on this resume page.",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "status": "invalid",
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "page": 1,
+      "raw": "```json\n[\n  {\n    \"boxes\": [\n      [65, 372, 455, 392]\n    ]\n  },\n  {\n    \"boxes\": [\n      [65, 424, 455, 443]\n    ]\n  }\n]\n```",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "status": "invalid",
+      "error": "list indices must be integers or slices, not str"
+    }
+  ],
+  "crop_count": 0,
+  "localization_valid": false,
+  "raw_answers": {
+    "full": "bachelor",
+    "fixed": "bachelor",
+    "localized": null,
+    "expanded": null
+  },
+  "methods": {
+    "none": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true
+    },
+    "fixed_middle": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true
+    },
+    "localized_only": {
+      "prediction": null,
+      "correct": false,
+      "accepted": false
+    },
+    "full_region_agreement": {
+      "prediction": null,
+      "correct": false,
+      "accepted": false
+    },
+    "contextual_recovery": {
+      "prediction": null,
+      "correct": false,
+      "accepted": false
+    }
+  },
+  "elapsed_seconds": 4.960159764000025
+}

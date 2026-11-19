@@ -1,0 +1,60 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]
+Fetching 2 files: 100%|██████████| 2/2 [00:00<00:00, 973.04it/s]
+
+Loading weights:   0%|          | 0/824 [00:00<?, ?it/s]
+Loading weights:  23%|██▎       | 186/824 [00:00<00:00, 1857.26it/s]
+Loading weights: 100%|██████████| 824/824 [00:00<00:00, 5633.72it/s]
+1/15 resume_parsing_vision/validation/r00708 pages=1 regions=1 {'none': 'bachelor', 'fixed_middle': 'bachelor', 'localized_only': 'bachelor', 'full_region_agreement': 'bachelor', 'contextual_recovery': 'bachelor'}
+2/15 resume_parsing_vision/validation/r00483 pages=2 regions=1 {'none': 'master', 'fixed_middle': 'master', 'localized_only': 'master', 'full_region_agreement': 'master', 'contextual_recovery': 'master'}
+3/15 resume_parsing_vision/validation/r00387 pages=2 regions=1 {'none': 'master', 'fixed_middle': 'associate', 'localized_only': None, 'full_region_agreement': None, 'contextual_recovery': None}
+4/15 resume_parsing_vision/validation/r00183 pages=2 regions=1 {'none': 'master', 'fixed_middle': 'bachelor', 'localized_only': 'master', 'full_region_agreement': 'master', 'contextual_recovery': 'master'}
+5/15 resume_parsing_vision/validation/r00773 pages=2 regions=1 {'none': 'bachelor', 'fixed_middle': 'bachelor', 'localized_only': 'bachelor', 'full_region_agreement': 'bachelor', 'contextual_recovery': 'bachelor'}
+6/15 resume_parsing_vision/validation/r00983 pages=2 regions=1 {'none': 'bachelor', 'fixed_middle': 'bachelor', 'localized_only': 'associate', 'full_region_agreement': None, 'contextual_recovery': None}
+7/15 resume_parsing_vision/validation/r00045 pages=1 regions=1 {'none': 'bachelor', 'fixed_middle': 'bachelor', 'localized_only': 'bachelor', 'full_region_agreement': 'bachelor', 'contextual_recovery': 'bachelor'}
+8/15 resume_parsing_vision/validation/r00520 pages=1 regions=1 {'none': 'bachelor', 'fixed_middle': 'bachelor', 'localized_only': 'bachelor', 'full_region_agreement': 'bachelor', 'contextual_recovery': 'bachelor'}
+9/15 resume_parsing_vision/validation/r00018 pages=2 regions=1 {'none': 'master', 'fixed_middle': 'postgraduate', 'localized_only': 'master', 'full_region_agreement': 'master', 'contextual_recovery': None}
+10/15 resume_parsing_vision/validation/r00065 pages=2 regions=1 {'none': 'bachelor', 'fixed_middle': 'associate', 'localized_only': 'bachelor', 'full_region_agreement': 'bachelor', 'contextual_recovery': 'bachelor'}
+11/15 resume_parsing_vision/validation/r00941 pages=1 regions=1 {'none': 'bachelor', 'fixed_middle': 'bachelor', 'localized_only': 'bachelor', 'full_region_agreement': 'bachelor', 'contextual_recovery': 'bachelor'}
+12/15 resume_parsing_vision/validation/r00217 pages=2 regions=2 {'none': 'bachelor', 'fixed_middle': 'associate', 'localized_only': 'bachelor', 'full_region_agreement': 'bachelor', 'contextual_recovery': 'bachelor'}
+13/15 resume_parsing_vision/validation/r00185 pages=2 regions=1 {'none': 'master', 'fixed_middle': 'associate', 'localized_only': 'master', 'full_region_agreement': 'master', 'contextual_recovery': 'master'}
+14/15 resume_parsing_vision/validation/r00739 pages=2 regions=1 {'none': 'bachelor', 'fixed_middle': 'bachelor', 'localized_only': 'bachelor', 'full_region_agreement': 'bachelor', 'contextual_recovery': 'bachelor'}
+15/15 resume_parsing_vision/validation/r00465 pages=2 regions=2 {'none': 'master', 'fixed_middle': 'bachelor', 'localized_only': 'master', 'full_region_agreement': 'master', 'contextual_recovery': 'master'}
+[
+  {
+    "method": "none",
+    "n": 15,
+    "correct": 15,
+    "wrong": 0,
+    "rejected": 0
+  },
+  {
+    "method": "fixed_middle",
+    "n": 15,
+    "correct": 8,
+    "wrong": 7,
+    "rejected": 0
+  },
+  {
+    "method": "localized_only",
+    "n": 15,
+    "correct": 13,
+    "wrong": 1,
+    "rejected": 1
+  },
+  {
+    "method": "full_region_agreement",
+    "n": 15,
+    "correct": 13,
+    "wrong": 0,
+    "rejected": 2
+  },
+  {
+    "method": "contextual_recovery",
+    "n": 15,
+    "correct": 12,
+    "wrong": 0,
+    "rejected": 3
+  }
+]

@@ -1,0 +1,148 @@
+{
+  "case_id": "resume_parsing_vision_validation_r00018__qwen__resume_highest_degree__pgd__eps-16__seed-566",
+  "family": "standard",
+  "epsilon_255": 16,
+  "attack_target": "doctorate",
+  "record_id": "resume_parsing_vision/validation/r00018",
+  "clean_target": "master",
+  "page_count": 2,
+  "regions": [
+    {
+      "raw": "```json\n{\n  \"boxes\": [\n    {\n      \"left\": 23,\n      \"top\": 59,\n      \"right\": 817,\n      \"bottom\": 108\n    }\n  ]\n}\n```",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [
+        [
+          0,
+          88,
+          1242,
+          161
+        ]
+      ],
+      "pairs": [
+        [
+          [
+            0,
+            0,
+            1242,
+            439
+          ],
+          [
+            0,
+            0,
+            1242,
+            527
+          ]
+        ]
+      ],
+      "status": "ok",
+      "attempts": [
+        {
+          "raw": "```json\n{\n  \"boxes\": [\n    {\n      \"left\": 23,\n      \"top\": 59,\n      \"right\": 817,\n      \"bottom\": 108\n    }\n  ]\n}\n```",
+          "status": "valid"
+        }
+      ],
+      "page": 0
+    },
+    {
+      "raw": "```json\n{\n    \"boxes\": [\n        {\n            \"left\": 92,\n            \"top\": 305,\n            \"right\": 418,\n            \"bottom\": 325\n        },\n        {\n            \"left\": 92,\n            \"top\": 325,\n            \"right\": 418,\n            \"bottom\": 345\n        },\n        {\n            \"left\": 92,\n            \"top\": 345,\n            \"right\": 418,\n            \"bottom\": 365\n        },\n        {\n            \"left\": 92,\n            \"top\": 365,\n            \"right\": 418,\n            \"bottom\": 385\n        }\n    ]\n}\n```",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [
+        [
+          0,
+          455,
+          1242,
+          485
+        ],
+        [
+          0,
+          485,
+          1242,
+          515
+        ],
+        [
+          0,
+          515,
+          1242,
+          545
+        ],
+        [
+          0,
+          545,
+          1242,
+          575
+        ]
+      ],
+      "pairs": [
+        [
+          [
+            0,
+            250,
+            1242,
+            779
+          ],
+          [
+            0,
+            162,
+            1242,
+            867
+          ]
+        ]
+      ],
+      "status": "ok",
+      "attempts": [
+        {
+          "raw": "```json\n{\n    \"boxes\": [\n        {\n            \"left\": 92,\n            \"top\": 305,\n            \"right\": 418,\n            \"bottom\": 325\n        },\n        {\n            \"left\": 92,\n            \"top\": 325,\n            \"right\": 418,\n            \"bottom\": 345\n        },\n        {\n            \"left\": 92,\n            \"top\": 345,\n            \"right\": 418,\n            \"bottom\": 365\n        },\n        {\n            \"left\": 92,\n            \"top\": 365,\n            \"right\": 418,\n            \"bottom\": 385\n        }\n    ]\n}\n```",
+          "status": "valid"
+        }
+      ],
+      "page": 1
+    }
+  ],
+  "crop_count": 2,
+  "localization_valid": true,
+  "raw_answers": {
+    "full": "master",
+    "fixed": "postgraduate",
+    "localized": "master",
+    "expanded": "master"
+  },
+  "methods": {
+    "none": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "fixed_middle": {
+      "prediction": "postgraduate",
+      "correct": false,
+      "accepted": true,
+      "targeted": false
+    },
+    "localized_only": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "full_region_agreement": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "contextual_recovery": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    }
+  },
+  "elapsed_seconds": 13.10075284100003
+}

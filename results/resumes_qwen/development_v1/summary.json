@@ -1,0 +1,41 @@
+{
+  "complete": true,
+  "groups": [
+    {
+      "method": "none",
+      "n": 15,
+      "correct": 15,
+      "wrong": 0,
+      "rejected": 0
+    },
+    {
+      "method": "fixed_middle",
+      "n": 15,
+      "correct": 8,
+      "wrong": 7,
+      "rejected": 0
+    },
+    {
+      "method": "localized_only",
+      "n": 15,
+      "correct": 0,
+      "wrong": 0,
+      "rejected": 15
+    },
+    {
+      "method": "full_region_agreement",
+      "n": 15,
+      "correct": 0,
+      "wrong": 0,
+      "rejected": 15
+    },
+    {
+      "method": "contextual_recovery",
+      "n": 15,
+      "correct": 0,
+      "wrong": 0,
+      "rejected": 15
+    }
+  ],
+  "note": "Clean development only; no adversarial robustness claim. Other 60 resumes excluded."
+}

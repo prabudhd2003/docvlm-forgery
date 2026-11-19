@@ -1,0 +1,60 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]
+Fetching 2 files: 100%|██████████| 2/2 [00:00<00:00, 969.89it/s]
+
+Loading weights:   0%|          | 0/824 [00:00<?, ?it/s]
+Loading weights:  42%|████▏     | 347/824 [00:00<00:00, 3468.96it/s]
+Loading weights: 100%|██████████| 824/824 [00:00<00:00, 6638.94it/s]
+RESUME 1/15
+RESUME 2/15
+RESUME 3/15
+RESUME 4/15
+RESUME 5/15
+RESUME 6/15
+RESUME 7/15
+RESUME 8/15
+RESUME 9/15
+RESUME 10/15
+RESUME 11/15
+RESUME 12/15
+RESUME 13/15
+RESUME 14/15
+RESUME 15/15
+[
+  {
+    "method": "none",
+    "n": 15,
+    "correct": 15,
+    "wrong": 0,
+    "rejected": 0
+  },
+  {
+    "method": "fixed_middle",
+    "n": 15,
+    "correct": 8,
+    "wrong": 7,
+    "rejected": 0
+  },
+  {
+    "method": "localized_only",
+    "n": 15,
+    "correct": 9,
+    "wrong": 0,
+    "rejected": 6
+  },
+  {
+    "method": "full_region_agreement",
+    "n": 15,
+    "correct": 9,
+    "wrong": 0,
+    "rejected": 6
+  },
+  {
+    "method": "contextual_recovery",
+    "n": 15,
+    "correct": 9,
+    "wrong": 0,
+    "rejected": 6
+  }
+]

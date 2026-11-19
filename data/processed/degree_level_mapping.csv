@@ -1,0 +1,84 @@
+raw_degree,count,canonical_level,rank
+A-Levels,19,secondary,0
+Secondary Diploma,9,secondary,0
+Abitur,7,secondary,0
+High School Diploma,4,secondary,0
+Secondary Certificate,4,secondary,0
+Secondary Education Certificate,2,secondary,0
+BTEC Extended Diploma,1,secondary,0
+Higher Secondary Certificate,1,secondary,0
+Secondary School Diploma,1,secondary,0
+Secondary Specialized Certificate,1,secondary,0
+Secondary Technical Certificate,1,secondary,0
+Secondary Vocational Certificate,1,secondary,0
+Secondary Vocational Diploma,1,secondary,0
+Diploma,191,certificate_or_diploma,1
+Vocational Diploma,46,certificate_or_diploma,1
+Professional Diploma,44,certificate_or_diploma,1
+Certificate of Higher Education,29,certificate_or_diploma,1
+Foundation Diploma,29,certificate_or_diploma,1
+Vocational Certificate,20,certificate_or_diploma,1
+Foundation Certificate,17,certificate_or_diploma,1
+Certificate,16,certificate_or_diploma,1
+Certificate of Completion,12,certificate_or_diploma,1
+Professional Certificate,11,certificate_or_diploma,1
+Technical Diploma,4,certificate_or_diploma,1
+Advanced Certificate,2,certificate_or_diploma,1
+Certificate of Higher Studies,2,certificate_or_diploma,1
+Certificate of Study,2,certificate_or_diploma,1
+Certificate Programme,1,certificate_or_diploma,1
+Certificate of Foundation Studies,1,certificate_or_diploma,1
+Certificate of Vocational Training,1,certificate_or_diploma,1
+Diploma in Informatics,1,certificate_or_diploma,1
+Diploma of Engineering,1,certificate_or_diploma,1
+Engineer Diploma,1,certificate_or_diploma,1
+Higher National Certificate,1,certificate_or_diploma,1
+Professional Certificate Programme,1,certificate_or_diploma,1
+Professional Certificate of Study,1,certificate_or_diploma,1
+Short Course Certificate,1,certificate_or_diploma,1
+Associate Diploma,40,associate,2
+Associate of Applied Science,31,associate,2
+Associate of Science,31,associate,2
+Associate Degree,23,associate,2
+Foundation Degree,17,associate,2
+Higher National Diploma,14,associate,2
+Advanced Diploma,13,associate,2
+Associate of Arts,9,associate,2
+Higher Diploma,2,associate,2
+Associate,1,associate,2
+Associate degree,1,associate,2
+Diploma of Higher Education,1,associate,2
+HND,1,associate,2
+Bachelor of Science,679,bachelor,3
+Bachelor of Arts,94,bachelor,3
+Bachelor of Engineering,58,bachelor,3
+BSc,35,bachelor,3
+Bachelor,24,bachelor,3
+Bachelor of Business Administration,16,bachelor,3
+BS,4,bachelor,3
+Bachelor's degree,4,bachelor,3
+Professional Bachelor,3,bachelor,3
+BA,2,bachelor,3
+BBA,1,bachelor,3
+Bachelor of Economics,1,bachelor,3
+Bachelor of Fine Arts,1,bachelor,3
+Bachelor's Degree,1,bachelor,3
+Postgraduate Diploma,17,postgraduate,4
+Postgraduate Certificate,11,postgraduate,4
+Certificate of Advanced Study,3,postgraduate,4
+Certificate of Graduate Study,1,postgraduate,4
+Graduate Certificate,1,postgraduate,4
+Specialist Diploma,1,postgraduate,4
+Master of Science,303,master,5
+Master of Business Administration,26,master,5
+Master of Arts,21,master,5
+MSc,16,master,5
+Diplom,12,master,5
+Master,4,master,5
+Master of Engineering,4,master,5
+Diplom (Master equivalent),1,master,5
+Diplom-Ingenieur,1,master,5
+MBA,1,master,5
+MS,1,master,5
+Master of Fine Arts,1,master,5
+Doctor of Philosophy,8,doctorate,6

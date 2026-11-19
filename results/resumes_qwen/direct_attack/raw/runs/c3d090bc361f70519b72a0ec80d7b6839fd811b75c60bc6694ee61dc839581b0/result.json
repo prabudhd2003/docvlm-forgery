@@ -1,0 +1,548 @@
+{
+  "contract": "8e7e5c489930d2dfa4ab8804b9f9552740637ad48f3a66d4e75a81101c2a8f17",
+  "record_id": "resume_parsing_vision/validation/r00288",
+  "clean_target": "master",
+  "attack_target": "doctorate",
+  "method_attacked": "contextual_recovery",
+  "epsilon_255": 8,
+  "restart": 1,
+  "steps": 100,
+  "queries": 40,
+  "runtime_seconds": 496.62722660299994,
+  "linf_255": 8,
+  "images": [
+    {
+      "path": "runs/c3d090bc361f70519b72a0ec80d7b6839fd811b75c60bc6694ee61dc839581b0/page_00.png",
+      "sha256": "10544dc6a11aa1945123590c0f560432f697cb3c4f94c71967a1a72db92d12fb"
+    }
+  ],
+  "candidate_rank": [
+    0,
+    0
+  ],
+  "saved_png_matches_candidate": true,
+  "methods": {
+    "none": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "localized_only": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "full_region_agreement": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "contextual_recovery": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    }
+  },
+  "raw_answers": {
+    "full": "master",
+    "localized": "master",
+    "expanded": "master"
+  },
+  "regions": [
+    {
+      "raw": "```json\n{\n  \"boxes\": [\n    {\n      \"left\": 235,\n      \"top\": 690,\n      \"right\": 585,\n      \"bottom\": 695\n    },\n    {\n      \"left\": 235,\n      \"top\": 700,\n      \"right\": 585,\n      \"bottom\": 705\n    },\n    {\n      \"left\": 235,\n      \"top\": 710,\n      \"right\": 585,\n      \"bottom\": 715\n    }\n  ]\n}\n```",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [
+        [
+          0,
+          1030,
+          1242,
+          1038
+        ],
+        [
+          0,
+          1045,
+          1242,
+          1053
+        ],
+        [
+          0,
+          1060,
+          1242,
+          1068
+        ]
+      ],
+      "pairs": [
+        [
+          [
+            0,
+            814,
+            1242,
+            1283
+          ],
+          [
+            0,
+            726,
+            1242,
+            1371
+          ]
+        ]
+      ],
+      "status": "ok",
+      "attempts": [
+        {
+          "raw": "```json\n{\n  \"boxes\": [\n    {\n      \"left\": 235,\n      \"top\": 690,\n      \"right\": 585,\n      \"bottom\": 695\n    },\n    {\n      \"left\": 235,\n      \"top\": 700,\n      \"right\": 585,\n      \"bottom\": 705\n    },\n    {\n      \"left\": 235,\n      \"top\": 710,\n      \"right\": 585,\n      \"bottom\": 715\n    }\n  ]\n}\n```",
+          "status": "valid"
+        }
+      ],
+      "page": 0
+    }
+  ],
+  "crop_count": 1,
+  "localization_valid": true,
+  "diagnostics": {
+    "surrogate_mean_max": 0.004054312594234943,
+    "steps_on_regions": 100,
+    "steps_on_full_pages": 0
+  },
+  "trace": [
+    {
+      "phase": "initial",
+      "step": 0,
+      "query": 1,
+      "prediction": "master",
+      "crop": "master",
+      "wide": "master",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "gradient",
+      "step": 10,
+      "query": 2,
+      "prediction": "master",
+      "crop": "master",
+      "wide": "master",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": 5.0234375
+    },
+    {
+      "phase": "gradient",
+      "step": 20,
+      "query": 3,
+      "prediction": "master",
+      "crop": "master",
+      "wide": "master",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": 4.640625
+    },
+    {
+      "phase": "gradient",
+      "step": 30,
+      "query": 4,
+      "prediction": "master",
+      "crop": "master",
+      "wide": "master",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": 5.671875
+    },
+    {
+      "phase": "gradient",
+      "step": 40,
+      "query": 5,
+      "prediction": "master",
+      "crop": "master",
+      "wide": "master",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": 4.59375
+    },
+    {
+      "phase": "gradient",
+      "step": 50,
+      "query": 6,
+      "prediction": "master",
+      "crop": "master",
+      "wide": "master",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": 4.34375
+    },
+    {
+      "phase": "gradient",
+      "step": 60,
+      "query": 7,
+      "prediction": "master",
+      "crop": "master",
+      "wide": "master",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": 4.1953125
+    },
+    {
+      "phase": "gradient",
+      "step": 70,
+      "query": 8,
+      "prediction": "master",
+      "crop": "master",
+      "wide": "master",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": 5.046875
+    },
+    {
+      "phase": "gradient",
+      "step": 80,
+      "query": 9,
+      "prediction": "master",
+      "crop": "master",
+      "wide": "master",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": 4.53125
+    },
+    {
+      "phase": "gradient",
+      "step": 90,
+      "query": 10,
+      "prediction": "master",
+      "crop": "master",
+      "wide": "master",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": 5.328125
+    },
+    {
+      "phase": "gradient",
+      "step": 100,
+      "query": 11,
+      "prediction": "master",
+      "crop": "master",
+      "wide": "master",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": 5.515625
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 12,
+      "prediction": "master",
+      "crop": "master",
+      "wide": "master",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 13,
+      "prediction": "master",
+      "crop": "master",
+      "wide": "master",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 14,
+      "prediction": "master",
+      "crop": "master",
+      "wide": "master",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 15,
+      "prediction": "master",
+      "crop": "master",
+      "wide": "master",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 16,
+      "prediction": "master",
+      "crop": "master",
+      "wide": "master",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 17,
+      "prediction": "master",
+      "crop": "master",
+      "wide": "master",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 18,
+      "prediction": "master",
+      "crop": "master",
+      "wide": "master",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 19,
+      "prediction": "master",
+      "crop": "master",
+      "wide": "master",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 20,
+      "prediction": "master",
+      "crop": "master",
+      "wide": "master",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 21,
+      "prediction": "master",
+      "crop": "master",
+      "wide": "master",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 22,
+      "prediction": "master",
+      "crop": "master",
+      "wide": "master",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 23,
+      "prediction": "master",
+      "crop": "master",
+      "wide": "master",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 24,
+      "prediction": "master",
+      "crop": "master",
+      "wide": "master",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 25,
+      "prediction": "master",
+      "crop": "master",
+      "wide": "master",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 26,
+      "prediction": "master",
+      "crop": "master",
+      "wide": "master",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 27,
+      "prediction": "master",
+      "crop": "master",
+      "wide": "master",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 28,
+      "prediction": "master",
+      "crop": "master",
+      "wide": "master",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 29,
+      "prediction": "master",
+      "crop": "master",
+      "wide": "master",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 30,
+      "prediction": "master",
+      "crop": "master",
+      "wide": "master",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 31,
+      "prediction": "master",
+      "crop": "master",
+      "wide": "master",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 32,
+      "prediction": "master",
+      "crop": "master",
+      "wide": "master",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 33,
+      "prediction": "master",
+      "crop": "master",
+      "wide": "master",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 34,
+      "prediction": "master",
+      "crop": "master",
+      "wide": "master",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 35,
+      "prediction": "master",
+      "crop": "master",
+      "wide": "master",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 36,
+      "prediction": "master",
+      "crop": "master",
+      "wide": "master",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 37,
+      "prediction": "master",
+      "crop": "master",
+      "wide": "master",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 38,
+      "prediction": "master",
+      "crop": "master",
+      "wide": "master",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 39,
+      "prediction": "master",
+      "crop": "master",
+      "wide": "master",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    }
+  ],
+  "clean_recovery": "correct",
+  "attack_note": "Bounded surrogate PGD on localized and expanded views plus verifier query search. Boxes fixed between verifier queries. Not an exhaustive adaptive attack or a robustness certificate."
+}

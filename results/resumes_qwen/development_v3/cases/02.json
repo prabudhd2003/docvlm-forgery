@@ -1,0 +1,86 @@
+{
+  "record_id": "resume_parsing_vision/validation/r00387",
+  "clean_target": "master",
+  "page_count": 2,
+  "regions": [
+    {
+      "page": 0,
+      "raw": "```json\n{\n  \"boxes\": [\n    {\n      \"left\": 52,\n      \"top\": 983,\n      \"right\": 420,\n      \"bottom\": 1032\n    }\n  ]\n}\n```",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [
+        [
+          0,
+          1468,
+          1242,
+          1541
+        ]
+      ],
+      "pairs": [
+        [
+          [
+            0,
+            1285,
+            1242,
+            1724
+          ],
+          [
+            0,
+            1197,
+            1242,
+            1756
+          ]
+        ]
+      ],
+      "status": "ok"
+    },
+    {
+      "page": 1,
+      "raw": "```json\n{\n    \"boxes\": [\n        {\n            \"left\": 49,\n            \"top\": 2,\n            \"right\": 532,\n            \"bottom\": 100\n        },\n        {\n            \"left\": 49,\n            \"top\": 102,\n            \"right\": 532,\n            \"bottom\": 100\n        }\n    ]\n}\n```",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "status": "invalid",
+      "error": "Box outside processed image"
+    }
+  ],
+  "crop_count": 1,
+  "localization_valid": false,
+  "raw_answers": {
+    "full": "master",
+    "fixed": "associate",
+    "localized": null,
+    "expanded": null
+  },
+  "methods": {
+    "none": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true
+    },
+    "fixed_middle": {
+      "prediction": "associate",
+      "correct": false,
+      "accepted": true
+    },
+    "localized_only": {
+      "prediction": null,
+      "correct": false,
+      "accepted": false
+    },
+    "full_region_agreement": {
+      "prediction": null,
+      "correct": false,
+      "accepted": false
+    },
+    "contextual_recovery": {
+      "prediction": null,
+      "correct": false,
+      "accepted": false
+    }
+  },
+  "elapsed_seconds": 7.2482805590000225
+}

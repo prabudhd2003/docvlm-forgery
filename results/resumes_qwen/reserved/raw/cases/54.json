@@ -1,0 +1,126 @@
+{
+  "case_id": "clean_54",
+  "family": "clean",
+  "epsilon_255": 0,
+  "attack_target": null,
+  "record_id": "resume_parsing_vision/validation/r00928",
+  "clean_target": "master",
+  "page_count": 2,
+  "regions": [
+    {
+      "raw": "{\"boxes\": []}",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [],
+      "pairs": [],
+      "status": "no_education",
+      "attempts": [
+        {
+          "raw": "{\"boxes\": []}",
+          "status": "valid"
+        }
+      ],
+      "page": 0
+    },
+    {
+      "raw": "```json\n{\n  \"boxes\": [\n    {\n      \"left\": 305,\n      \"top\": 129,\n      \"right\": 775,\n      \"bottom\": 137\n    },\n    {\n      \"left\": 305,\n      \"top\": 180,\n      \"right\": 775,\n      \"bottom\": 188\n    },\n    {\n      \"left\": 305,\n      \"top\": 235,\n      \"right\": 775,\n      \"bottom\": 243\n    },\n    {\n      \"left\": 305,\n      \"top\": 288,\n      \"right\": 775,\n      \"bottom\": 296\n    }\n  ]\n}\n```",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [
+        [
+          0,
+          193,
+          1242,
+          205
+        ],
+        [
+          0,
+          269,
+          1242,
+          281
+        ],
+        [
+          0,
+          351,
+          1242,
+          363
+        ],
+        [
+          0,
+          430,
+          1242,
+          442
+        ]
+      ],
+      "pairs": [
+        [
+          [
+            0,
+            0,
+            1242,
+            655
+          ],
+          [
+            0,
+            0,
+            1242,
+            743
+          ]
+        ]
+      ],
+      "status": "ok",
+      "attempts": [
+        {
+          "raw": "```json\n{\n  \"boxes\": [\n    {\n      \"left\": 305,\n      \"top\": 129,\n      \"right\": 775,\n      \"bottom\": 137\n    },\n    {\n      \"left\": 305,\n      \"top\": 180,\n      \"right\": 775,\n      \"bottom\": 188\n    },\n    {\n      \"left\": 305,\n      \"top\": 235,\n      \"right\": 775,\n      \"bottom\": 243\n    },\n    {\n      \"left\": 305,\n      \"top\": 288,\n      \"right\": 775,\n      \"bottom\": 296\n    }\n  ]\n}\n```",
+          "status": "valid"
+        }
+      ],
+      "page": 1
+    }
+  ],
+  "crop_count": 1,
+  "localization_valid": true,
+  "raw_answers": {
+    "full": "master",
+    "fixed": "bachelor",
+    "localized": "master",
+    "expanded": "master"
+  },
+  "methods": {
+    "none": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "fixed_middle": {
+      "prediction": "bachelor",
+      "correct": false,
+      "accepted": true,
+      "targeted": false
+    },
+    "localized_only": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "full_region_agreement": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "contextual_recovery": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    }
+  },
+  "elapsed_seconds": 9.312787713000034
+}

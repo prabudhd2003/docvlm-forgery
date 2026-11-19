@@ -1,0 +1,147 @@
+{
+  "case_id": "resume_parsing_vision_validation_r00599__qwen__resume_highest_degree__pgd__eps-16__seed-566",
+  "family": "standard",
+  "epsilon_255": 16,
+  "attack_target": "master",
+  "record_id": "resume_parsing_vision/validation/r00599",
+  "clean_target": "bachelor",
+  "page_count": 2,
+  "regions": [
+    {
+      "raw": "```json\n{\n  \"boxes\": [\n    {\n      \"left\": 65,\n      \"top\": 1023,\n      \"right\": 769,\n      \"bottom\": 1030\n    }\n  ]\n}\n```",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [
+        [
+          0,
+          1528,
+          1242,
+          1538
+        ]
+      ],
+      "pairs": [
+        [
+          [
+            0,
+            1314,
+            1242,
+            1753
+          ],
+          [
+            0,
+            1226,
+            1242,
+            1756
+          ]
+        ]
+      ],
+      "status": "ok",
+      "attempts": [
+        {
+          "raw": "```json\n{\n  \"boxes\": [\n    {\n      \"left\": 65,\n      \"top\": 1023,\n      \"right\": 769,\n      \"bottom\": 1030\n    }\n  ]\n}\n```",
+          "status": "valid"
+        }
+      ],
+      "page": 0
+    },
+    {
+      "raw": "```json\n{\n  \"boxes\": [\n    {\n      \"left\": 69,\n      \"top\": 32,\n      \"right\": 765,\n      \"bottom\": 69\n    },\n    {\n      \"left\": 69,\n      \"top\": 72,\n      \"right\": 765,\n      \"bottom\": 100\n    },\n    {\n      \"left\": 69,\n      \"top\": 103,\n      \"right\": 765,\n      \"bottom\": 131\n    }\n  ]\n}\n```",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [
+        [
+          0,
+          48,
+          1242,
+          103
+        ],
+        [
+          0,
+          108,
+          1242,
+          149
+        ],
+        [
+          0,
+          154,
+          1242,
+          196
+        ]
+      ],
+      "pairs": [
+        [
+          [
+            0,
+            0,
+            1242,
+            439
+          ],
+          [
+            0,
+            0,
+            1242,
+            527
+          ]
+        ]
+      ],
+      "status": "ok",
+      "attempts": [
+        {
+          "raw": "{\"boxes\": [[\"25,30,829,66\", \"Zarafshan Institute of Technology, Tashkent, Uzbekistan\"], [\"25,66,829,80\", \"Diploma in Web Development\"], [\"25,80,829,94\", \"Navoy Applied Sciences College, Navoly, Uzbekistan\"], [\"25,94,829,108\", \"SKILLS\"], [\"25,108,829,122\", \"- C#\"], [\"25,122,829,136\", \"- ASP.NET\"], [\"25,136,829,150\", \"- Python\"], [\"25,150,829,164\", \"- Docker\"], [\"25,164,829,178\", \"- Microsoft SQL\"], [\"25,178,829,192\", \"- C\"], [\"25,192,829,206\", \"- Java\"], [\"25,206,829,220\", \"- Android Development (Java, Kotlin)\"], [\"25,220,829,234\", \"- Gitlab\"], [\"25,234,829,248\", \"LANGUAGES\"], [\"25,248,829,262\", \"English (Full Professional), Hebrew (Advanced), Russian (Native), Spanish (Native)\"], [\"25,262,829,276\", \"PREFERENCES\"], [\"25,276,829,290\", \"Remote, On-site \u2022 Part-time \u2022 Temporary\"]]]}",
+          "status": "invalid",
+          "error": "Expecting ',' delimiter: line 1 column 787 (char 786)"
+        },
+        {
+          "raw": "```json\n{\n  \"boxes\": [\n    {\n      \"left\": 69,\n      \"top\": 32,\n      \"right\": 765,\n      \"bottom\": 69\n    },\n    {\n      \"left\": 69,\n      \"top\": 72,\n      \"right\": 765,\n      \"bottom\": 100\n    },\n    {\n      \"left\": 69,\n      \"top\": 103,\n      \"right\": 765,\n      \"bottom\": 131\n    }\n  ]\n}\n```",
+          "status": "valid"
+        }
+      ],
+      "page": 1
+    }
+  ],
+  "crop_count": 2,
+  "localization_valid": true,
+  "raw_answers": {
+    "full": "bachelor",
+    "fixed": "associate",
+    "localized": "bachelor",
+    "expanded": "bachelor"
+  },
+  "methods": {
+    "none": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "fixed_middle": {
+      "prediction": "associate",
+      "correct": false,
+      "accepted": true,
+      "targeted": false
+    },
+    "localized_only": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "full_region_agreement": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "contextual_recovery": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    }
+  },
+  "elapsed_seconds": 29.652814139000384
+}

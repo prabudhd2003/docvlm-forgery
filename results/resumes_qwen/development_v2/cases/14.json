@@ -1,0 +1,115 @@
+{
+  "record_id": "resume_parsing_vision/validation/r00465",
+  "clean_target": "master",
+  "page_count": 2,
+  "regions": [
+    {
+      "page": 0,
+      "raw": "```json\n[\n  {\n    \"left\": 52,\n    \"top\": 930,\n    \"right\": 366,\n    \"bottom\": 968\n  },\n  {\n    \"left\": 52,\n    \"top\": 1008,\n    \"right\": 366,\n    \"bottom\": 1046\n  }\n]\n```",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [
+        [
+          0,
+          1389,
+          1242,
+          1445
+        ],
+        [
+          0,
+          1505,
+          1242,
+          1562
+        ]
+      ],
+      "pairs": [
+        [
+          [
+            0,
+            1198,
+            1242,
+            1753
+          ],
+          [
+            0,
+            1110,
+            1242,
+            1756
+          ]
+        ]
+      ],
+      "status": "ok"
+    },
+    {
+      "page": 1,
+      "raw": "```json\n[\n\t{\"bbox_2d\": [53, 23, 327, 35], \"text_content\": \"Crownbridge Polytechnic College, Riga, U.S.\"}\n]\n```",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [
+        [
+          0,
+          34,
+          1242,
+          52
+        ]
+      ],
+      "pairs": [
+        [
+          [
+            0,
+            0,
+            1242,
+            439
+          ],
+          [
+            0,
+            0,
+            1242,
+            527
+          ]
+        ]
+      ],
+      "status": "ok"
+    }
+  ],
+  "crop_count": 2,
+  "localization_valid": true,
+  "raw_answers": {
+    "full": "master",
+    "fixed": "bachelor",
+    "localized": "master",
+    "expanded": "master"
+  },
+  "methods": {
+    "none": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true
+    },
+    "fixed_middle": {
+      "prediction": "bachelor",
+      "correct": false,
+      "accepted": true
+    },
+    "localized_only": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true
+    },
+    "full_region_agreement": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true
+    },
+    "contextual_recovery": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true
+    }
+  },
+  "elapsed_seconds": 7.7304532910000034
+}

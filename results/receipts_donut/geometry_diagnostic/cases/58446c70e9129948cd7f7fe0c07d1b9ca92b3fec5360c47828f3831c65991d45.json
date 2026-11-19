@@ -1,0 +1,226 @@
+{
+  "record_id": "sroie/train/X51006555814",
+  "dataset": "sroie",
+  "family": "clean",
+  "epsilon": 0,
+  "clean_target": "94.19",
+  "attack_target": "941.90",
+  "input_sha256": "09f76bb8db0011b418e711173cdbf01df2be315c7948de022ee5b6861a649951",
+  "methods": {
+    "none": {
+      "prediction": "6.00",
+      "accepted": true,
+      "correct": false,
+      "targeted": false
+    },
+    "jpeg": {
+      "prediction": "6.00",
+      "accepted": true,
+      "correct": false,
+      "targeted": false
+    },
+    "resize_vote": {
+      "prediction": "6.00",
+      "accepted": true,
+      "correct": false,
+      "targeted": false
+    },
+    "selective_multiview": {
+      "prediction": "6.00",
+      "accepted": true,
+      "correct": false,
+      "targeted": false
+    },
+    "semantic_consistency": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "ocr_only": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "evidence": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "fixed_band": {
+      "prediction": "6.00",
+      "accepted": true,
+      "correct": false,
+      "targeted": false
+    },
+    "band_answer": {
+      "prediction": "94.19",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "band_agreement": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "verified_recovery": {
+      "prediction": "94.19",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "smaller_expansion": {
+      "prediction": "94.19",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "taller_18": {
+      "prediction": "94.19",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "taller_24": {
+      "prediction": "94.19",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    }
+  },
+  "variants": {
+    "smaller_expansion": {
+      "boxes": [
+        [
+          0,
+          892,
+          616,
+          1041
+        ],
+        [
+          0,
+          880,
+          616,
+          1053
+        ]
+      ],
+      "answers": [
+        "94.19",
+        "94.19"
+      ]
+    },
+    "taller_18": {
+      "boxes": [
+        [
+          0,
+          855,
+          616,
+          1078
+        ],
+        [
+          0,
+          818,
+          616,
+          1115
+        ]
+      ],
+      "answers": [
+        "94.19",
+        "94.19"
+      ]
+    },
+    "taller_24": {
+      "boxes": [
+        [
+          0,
+          818,
+          616,
+          1116
+        ],
+        [
+          0,
+          781,
+          616,
+          1153
+        ]
+      ],
+      "answers": [
+        "94.19",
+        "94.19"
+      ]
+    }
+  },
+  "crops": [
+    {
+      "box": [
+        0,
+        892,
+        616,
+        1041
+      ],
+      "prediction": "94.19",
+      "raw": "94.19",
+      "reused": true
+    },
+    {
+      "box": [
+        0,
+        855,
+        616,
+        1078
+      ],
+      "prediction": "94.19",
+      "raw": "94.19",
+      "reused": true
+    },
+    {
+      "box": [
+        0,
+        880,
+        616,
+        1053
+      ],
+      "prediction": "94.19",
+      "raw": "94.19",
+      "reused": false
+    },
+    {
+      "box": [
+        0,
+        818,
+        616,
+        1115
+      ],
+      "prediction": "94.19",
+      "raw": "94.19",
+      "reused": false
+    },
+    {
+      "box": [
+        0,
+        818,
+        616,
+        1116
+      ],
+      "prediction": "94.19",
+      "raw": "94.19",
+      "reused": false
+    },
+    {
+      "box": [
+        0,
+        781,
+        616,
+        1153
+      ],
+      "prediction": "94.19",
+      "raw": "94.19",
+      "reused": false
+    }
+  ],
+  "elapsed_seconds": 1.5403383010000198
+}

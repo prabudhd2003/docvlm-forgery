@@ -1,0 +1,557 @@
+{
+  "contract": "8e7e5c489930d2dfa4ab8804b9f9552740637ad48f3a66d4e75a81101c2a8f17",
+  "record_id": "resume_parsing_vision/validation/r00373",
+  "clean_target": "bachelor",
+  "attack_target": "master",
+  "method_attacked": "contextual_recovery",
+  "epsilon_255": 16,
+  "restart": 1,
+  "steps": 100,
+  "queries": 40,
+  "runtime_seconds": 283.5408855530004,
+  "linf_255": 16,
+  "images": [
+    {
+      "path": "runs/c06508634eabd9794aa43b3540fc2bf2b4ba1d1ead751036849aa74d5a95c0c6/page_00.png",
+      "sha256": "92e23a307f8156ed4b0e6aba56d502fc91ec417d280541c87004b32ab001f00c"
+    },
+    {
+      "path": "runs/c06508634eabd9794aa43b3540fc2bf2b4ba1d1ead751036849aa74d5a95c0c6/page_01.png",
+      "sha256": "b6766b31831b0a887d49c7ed43026453b6a3ca6ef10f18f283464a5a573c8579"
+    }
+  ],
+  "candidate_rank": [
+    0,
+    0
+  ],
+  "saved_png_matches_candidate": true,
+  "methods": {
+    "none": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "localized_only": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "full_region_agreement": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "contextual_recovery": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    }
+  },
+  "raw_answers": {
+    "full": "bachelor",
+    "localized": "bachelor",
+    "expanded": "bachelor"
+  },
+  "regions": [
+    {
+      "raw": "{\"boxes\": []}",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [],
+      "pairs": [],
+      "status": "no_education",
+      "attempts": [
+        {
+          "raw": "{\"boxes\": []}",
+          "status": "valid"
+        }
+      ],
+      "page": 0
+    },
+    {
+      "raw": "```json\n{\n  \"boxes\": [\n    {\n      \"left\": 50,\n      \"top\": 219,\n      \"right\": 460,\n      \"bottom\": 243\n    }\n  ]\n}\n```",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [
+        [
+          0,
+          327,
+          1242,
+          363
+        ]
+      ],
+      "pairs": [
+        [
+          [
+            0,
+            126,
+            1242,
+            565
+          ],
+          [
+            0,
+            38,
+            1242,
+            653
+          ]
+        ]
+      ],
+      "status": "ok",
+      "attempts": [
+        {
+          "raw": "```json\n{\n  \"boxes\": [\n    {\n      \"left\": 50,\n      \"top\": 219,\n      \"right\": 460,\n      \"bottom\": 243\n    }\n  ]\n}\n```",
+          "status": "valid"
+        }
+      ],
+      "page": 1
+    }
+  ],
+  "crop_count": 1,
+  "localization_valid": true,
+  "diagnostics": {
+    "surrogate_mean_max": 0.0042943693697452545,
+    "steps_on_regions": 100,
+    "steps_on_full_pages": 0
+  },
+  "trace": [
+    {
+      "phase": "initial",
+      "step": 0,
+      "query": 1,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "gradient",
+      "step": 10,
+      "query": 2,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": 5.484375
+    },
+    {
+      "phase": "gradient",
+      "step": 20,
+      "query": 3,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": 6.953125
+    },
+    {
+      "phase": "gradient",
+      "step": 30,
+      "query": 4,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": 6.171875
+    },
+    {
+      "phase": "gradient",
+      "step": 40,
+      "query": 5,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": 7.484375
+    },
+    {
+      "phase": "gradient",
+      "step": 50,
+      "query": 6,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": 6.734375
+    },
+    {
+      "phase": "gradient",
+      "step": 60,
+      "query": 7,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": 5.046875
+    },
+    {
+      "phase": "gradient",
+      "step": 70,
+      "query": 8,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": 7.15625
+    },
+    {
+      "phase": "gradient",
+      "step": 80,
+      "query": 9,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": 7.3125
+    },
+    {
+      "phase": "gradient",
+      "step": 90,
+      "query": 10,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": 7.015625
+    },
+    {
+      "phase": "gradient",
+      "step": 100,
+      "query": 11,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": 6.515625
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 12,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 13,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 14,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 15,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 16,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 17,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 18,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 19,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 20,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 21,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 22,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 23,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 24,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 25,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 26,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 27,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 28,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 29,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 30,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 31,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 32,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 33,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 34,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 35,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 36,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 37,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 38,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    },
+    {
+      "phase": "query_search",
+      "step": 100,
+      "query": 39,
+      "prediction": "bachelor",
+      "crop": "bachelor",
+      "wide": "bachelor",
+      "localization_valid": true,
+      "crops": 1,
+      "surrogate_loss": null
+    }
+  ],
+  "clean_recovery": "correct",
+  "attack_note": "Bounded surrogate PGD on localized and expanded views plus verifier query search. Boxes fixed between verifier queries. Not an exhaustive adaptive attack or a robustness certificate."
+}

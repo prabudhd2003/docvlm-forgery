@@ -1,0 +1,104 @@
+{
+  "record_id": "resume_parsing_vision/validation/r00217",
+  "clean_target": "bachelor",
+  "page_count": 2,
+  "regions": [
+    {
+      "page": 0,
+      "raw": "```json\n[\n  {\n    \"boxes\": [\n      [302, 1065, 774, 1079],\n      [302, 1089, 774, 1103],\n      [302, 1113, 774, 1127],\n      [302, 1137, 774, 1151]\n    ]\n  }\n]\n```",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [
+        [
+          0,
+          1590,
+          1242,
+          1611
+        ],
+        [
+          0,
+          1626,
+          1242,
+          1647
+        ],
+        [
+          0,
+          1662,
+          1242,
+          1683
+        ],
+        [
+          0,
+          1698,
+          1242,
+          1719
+        ]
+      ],
+      "pairs": [
+        [
+          [
+            0,
+            1317,
+            1242,
+            1756
+          ],
+          [
+            0,
+            1229,
+            1242,
+            1756
+          ]
+        ]
+      ],
+      "status": "ok"
+    },
+    {
+      "page": 1,
+      "raw": "```json\n[\n\t{\"boxes\": [300, 2, 657, 19], \"text_content\": \"Professional Certificate in Applied Software Testing\"},\n\t{\"boxes\": [300, 21, 608, 38], \"text_content\": \"Aral Continuing Education Centre, Tashkent, Latvia\"},\n\t{\"boxes\": [300, 91, 566, 110], \"text_content\": \"Foundation Software Tester Certificate\"},\n\t{\"boxes\": [300, 115, 483, 131], \"text_content\": \"Manual Testing Fundamentals\"},\n\t{\"boxes\": [300, 147, 535, 164], \"text_content\": \"Agile Testing Essentials Credential\"},\n\t{\"boxes\": [700, 2, 774, 18], \"text_content\": \"2013 - 2015\"},\n\t{\"boxes\": [721, 95, 774, 109], \"text_content\": \"Jun 2025\"},\n\t{\"boxes\": [721, 147, 774, 161], \"text_content\": \"Sep 2026\"}\n]\n```",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "status": "invalid",
+      "error": "More than four boxes"
+    }
+  ],
+  "crop_count": 1,
+  "localization_valid": false,
+  "raw_answers": {
+    "full": "bachelor",
+    "fixed": "associate",
+    "localized": null,
+    "expanded": null
+  },
+  "methods": {
+    "none": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true
+    },
+    "fixed_middle": {
+      "prediction": "associate",
+      "correct": false,
+      "accepted": true
+    },
+    "localized_only": {
+      "prediction": null,
+      "correct": false,
+      "accepted": false
+    },
+    "full_region_agreement": {
+      "prediction": null,
+      "correct": false,
+      "accepted": false
+    },
+    "contextual_recovery": {
+      "prediction": null,
+      "correct": false,
+      "accepted": false
+    }
+  },
+  "elapsed_seconds": 16.53136599200002
+}

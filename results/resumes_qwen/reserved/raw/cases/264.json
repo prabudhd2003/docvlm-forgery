@@ -1,0 +1,126 @@
+{
+  "case_id": "resume_parsing_vision_validation_r00842__qwen__resume_highest_degree__pgd__eps-2__seed-566",
+  "family": "standard",
+  "epsilon_255": 2,
+  "attack_target": "master",
+  "record_id": "resume_parsing_vision/validation/r00842",
+  "clean_target": "bachelor",
+  "page_count": 2,
+  "regions": [
+    {
+      "raw": "{\"boxes\": []}",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [],
+      "pairs": [],
+      "status": "no_education",
+      "attempts": [
+        {
+          "raw": "{\"boxes\": []}",
+          "status": "valid"
+        }
+      ],
+      "page": 0
+    },
+    {
+      "raw": "```json\n{\n  \"boxes\": [\n    {\n      \"left\": 298, \n      \"top\": 300, \n      \"right\": 775, \n      \"bottom\": 330,\n      \"label\": \"EDUCATION\"\n    },\n    {\n      \"left\": 298, \n      \"top\": 330, \n      \"right\": 775, \n      \"bottom\": 340,\n      \"label\": \"Bachelor of Science in Computer Science\"\n    },\n    {\n      \"left\": 298, \n      \"top\": 340, \n      \"right\": 775, \n      \"bottom\": 350,\n      \"label\": \"Front Range Technical University, Boulder, United States\"\n    },\n    {\n      \"left\": 298, \n      \"top\": 350, \n      \"right\": 775, \n      \"bottom\": 360,\n      \"label\": \"2013 - 2016\"\n    }\n  ]\n}\n```",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [
+        [
+          0,
+          448,
+          1242,
+          493
+        ],
+        [
+          0,
+          493,
+          1242,
+          508
+        ],
+        [
+          0,
+          508,
+          1242,
+          523
+        ],
+        [
+          0,
+          523,
+          1242,
+          538
+        ]
+      ],
+      "pairs": [
+        [
+          [
+            0,
+            251,
+            1242,
+            750
+          ],
+          [
+            0,
+            163,
+            1242,
+            838
+          ]
+        ]
+      ],
+      "status": "ok",
+      "attempts": [
+        {
+          "raw": "```json\n{\n  \"boxes\": [\n    {\n      \"left\": 298, \n      \"top\": 300, \n      \"right\": 775, \n      \"bottom\": 330,\n      \"label\": \"EDUCATION\"\n    },\n    {\n      \"left\": 298, \n      \"top\": 330, \n      \"right\": 775, \n      \"bottom\": 340,\n      \"label\": \"Bachelor of Science in Computer Science\"\n    },\n    {\n      \"left\": 298, \n      \"top\": 340, \n      \"right\": 775, \n      \"bottom\": 350,\n      \"label\": \"Front Range Technical University, Boulder, United States\"\n    },\n    {\n      \"left\": 298, \n      \"top\": 350, \n      \"right\": 775, \n      \"bottom\": 360,\n      \"label\": \"2013 - 2016\"\n    }\n  ]\n}\n```",
+          "status": "valid"
+        }
+      ],
+      "page": 1
+    }
+  ],
+  "crop_count": 1,
+  "localization_valid": true,
+  "raw_answers": {
+    "full": "bachelor",
+    "fixed": "bachelor",
+    "localized": "bachelor",
+    "expanded": "bachelor"
+  },
+  "methods": {
+    "none": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "fixed_middle": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "localized_only": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "full_region_agreement": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "contextual_recovery": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    }
+  },
+  "elapsed_seconds": 12.377595833999749
+}

@@ -1,0 +1,105 @@
+{
+  "record_id": "resume_parsing_vision/validation/r00183",
+  "clean_target": "master",
+  "page_count": 2,
+  "regions": [
+    {
+      "page": 0,
+      "raw": "{\"boxes\": []}",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [],
+      "pairs": [],
+      "status": "no_education"
+    },
+    {
+      "page": 1,
+      "raw": "```json\n{\n  \"boxes\": [\n    {\n      \"left\": 65,\n      \"top\": 203,\n      \"right\": 495,\n      \"bottom\": 218\n    },\n    {\n      \"left\": 65,\n      \"top\": 218,\n      \"right\": 495,\n      \"bottom\": 233\n    },\n    {\n      \"left\": 65,\n      \"top\": 233,\n      \"right\": 495,\n      \"bottom\": 248\n    },\n    {\n      \"left\": 65,\n      \"top\": 248,\n      \"right\": 495,\n      \"bottom\": 263\n    }\n  ]\n}\n```",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [
+        [
+          0,
+          303,
+          1242,
+          326
+        ],
+        [
+          0,
+          326,
+          1242,
+          348
+        ],
+        [
+          0,
+          348,
+          1242,
+          370
+        ],
+        [
+          0,
+          370,
+          1242,
+          393
+        ]
+      ],
+      "pairs": [
+        [
+          [
+            0,
+            95,
+            1242,
+            601
+          ],
+          [
+            0,
+            7,
+            1242,
+            689
+          ]
+        ]
+      ],
+      "status": "ok"
+    }
+  ],
+  "crop_count": 1,
+  "localization_valid": true,
+  "raw_answers": {
+    "full": "master",
+    "fixed": "bachelor",
+    "localized": "master",
+    "expanded": "master"
+  },
+  "methods": {
+    "none": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true
+    },
+    "fixed_middle": {
+      "prediction": "bachelor",
+      "correct": false,
+      "accepted": true
+    },
+    "localized_only": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true
+    },
+    "full_region_agreement": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true
+    },
+    "contextual_recovery": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true
+    }
+  },
+  "elapsed_seconds": 9.126523845999941
+}

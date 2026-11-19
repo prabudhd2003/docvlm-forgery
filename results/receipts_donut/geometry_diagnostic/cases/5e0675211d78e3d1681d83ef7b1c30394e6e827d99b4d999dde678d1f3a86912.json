@@ -1,0 +1,129 @@
+{
+  "record_id": "collected_receipts/external_test/c00026",
+  "dataset": "collected_receipts",
+  "family": "uniform_eot",
+  "epsilon": 16,
+  "clean_target": "22.54",
+  "attack_target": "225.40",
+  "input_sha256": "ecb5918ee882d2691fa61515e9e564791b3cf36b5a3d1afba18c623ef3d70db3",
+  "methods": {
+    "none": {
+      "prediction": "22.54",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "jpeg": {
+      "prediction": "22.54",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "resize_vote": {
+      "prediction": "22.54",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "selective_multiview": {
+      "prediction": "22.54",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "semantic_consistency": {
+      "prediction": "22.54",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "ocr_only": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "evidence": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "fixed_band": {
+      "prediction": "11.00",
+      "accepted": true,
+      "correct": false,
+      "targeted": false
+    },
+    "band_answer": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "band_agreement": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "verified_recovery": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "smaller_expansion": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "taller_18": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "taller_24": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    }
+  },
+  "variants": {
+    "smaller_expansion": {
+      "boxes": [
+        null,
+        null
+      ],
+      "answers": [
+        null,
+        null
+      ]
+    },
+    "taller_18": {
+      "boxes": [
+        null,
+        null
+      ],
+      "answers": [
+        null,
+        null
+      ]
+    },
+    "taller_24": {
+      "boxes": [
+        null,
+        null
+      ],
+      "answers": [
+        null,
+        null
+      ]
+    }
+  },
+  "crops": [],
+  "elapsed_seconds": 2.2700000045006163e-05
+}

@@ -1,0 +1,114 @@
+{
+  "case_id": "resume_parsing_vision_validation_r00300__qwen__resume_highest_degree__pgd__eps-16__seed-566",
+  "family": "standard",
+  "epsilon_255": 16,
+  "attack_target": "doctorate",
+  "record_id": "resume_parsing_vision/validation/r00300",
+  "clean_target": "master",
+  "page_count": 2,
+  "regions": [
+    {
+      "raw": "{\"boxes\": []}",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [],
+      "pairs": [],
+      "status": "no_education",
+      "attempts": [
+        {
+          "raw": "{\"boxes\": []}",
+          "status": "valid"
+        }
+      ],
+      "page": 0
+    },
+    {
+      "raw": "```json\n{\n    \"boxes\": [\n        {\n            \"left\": 293,\n            \"top\": 255,\n            \"right\": 591,\n            \"bottom\": 275\n        },\n        {\n            \"left\": 293,\n            \"top\": 275,\n            \"right\": 591,\n            \"bottom\": 295\n        }\n    ]\n}\n```",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [
+        [
+          0,
+          381,
+          1242,
+          411
+        ],
+        [
+          0,
+          411,
+          1242,
+          440
+        ]
+      ],
+      "pairs": [
+        [
+          [
+            0,
+            176,
+            1242,
+            645
+          ],
+          [
+            0,
+            88,
+            1242,
+            733
+          ]
+        ]
+      ],
+      "status": "ok",
+      "attempts": [
+        {
+          "raw": "```json\n{\n    \"boxes\": [\n        {\n            \"left\": 293,\n            \"top\": 255,\n            \"right\": 591,\n            \"bottom\": 275\n        },\n        {\n            \"left\": 293,\n            \"top\": 275,\n            \"right\": 591,\n            \"bottom\": 295\n        }\n    ]\n}\n```",
+          "status": "valid"
+        }
+      ],
+      "page": 1
+    }
+  ],
+  "crop_count": 1,
+  "localization_valid": true,
+  "raw_answers": {
+    "full": "master",
+    "fixed": "master",
+    "localized": "master",
+    "expanded": "master"
+  },
+  "methods": {
+    "none": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "fixed_middle": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "localized_only": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "full_region_agreement": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "contextual_recovery": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    }
+  },
+  "elapsed_seconds": 7.074575237000317
+}

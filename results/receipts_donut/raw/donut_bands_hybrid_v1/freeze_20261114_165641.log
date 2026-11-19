@@ -1,0 +1,3 @@
+usage: donut_geometry_diagnostic.py [-h] --root ROOT --baseline BASELINE --out
+                                    OUT
+donut_geometry_diagnostic.py: error: the following arguments are required: --baseline

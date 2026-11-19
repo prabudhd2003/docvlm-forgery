@@ -1,0 +1,237 @@
+{
+  "record_id": "sroie/train/X51006557199",
+  "dataset": "sroie",
+  "family": "clean",
+  "epsilon": 0,
+  "clean_target": "60.24",
+  "attack_target": "602.40",
+  "input_sha256": "26d6f873898347cf7980e51ccc904746acc215a4e797bd5f4313e69738ae7acf",
+  "methods": {
+    "none": {
+      "prediction": "60.24",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "jpeg": {
+      "prediction": "60.24",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "resize_vote": {
+      "prediction": "60.24",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "selective_multiview": {
+      "prediction": "60.24",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "semantic_consistency": {
+      "prediction": "60.24",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "ocr_only": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "evidence": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "fixed_band": {
+      "prediction": "6.00",
+      "accepted": true,
+      "correct": false,
+      "targeted": false
+    },
+    "band_answer": {
+      "prediction": "60.24",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "band_agreement": {
+      "prediction": "60.24",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "verified_recovery": {
+      "prediction": "60.24",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "smaller_expansion": {
+      "prediction": "60.24",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "taller_18": {
+      "prediction": "60.24",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "taller_24": {
+      "prediction": "60.24",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    }
+  },
+  "variants": {
+    "smaller_expansion": {
+      "boxes": [
+        [
+          0,
+          886,
+          616,
+          1035
+        ],
+        [
+          0,
+          874,
+          616,
+          1047
+        ]
+      ],
+      "answers": [
+        "60.24",
+        "60.24"
+      ]
+    },
+    "taller_18": {
+      "boxes": [
+        [
+          0,
+          850,
+          616,
+          1073
+        ],
+        [
+          0,
+          813,
+          616,
+          1110
+        ]
+      ],
+      "answers": [
+        "60.24",
+        "60.24"
+      ]
+    },
+    "taller_24": {
+      "boxes": [
+        [
+          0,
+          812,
+          616,
+          1109
+        ],
+        [
+          0,
+          775,
+          616,
+          1146
+        ]
+      ],
+      "answers": [
+        "60.24",
+        "60.24"
+      ]
+    }
+  },
+  "crops": [
+    {
+      "box": [
+        0,
+        886,
+        616,
+        1035
+      ],
+      "prediction": "60.24",
+      "raw": "60.24",
+      "reused": true
+    },
+    {
+      "box": [
+        0,
+        849,
+        616,
+        1072
+      ],
+      "prediction": "60.24",
+      "raw": "60.24",
+      "reused": true
+    },
+    {
+      "box": [
+        0,
+        874,
+        616,
+        1047
+      ],
+      "prediction": "60.24",
+      "raw": "60.24",
+      "reused": false
+    },
+    {
+      "box": [
+        0,
+        850,
+        616,
+        1073
+      ],
+      "prediction": "60.24",
+      "raw": "60.24",
+      "reused": false
+    },
+    {
+      "box": [
+        0,
+        813,
+        616,
+        1110
+      ],
+      "prediction": "60.24",
+      "raw": "60.24",
+      "reused": false
+    },
+    {
+      "box": [
+        0,
+        812,
+        616,
+        1109
+      ],
+      "prediction": "60.24",
+      "raw": "60.24",
+      "reused": false
+    },
+    {
+      "box": [
+        0,
+        775,
+        616,
+        1146
+      ],
+      "prediction": "60.24",
+      "raw": "60.24",
+      "reused": false
+    }
+  ],
+  "elapsed_seconds": 2.0149238479999667
+}

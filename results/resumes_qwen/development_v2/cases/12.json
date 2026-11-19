@@ -1,0 +1,93 @@
+{
+  "record_id": "resume_parsing_vision/validation/r00185",
+  "clean_target": "master",
+  "page_count": 2,
+  "regions": [
+    {
+      "page": 0,
+      "raw": "There are no regions indicating completed education qualifications or awarded degrees on this resume page.",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [],
+      "pairs": [],
+      "status": "no_education"
+    },
+    {
+      "page": 1,
+      "raw": "```json\n[\n  {\n    \"left\": 298, \n    \"top\": 115, \n    \"right\": 609, \n    \"bottom\": 130\n  },\n  {\n    \"left\": 298, \n    \"top\": 189, \n    \"right\": 659, \n    \"bottom\": 204\n  }\n]\n```",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [
+        [
+          0,
+          172,
+          1242,
+          194
+        ],
+        [
+          0,
+          282,
+          1242,
+          305
+        ]
+      ],
+      "pairs": [
+        [
+          [
+            0,
+            0,
+            1242,
+            513
+          ],
+          [
+            0,
+            0,
+            1242,
+            601
+          ]
+        ]
+      ],
+      "status": "ok"
+    }
+  ],
+  "crop_count": 1,
+  "localization_valid": true,
+  "raw_answers": {
+    "full": "master",
+    "fixed": "associate",
+    "localized": "master",
+    "expanded": "master"
+  },
+  "methods": {
+    "none": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true
+    },
+    "fixed_middle": {
+      "prediction": "associate",
+      "correct": false,
+      "accepted": true
+    },
+    "localized_only": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true
+    },
+    "full_region_agreement": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true
+    },
+    "contextual_recovery": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true
+    }
+  },
+  "elapsed_seconds": 6.227552446999994
+}

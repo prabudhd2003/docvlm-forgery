@@ -1,0 +1,351 @@
+"""Pinned Donut DocVQA adapter for clean inference and image attacks."""
+
+from __future__ import annotations
+
+import hashlib
+from dataclasses import dataclass
+from typing import Any
+
+import torch
+import torch.nn.functional as F
+from PIL import Image
+
+from attacks.donut import targeted_token_loss
+
+
+DEFAULT_MODEL_ID = "naver-clova-ix/donut-base-finetuned-docvqa"
+DEFAULT_REVISION = "b19d2e332684b0e2d35d9144ce34047767335cf8"
+PROMPT_TEMPLATE = "<s_docvqa><s_question>{question}</s_question><s_answer>"
+
+
+def pil_to_rgb_tensor(image: Image.Image, device: torch.device | None = None) -> torch.Tensor:
+    """Convert a PIL image into a CHW RGB float tensor without torchvision."""
+    import numpy as np
+
+    array = np.asarray(image.convert("RGB"), dtype=np.float32).copy() / 255.0
+    return torch.from_numpy(array).permute(2, 0, 1).to(device=device)
+
+
+def rgb_tensor_to_pil(image: torch.Tensor) -> Image.Image:
+    """Convert a CHW RGB float tensor to an exactly quantized PIL image."""
+    import numpy as np
+
+    array = (
+        image.detach().clamp(0, 1).mul(255).round().to(torch.uint8).permute(1, 2, 0).cpu().numpy()
+    )
+    return Image.fromarray(np.asarray(array), mode="RGB")
+
+
+def differentiable_donut_preprocess(
+    image: torch.Tensor,
+    *,
+    height: int,
+    width: int,
+    image_mean: tuple[float, float, float],
+    image_std: tuple[float, float, float],
+    align_long_axis: bool,
+) -> torch.Tensor:
+    """Differentiable Donut resize, center-pad, and normalization pipeline."""
+    if image.ndim != 3 or image.shape[0] != 3:
+        raise ValueError("image must have shape [3, H, W]")
+    x = image
+    input_height, input_width = x.shape[-2:]
+    if align_long_axis and (
+        (width < height and input_width > input_height)
+        or (width > height and input_width < input_height)
+    ):
+        x = torch.rot90(x, 3, dims=(-2, -1))
+        input_height, input_width = x.shape[-2:]
+
+    scale = min(float(height) / input_height, float(width) / input_width)
+    resized_height = max(1, min(height, int(input_height * scale)))
+    resized_width = max(1, min(width, int(input_width * scale)))
+    x = F.interpolate(
+        x.unsqueeze(0),
+        size=(resized_height, resized_width),
+        mode="bicubic",
+        align_corners=False,
+        antialias=True,
+    ).squeeze(0)
+    x = x.clamp(0, 1)
+
+    delta_height = height - resized_height
+    delta_width = width - resized_width
+    left = delta_width // 2
+    right = delta_width - left
+    top = delta_height // 2
+    bottom = delta_height - top
+    x = F.pad(x, (left, right, top, bottom), value=0.0)
+
+    mean = torch.tensor(image_mean, device=x.device, dtype=x.dtype)[:, None, None]
+    std = torch.tensor(image_std, device=x.device, dtype=x.dtype)[:, None, None]
+    return (x - mean) / std
+
+
+@dataclass(frozen=True)
+class DonutSettings:
+    height: int
+    width: int
+    image_mean: tuple[float, float, float]
+    image_std: tuple[float, float, float]
+    align_long_axis: bool
+
+
+class DonutAdaptiveObjective:
+    """Exact-official-forward Donut objective with a differentiable BPDA path."""
+
+    def __init__(
+        self,
+        wrapper: "DonutDocVQA",
+        pages: list[Image.Image],
+        question: str,
+        target_text: str,
+        tolerances: dict[str, float],
+        *,
+        loss_type: str,
+    ) -> None:
+        if len(pages) != 1:
+            raise ValueError("Donut adaptive attacks require one-page receipts")
+        self.wrapper = wrapper
+        self.question = question
+        self.loss_type = loss_type
+        self.tolerances = tolerances
+        self.prompt_ids = wrapper._token_ids(wrapper.prompt(question))
+        self.target_tensor = wrapper._token_ids(target_text + "</s_answer>")
+        self.ids = torch.cat([self.prompt_ids, self.target_tensor], dim=1)
+        start = self.prompt_ids.shape[1] - 1
+        self.positions = torch.arange(
+            start,
+            start + self.target_tensor.shape[1],
+            device=wrapper.device,
+            dtype=torch.long,
+        )
+        self.target_ids = self.target_tensor[0].detach().cpu().tolist()
+        self.template_hash = hashlib.sha256(
+            wrapper.prompt(question).encode("utf-8")
+        ).hexdigest()
+        self.grids = torch.tensor(
+            [[wrapper.settings.height, wrapper.settings.width]], dtype=torch.long
+        )
+
+    def _surrogate(self, xs: list[torch.Tensor]) -> torch.Tensor:
+        if len(xs) != 1:
+            raise ValueError("Donut adaptive objective expects exactly one image")
+        return self.wrapper.preprocess_for_attack(xs[0])
+
+    def _official(self, xs: list[torch.Tensor]) -> torch.Tensor:
+        page = rgb_tensor_to_pil(xs[0].detach())
+        return self.wrapper.processor(images=page, return_tensors="pt")[
+            "pixel_values"
+        ].to(device=self.wrapper.device, dtype=self.wrapper.dtype)
+
+    def pixels(self, xs: list[torch.Tensor]) -> torch.Tensor:
+        surrogate = self._surrogate(xs)
+        official = self._official(xs).to(surrogate.dtype)
+        return surrogate + (official - surrogate).detach()
+
+    def parity(self, xs: list[torch.Tensor]) -> dict[str, Any]:
+        surrogate = self._surrogate(xs)
+        official = self._official(xs).to(surrogate.dtype)
+        exact = surrogate + (official - surrogate).detach()
+        error = (exact - official).abs()
+        surrogate_error = (surrogate - official).abs()
+        stats = {
+            "official_processor_shape": list(official.shape),
+            "differentiable_processor_shape": list(surrogate.shape),
+            "processor_max_abs_difference": float(error.max()),
+            "processor_mean_abs_difference": float(error.mean()),
+            "processor_surrogate_max_abs_difference": float(surrogate_error.max()),
+            "processor_surrogate_mean_abs_difference": float(surrogate_error.mean()),
+            "processor_gradient_method": "bpda_exact_official_forward",
+        }
+        if (
+            stats["processor_max_abs_difference"] > self.tolerances["max"]
+            or stats["processor_mean_abs_difference"] > self.tolerances["mean"]
+            or stats["processor_surrogate_mean_abs_difference"]
+            > self.tolerances["surrogate_mean"]
+        ):
+            raise RuntimeError(f"Donut preprocessing parity failed: {stats}")
+        return stats
+
+    def loss(self, xs: list[torch.Tensor], grad_page: int | None = None):
+        if grad_page not in (None, 0):
+            raise ValueError("Donut has only one differentiable page")
+        outputs = self.wrapper.model(
+            pixel_values=self.pixels(xs),
+            decoder_input_ids=self.ids,
+            use_cache=False,
+        )
+        return targeted_token_loss(
+            outputs.logits,
+            self.target_tensor[0],
+            self.positions,
+            loss_type=self.loss_type,
+        )
+
+
+class DonutDocVQA:
+    """Small wrapper that keeps clean and adversarial Donut paths identical."""
+
+    def __init__(
+        self,
+        *,
+        device: torch.device,
+        model_id: str = DEFAULT_MODEL_ID,
+        revision: str = DEFAULT_REVISION,
+        precision: str = "float32",
+        max_length: int = 64,
+    ) -> None:
+        try:
+            from transformers import AutoProcessor
+            try:
+                # Transformers 5 renamed this auto-class. Prefer the new name
+                # while retaining compatibility with the CARC/local v4 setup.
+                from transformers import AutoModelForImageTextToText as DonutAutoModel
+            except ImportError:
+                from transformers import AutoModelForVision2Seq as DonutAutoModel
+        except ImportError as exc:
+            raise RuntimeError("transformers is required to load Donut") from exc
+
+        self.device = device
+        self.model_id = model_id
+        self.revision = revision
+        precision_types = {
+            "float32": torch.float32,
+            "float16": torch.float16,
+            "bfloat16": torch.bfloat16,
+        }
+        if precision not in precision_types:
+            raise ValueError("precision must be float32, float16, or bfloat16")
+        self.dtype = precision_types[precision]
+        self.max_length = int(max_length)
+        self.processor = AutoProcessor.from_pretrained(model_id, revision=revision)
+        self.model = DonutAutoModel.from_pretrained(
+            model_id, revision=revision, torch_dtype=self.dtype
+        ).to(device)
+        self.model.eval()
+        for parameter in self.model.parameters():
+            parameter.requires_grad_(False)
+
+        tokenizer = self.processor.tokenizer
+        self.model.config.decoder_start_token_id = tokenizer.cls_token_id
+        self.model.config.pad_token_id = tokenizer.pad_token_id
+        image_processor = self.processor.image_processor
+        size = image_processor.size
+        if isinstance(size, dict):
+            height, width = int(size["height"]), int(size["width"])
+        elif hasattr(size, "height") and hasattr(size, "width"):
+            height, width = int(size.height), int(size.width)
+        else:
+            height, width = map(int, size)
+        self.settings = DonutSettings(
+            height=height,
+            width=width,
+            image_mean=tuple(float(v) for v in image_processor.image_mean),
+            image_std=tuple(float(v) for v in image_processor.image_std),
+            align_long_axis=bool(getattr(image_processor, "do_align_long_axis", False)),
+        )
+
+    def prompt(self, question: str) -> str:
+        return PROMPT_TEMPLATE.format(question=question)
+
+    def _token_ids(self, text: str) -> torch.Tensor:
+        return self.processor.tokenizer(
+            text, add_special_tokens=False, return_tensors="pt"
+        ).input_ids.to(self.device)
+
+    def preprocess_for_attack(self, image: torch.Tensor) -> torch.Tensor:
+        return differentiable_donut_preprocess(
+            image,
+            height=self.settings.height,
+            width=self.settings.width,
+            image_mean=self.settings.image_mean,
+            image_std=self.settings.image_std,
+            align_long_axis=self.settings.align_long_axis,
+        ).unsqueeze(0)
+
+    def attack_objective(
+        self,
+        image: torch.Tensor,
+        *,
+        question: str,
+        target_text: str,
+        loss_type: str,
+    ) -> tuple[torch.Tensor, dict[str, Any]]:
+        prompt_ids = self._token_ids(self.prompt(question))
+        target_ids = self._token_ids(target_text + "</s_answer>")
+        decoder_input_ids = torch.cat([prompt_ids, target_ids], dim=1)
+        outputs = self.model(
+            pixel_values=self.preprocess_for_attack(image),
+            decoder_input_ids=decoder_input_ids,
+            use_cache=False,
+        )
+        start = prompt_ids.shape[1] - 1
+        positions = torch.arange(
+            start, start + target_ids.shape[1], device=self.device, dtype=torch.long
+        )
+        loss, mean_log_probability = targeted_token_loss(
+            outputs.logits,
+            target_ids[0],
+            positions,
+            loss_type=loss_type,
+        )
+        return loss, {"mean_target_log_probability": float(mean_log_probability.detach())}
+
+    def make_adaptive_objective(
+        self,
+        pages: list[Image.Image],
+        question: str,
+        target_text: str,
+        tolerances: dict[str, float],
+        *,
+        loss_type: str,
+    ) -> DonutAdaptiveObjective:
+        return DonutAdaptiveObjective(
+            self,
+            pages,
+            question,
+            target_text,
+            tolerances,
+            loss_type=loss_type,
+        )
+
+    def predict(self, pages: list[Image.Image], question: str) -> str:
+        if len(pages) != 1:
+            raise ValueError("Donut prediction requires exactly one receipt page")
+        return self.predict_pil(pages[0], question)
+
+    def unload(self) -> None:
+        import gc
+
+        del self.model
+        gc.collect()
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+
+    @torch.inference_mode()
+    def predict_pil(self, image: Image.Image, question: str) -> str:
+        prompt = self.prompt(question)
+        inputs = self.processor(images=image.convert("RGB"), text=prompt, return_tensors="pt")
+        pixel_values = inputs["pixel_values"].to(device=self.device, dtype=self.dtype)
+        prompt_ids = inputs.get("input_ids")
+        if prompt_ids is None:
+            prompt_ids = self._token_ids(prompt)
+        else:
+            prompt_ids = prompt_ids.to(self.device)
+        generated = self.model.generate(
+            pixel_values=pixel_values,
+            decoder_input_ids=prompt_ids,
+            max_length=self.max_length,
+            do_sample=False,
+        )
+        text = self.processor.batch_decode(generated, skip_special_tokens=False)[0]
+        if self.processor.tokenizer.pad_token:
+            text = text.replace(self.processor.tokenizer.pad_token, "")
+        if self.processor.tokenizer.eos_token:
+            text = text.replace(self.processor.tokenizer.eos_token, "")
+        if "<s_answer>" in text:
+            text = text.split("<s_answer>", 1)[1]
+        if "</s_answer>" in text:
+            text = text.split("</s_answer>", 1)[0]
+        return text.strip()

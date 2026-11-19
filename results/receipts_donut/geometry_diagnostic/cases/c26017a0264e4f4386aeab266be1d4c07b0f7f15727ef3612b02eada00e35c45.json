@@ -1,0 +1,226 @@
+{
+  "record_id": "collected_receipts/external_test/c00024",
+  "dataset": "collected_receipts",
+  "family": "standard",
+  "epsilon": 8,
+  "clean_target": "28.91",
+  "attack_target": "289.10",
+  "input_sha256": "3925461a17ae744172d558cc18460bd03745b23351607436732e763cd9d5d68a",
+  "methods": {
+    "none": {
+      "prediction": "21.85",
+      "accepted": true,
+      "correct": false,
+      "targeted": false
+    },
+    "jpeg": {
+      "prediction": "21.85",
+      "accepted": true,
+      "correct": false,
+      "targeted": false
+    },
+    "resize_vote": {
+      "prediction": "21.85",
+      "accepted": true,
+      "correct": false,
+      "targeted": false
+    },
+    "selective_multiview": {
+      "prediction": "21.85",
+      "accepted": true,
+      "correct": false,
+      "targeted": false
+    },
+    "semantic_consistency": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "ocr_only": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "evidence": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "fixed_band": {
+      "prediction": "28.91",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "band_answer": {
+      "prediction": "28.91",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "band_agreement": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "verified_recovery": {
+      "prediction": "28.91",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "smaller_expansion": {
+      "prediction": "28.91",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "taller_18": {
+      "prediction": "28.91",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "taller_24": {
+      "prediction": "28.91",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    }
+  },
+  "variants": {
+    "smaller_expansion": {
+      "boxes": [
+        [
+          0,
+          2094,
+          1594,
+          2543
+        ],
+        [
+          0,
+          2057,
+          1594,
+          2580
+        ]
+      ],
+      "answers": [
+        "28.91",
+        "28.91"
+      ]
+    },
+    "taller_18": {
+      "boxes": [
+        [
+          0,
+          1982,
+          1594,
+          2656
+        ],
+        [
+          0,
+          1870,
+          1594,
+          2768
+        ]
+      ],
+      "answers": [
+        "28.91",
+        "28.91"
+      ]
+    },
+    "taller_24": {
+      "boxes": [
+        [
+          0,
+          1870,
+          1594,
+          2768
+        ],
+        [
+          0,
+          1758,
+          1594,
+          2880
+        ]
+      ],
+      "answers": [
+        "28.91",
+        "28.91"
+      ]
+    }
+  },
+  "crops": [
+    {
+      "box": [
+        0,
+        2094,
+        1594,
+        2543
+      ],
+      "prediction": "28.91",
+      "raw": "28.91",
+      "reused": true
+    },
+    {
+      "box": [
+        0,
+        1982,
+        1594,
+        2655
+      ],
+      "prediction": "28.91",
+      "raw": "28.91",
+      "reused": true
+    },
+    {
+      "box": [
+        0,
+        2057,
+        1594,
+        2580
+      ],
+      "prediction": "28.91",
+      "raw": "28.91",
+      "reused": false
+    },
+    {
+      "box": [
+        0,
+        1982,
+        1594,
+        2656
+      ],
+      "prediction": "28.91",
+      "raw": "28.91",
+      "reused": false
+    },
+    {
+      "box": [
+        0,
+        1870,
+        1594,
+        2768
+      ],
+      "prediction": "28.91",
+      "raw": "28.91",
+      "reused": false
+    },
+    {
+      "box": [
+        0,
+        1758,
+        1594,
+        2880
+      ],
+      "prediction": "28.91",
+      "raw": "28.91",
+      "reused": false
+    }
+  ],
+  "elapsed_seconds": 1.7558628529999396
+}

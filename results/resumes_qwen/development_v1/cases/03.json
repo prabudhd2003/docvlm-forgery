@@ -1,0 +1,63 @@
+{
+  "record_id": "resume_parsing_vision/validation/r00183",
+  "clean_target": "master",
+  "page_count": 2,
+  "regions": [
+    {
+      "page": 0,
+      "raw": "There are no regions indicating completed education qualifications or awarded degrees on this resume page.",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "status": "invalid",
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "page": 1,
+      "raw": "```json\n[\n  {\n    \"left\": 69,\n    \"top\": 205,\n    \"right\": 368,\n    \"bottom\": 220\n  },\n  {\n    \"left\": 69,\n    \"top\": 225,\n    \"right\": 368,\n    \"bottom\": 240\n  },\n  {\n    \"left\": 69,\n    \"top\": 245,\n    \"right\": 368,\n    \"bottom\": 260\n  },\n  {\n    \"left\": 69,\n    \"top\": 265,\n    \"right\": 368,\n    \"bottom\": 280\n  }\n]\n```",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "status": "invalid",
+      "error": "list indices must be integers or slices, not str"
+    }
+  ],
+  "crop_count": 0,
+  "localization_valid": false,
+  "raw_answers": {
+    "full": "master",
+    "fixed": "bachelor",
+    "localized": null,
+    "expanded": null
+  },
+  "methods": {
+    "none": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true
+    },
+    "fixed_middle": {
+      "prediction": "bachelor",
+      "correct": false,
+      "accepted": true
+    },
+    "localized_only": {
+      "prediction": null,
+      "correct": false,
+      "accepted": false
+    },
+    "full_region_agreement": {
+      "prediction": null,
+      "correct": false,
+      "accepted": false
+    },
+    "contextual_recovery": {
+      "prediction": null,
+      "correct": false,
+      "accepted": false
+    }
+  },
+  "elapsed_seconds": 8.521931948999963
+}

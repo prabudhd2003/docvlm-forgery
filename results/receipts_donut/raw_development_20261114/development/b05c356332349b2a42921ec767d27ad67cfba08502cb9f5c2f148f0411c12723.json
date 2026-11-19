@@ -1,0 +1,130 @@
+{
+  "reader": "donut",
+  "localizer": "qwen",
+  "attack_origin": "clean",
+  "contract": "217d905f10cb734c73ca816ee9b4693070406131a7dffa29e5198dfeb5c39c3c",
+  "record_id": "sroie/train/X51005676549",
+  "dataset": "sroie",
+  "family": "clean",
+  "epsilon": 0,
+  "input_sha256": "89e99dda8d0aced81de4085cdf7355d8444b3fc35a00ffbc62256def4bfd10b9",
+  "clean_target": "39.75",
+  "attack_target": "397.50",
+  "observation": {
+    "full": "37.50",
+    "full_raw": "37.50",
+    "crop": "0.00",
+    "wide": null,
+    "gap": null,
+    "box": [
+      0,
+      1361,
+      932,
+      1627
+    ],
+    "expanded_box": [
+      0,
+      1302,
+      932,
+      1686
+    ],
+    "control": [
+      0,
+      0,
+      932,
+      266
+    ],
+    "reason": "crop_disagreement",
+    "localization_raw": "```json\n{\n    \"box\": [52, 1048, 603, 1157]\n}\n```",
+    "processor_size": [
+      672,
+      1456
+    ],
+    "tight_box": [
+      72,
+      1420,
+      836,
+      1568
+    ],
+    "crop_raw": "0.00",
+    "wide_raw": "gst summary"
+  },
+  "methods": {
+    "none": {
+      "prediction": "37.50",
+      "accepted": true,
+      "correct": false,
+      "targeted": false
+    },
+    "jpeg": {
+      "prediction": "37.50",
+      "accepted": true,
+      "correct": false,
+      "targeted": false
+    },
+    "resize_vote": {
+      "prediction": "37.50",
+      "accepted": true,
+      "correct": false,
+      "targeted": false
+    },
+    "selective_multiview": {
+      "prediction": "37.50",
+      "accepted": true,
+      "correct": false,
+      "targeted": false
+    },
+    "semantic_consistency": {
+      "prediction": "37.50",
+      "accepted": true,
+      "correct": false,
+      "targeted": false
+    },
+    "ocr_only": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "evidence": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "fixed_band": {
+      "prediction": "39.75",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "band_answer": {
+      "prediction": "0.00",
+      "accepted": true,
+      "correct": false,
+      "targeted": false
+    },
+    "band_agreement": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "verified_recovery": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    }
+  },
+  "elapsed_seconds": 15.270944129999862,
+  "baseline_seconds": {
+    "jpeg": 0.4265443479998794,
+    "resize_vote": 2.3801958650001325,
+    "selective_multiview": 2.274327308000011,
+    "semantic_consistency": 2.4610170139999354,
+    "ocr_only": 1.3874341509999795,
+    "evidence": 3.3081448699999783
+  },
+  "timing_note": "Shared calls: elapsed time is for the whole comparison, not any individual proposed method."
+}

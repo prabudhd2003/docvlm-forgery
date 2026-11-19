@@ -1,0 +1,506 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]
+Fetching 2 files:  50%|█████     | 1/2 [00:25<00:25, 25.20s/it]
+Fetching 2 files: 100%|██████████| 2/2 [00:25<00:00, 12.60s/it]
+
+Loading weights:   0%|          | 0/824 [00:00<?, ?it/s]
+Loading weights:  47%|████▋     | 384/824 [00:00<00:00, 3832.26it/s]
+Loading weights: 100%|██████████| 824/824 [00:00<00:00, 5088.30it/s]
+1/75 clean_0 pages=1 regions=1 {'none': 'bachelor', 'fixed_middle': 'bachelor', 'localized_only': 'bachelor', 'full_region_agreement': 'bachelor', 'contextual_recovery': 'bachelor'}
+2/75 clean_1 pages=2 regions=1 {'none': 'master', 'fixed_middle': 'master', 'localized_only': 'master', 'full_region_agreement': 'master', 'contextual_recovery': 'master'}
+3/75 clean_2 pages=2 regions=2 {'none': 'master', 'fixed_middle': 'associate', 'localized_only': 'master', 'full_region_agreement': 'master', 'contextual_recovery': 'master'}
+4/75 clean_3 pages=2 regions=1 {'none': 'master', 'fixed_middle': 'bachelor', 'localized_only': 'master', 'full_region_agreement': 'master', 'contextual_recovery': 'master'}
+5/75 clean_4 pages=2 regions=1 {'none': 'bachelor', 'fixed_middle': 'bachelor', 'localized_only': 'bachelor', 'full_region_agreement': 'bachelor', 'contextual_recovery': 'bachelor'}
+6/75 clean_5 pages=2 regions=1 {'none': 'bachelor', 'fixed_middle': 'bachelor', 'localized_only': 'associate', 'full_region_agreement': None, 'contextual_recovery': None}
+7/75 clean_6 pages=1 regions=1 {'none': 'bachelor', 'fixed_middle': 'bachelor', 'localized_only': 'bachelor', 'full_region_agreement': 'bachelor', 'contextual_recovery': 'bachelor'}
+8/75 clean_7 pages=1 regions=1 {'none': 'bachelor', 'fixed_middle': 'bachelor', 'localized_only': 'bachelor', 'full_region_agreement': 'bachelor', 'contextual_recovery': 'bachelor'}
+9/75 clean_8 pages=2 regions=1 {'none': 'master', 'fixed_middle': 'postgraduate', 'localized_only': 'master', 'full_region_agreement': 'master', 'contextual_recovery': None}
+10/75 clean_9 pages=2 regions=1 {'none': 'bachelor', 'fixed_middle': 'associate', 'localized_only': 'bachelor', 'full_region_agreement': 'bachelor', 'contextual_recovery': 'bachelor'}
+11/75 clean_10 pages=1 regions=1 {'none': 'bachelor', 'fixed_middle': 'bachelor', 'localized_only': 'bachelor', 'full_region_agreement': 'bachelor', 'contextual_recovery': 'bachelor'}
+12/75 clean_11 pages=2 regions=2 {'none': 'bachelor', 'fixed_middle': 'associate', 'localized_only': 'bachelor', 'full_region_agreement': 'bachelor', 'contextual_recovery': 'bachelor'}
+13/75 clean_12 pages=2 regions=1 {'none': 'master', 'fixed_middle': 'associate', 'localized_only': 'master', 'full_region_agreement': 'master', 'contextual_recovery': 'master'}
+14/75 clean_13 pages=2 regions=1 {'none': 'bachelor', 'fixed_middle': 'bachelor', 'localized_only': 'bachelor', 'full_region_agreement': 'bachelor', 'contextual_recovery': 'bachelor'}
+15/75 clean_14 pages=2 regions=2 {'none': 'master', 'fixed_middle': 'bachelor', 'localized_only': 'master', 'full_region_agreement': 'master', 'contextual_recovery': 'master'}
+16/75 resume_parsing_vision_validation_r00018__qwen__resume_highest_degree__pgd__eps-2__seed-566 pages=2 regions=1 {'none': 'master', 'fixed_middle': 'postgraduate', 'localized_only': 'master', 'full_region_agreement': 'master', 'contextual_recovery': 'master'}
+17/75 resume_parsing_vision_validation_r00018__qwen__resume_highest_degree__pgd__eps-4__seed-566 pages=2 regions=2 {'none': 'postgraduate', 'fixed_middle': 'postgraduate', 'localized_only': 'postgraduate', 'full_region_agreement': 'postgraduate', 'contextual_recovery': 'postgraduate'}
+18/75 resume_parsing_vision_validation_r00018__qwen__resume_highest_degree__pgd__eps-8__seed-566 pages=2 regions=2 {'none': 'master', 'fixed_middle': 'postgraduate', 'localized_only': 'postgraduate', 'full_region_agreement': None, 'contextual_recovery': None}
+19/75 resume_parsing_vision_validation_r00018__qwen__resume_highest_degree__pgd__eps-16__seed-566 pages=2 regions=2 {'none': 'master', 'fixed_middle': 'postgraduate', 'localized_only': 'master', 'full_region_agreement': 'master', 'contextual_recovery': 'master'}
+20/75 resume_parsing_vision_validation_r00045__qwen__resume_highest_degree__pgd__eps-2__seed-566 pages=1 regions=1 {'none': 'bachelor', 'fixed_middle': 'bachelor', 'localized_only': 'bachelor', 'full_region_agreement': 'bachelor', 'contextual_recovery': 'bachelor'}
+21/75 resume_parsing_vision_validation_r00045__qwen__resume_highest_degree__pgd__eps-4__seed-566 pages=1 regions=1 {'none': 'bachelor', 'fixed_middle': 'bachelor', 'localized_only': 'bachelor', 'full_region_agreement': 'bachelor', 'contextual_recovery': 'bachelor'}
+22/75 resume_parsing_vision_validation_r00045__qwen__resume_highest_degree__pgd__eps-8__seed-566 pages=1 regions=1 {'none': 'bachelor', 'fixed_middle': 'bachelor', 'localized_only': 'bachelor', 'full_region_agreement': 'bachelor', 'contextual_recovery': 'bachelor'}
+23/75 resume_parsing_vision_validation_r00045__qwen__resume_highest_degree__pgd__eps-16__seed-566 pages=1 regions=1 {'none': 'bachelor', 'fixed_middle': 'bachelor', 'localized_only': 'bachelor', 'full_region_agreement': 'bachelor', 'contextual_recovery': 'bachelor'}
+24/75 resume_parsing_vision_validation_r00065__qwen__resume_highest_degree__pgd__eps-2__seed-566 pages=2 regions=1 {'none': 'bachelor', 'fixed_middle': 'associate', 'localized_only': 'bachelor', 'full_region_agreement': 'bachelor', 'contextual_recovery': 'bachelor'}
+25/75 resume_parsing_vision_validation_r00065__qwen__resume_highest_degree__pgd__eps-4__seed-566 pages=2 regions=1 {'none': 'bachelor', 'fixed_middle': 'associate', 'localized_only': 'bachelor', 'full_region_agreement': 'bachelor', 'contextual_recovery': 'bachelor'}
+26/75 resume_parsing_vision_validation_r00065__qwen__resume_highest_degree__pgd__eps-8__seed-566 pages=2 regions=1 {'none': 'bachelor', 'fixed_middle': 'associate', 'localized_only': 'bachelor', 'full_region_agreement': 'bachelor', 'contextual_recovery': 'bachelor'}
+27/75 resume_parsing_vision_validation_r00065__qwen__resume_highest_degree__pgd__eps-16__seed-566 pages=2 regions=1 {'none': 'master', 'fixed_middle': 'associate', 'localized_only': 'bachelor', 'full_region_agreement': None, 'contextual_recovery': 'bachelor'}
+28/75 resume_parsing_vision_validation_r00183__qwen__resume_highest_degree__pgd__eps-2__seed-566 pages=2 regions=1 {'none': 'master', 'fixed_middle': 'bachelor', 'localized_only': 'master', 'full_region_agreement': 'master', 'contextual_recovery': 'master'}
+29/75 resume_parsing_vision_validation_r00183__qwen__resume_highest_degree__pgd__eps-4__seed-566 pages=2 regions=1 {'none': 'master', 'fixed_middle': 'bachelor', 'localized_only': 'master', 'full_region_agreement': 'master', 'contextual_recovery': 'master'}
+30/75 resume_parsing_vision_validation_r00183__qwen__resume_highest_degree__pgd__eps-8__seed-566 pages=2 regions=0 {'none': 'master', 'fixed_middle': 'bachelor', 'localized_only': None, 'full_region_agreement': None, 'contextual_recovery': None}
+31/75 resume_parsing_vision_validation_r00183__qwen__resume_highest_degree__pgd__eps-16__seed-566 pages=2 regions=1 {'none': 'master', 'fixed_middle': 'bachelor', 'localized_only': 'master', 'full_region_agreement': 'master', 'contextual_recovery': 'master'}
+32/75 resume_parsing_vision_validation_r00185__qwen__resume_highest_degree__pgd__eps-2__seed-566 pages=2 regions=1 {'none': 'master', 'fixed_middle': 'associate', 'localized_only': 'master', 'full_region_agreement': 'master', 'contextual_recovery': 'master'}
+33/75 resume_parsing_vision_validation_r00185__qwen__resume_highest_degree__pgd__eps-4__seed-566 pages=2 regions=1 {'none': 'master', 'fixed_middle': 'associate', 'localized_only': 'master', 'full_region_agreement': 'master', 'contextual_recovery': 'master'}
+34/75 resume_parsing_vision_validation_r00185__qwen__resume_highest_degree__pgd__eps-8__seed-566 pages=2 regions=1 {'none': 'master', 'fixed_middle': 'associate', 'localized_only': 'master', 'full_region_agreement': 'master', 'contextual_recovery': 'master'}
+35/75 resume_parsing_vision_validation_r00185__qwen__resume_highest_degree__pgd__eps-16__seed-566 pages=2 regions=1 {'none': 'doctorate', 'fixed_middle': 'associate', 'localized_only': 'master', 'full_region_agreement': None, 'contextual_recovery': 'master'}
+36/75 resume_parsing_vision_validation_r00217__qwen__resume_highest_degree__pgd__eps-2__seed-566 pages=2 regions=2 {'none': 'bachelor', 'fixed_middle': 'associate', 'localized_only': 'associate', 'full_region_agreement': None, 'contextual_recovery': None}
+37/75 resume_parsing_vision_validation_r00217__qwen__resume_highest_degree__pgd__eps-4__seed-566 pages=2 regions=1 {'none': 'bachelor', 'fixed_middle': 'associate', 'localized_only': 'bachelor', 'full_region_agreement': 'bachelor', 'contextual_recovery': 'bachelor'}
+38/75 resume_parsing_vision_validation_r00217__qwen__resume_highest_degree__pgd__eps-8__seed-566 pages=2 regions=2 {'none': 'bachelor', 'fixed_middle': 'associate', 'localized_only': 'associate', 'full_region_agreement': None, 'contextual_recovery': 'associate'}
+39/75 resume_parsing_vision_validation_r00217__qwen__resume_highest_degree__pgd__eps-16__seed-566 pages=2 regions=2 {'none': 'bachelor', 'fixed_middle': 'associate', 'localized_only': 'associate', 'full_region_agreement': None, 'contextual_recovery': 'associate'}
+40/75 resume_parsing_vision_validation_r00387__qwen__resume_highest_degree__pgd__eps-2__seed-566 pages=2 regions=2 {'none': 'master', 'fixed_middle': 'associate', 'localized_only': 'master', 'full_region_agreement': 'master', 'contextual_recovery': 'master'}
+41/75 resume_parsing_vision_validation_r00387__qwen__resume_highest_degree__pgd__eps-4__seed-566 pages=2 regions=2 {'none': 'master', 'fixed_middle': 'postgraduate', 'localized_only': 'master', 'full_region_agreement': 'master', 'contextual_recovery': 'master'}
+42/75 resume_parsing_vision_validation_r00387__qwen__resume_highest_degree__pgd__eps-8__seed-566 pages=2 regions=2 {'none': 'master', 'fixed_middle': 'associate', 'localized_only': 'bachelor', 'full_region_agreement': None, 'contextual_recovery': None}
+43/75 resume_parsing_vision_validation_r00387__qwen__resume_highest_degree__pgd__eps-16__seed-566 pages=2 regions=1 {'none': 'master', 'fixed_middle': 'associate', 'localized_only': 'bachelor', 'full_region_agreement': None, 'contextual_recovery': None}
+44/75 resume_parsing_vision_validation_r00465__qwen__resume_highest_degree__pgd__eps-2__seed-566 pages=2 regions=2 {'none': 'master', 'fixed_middle': 'bachelor', 'localized_only': 'master', 'full_region_agreement': 'master', 'contextual_recovery': 'master'}
+45/75 resume_parsing_vision_validation_r00465__qwen__resume_highest_degree__pgd__eps-4__seed-566 pages=2 regions=2 {'none': 'master', 'fixed_middle': 'bachelor', 'localized_only': 'master', 'full_region_agreement': 'master', 'contextual_recovery': 'master'}
+46/75 resume_parsing_vision_validation_r00465__qwen__resume_highest_degree__pgd__eps-8__seed-566 pages=2 regions=1 {'none': 'master', 'fixed_middle': 'bachelor', 'localized_only': 'master', 'full_region_agreement': 'master', 'contextual_recovery': 'master'}
+47/75 resume_parsing_vision_validation_r00465__qwen__resume_highest_degree__pgd__eps-16__seed-566 pages=2 regions=2 {'none': 'doctorate', 'fixed_middle': 'bachelor', 'localized_only': 'master', 'full_region_agreement': None, 'contextual_recovery': 'master'}
+48/75 resume_parsing_vision_validation_r00483__qwen__resume_highest_degree__pgd__eps-2__seed-566 pages=2 regions=1 {'none': 'master', 'fixed_middle': 'master', 'localized_only': 'master', 'full_region_agreement': 'master', 'contextual_recovery': 'master'}
+49/75 resume_parsing_vision_validation_r00483__qwen__resume_highest_degree__pgd__eps-4__seed-566 pages=2 regions=1 {'none': 'bachelor', 'fixed_middle': 'master', 'localized_only': 'master', 'full_region_agreement': None, 'contextual_recovery': 'master'}
+50/75 resume_parsing_vision_validation_r00483__qwen__resume_highest_degree__pgd__eps-8__seed-566 pages=2 regions=0 {'none': 'master', 'fixed_middle': 'master', 'localized_only': None, 'full_region_agreement': None, 'contextual_recovery': None}
+51/75 resume_parsing_vision_validation_r00483__qwen__resume_highest_degree__pgd__eps-16__seed-566 pages=2 regions=1 {'none': 'doctorate', 'fixed_middle': 'master', 'localized_only': 'master', 'full_region_agreement': None, 'contextual_recovery': 'master'}
+52/75 resume_parsing_vision_validation_r00520__qwen__resume_highest_degree__pgd__eps-2__seed-566 pages=1 regions=1 {'none': 'bachelor', 'fixed_middle': 'bachelor', 'localized_only': 'bachelor', 'full_region_agreement': 'bachelor', 'contextual_recovery': 'bachelor'}
+53/75 resume_parsing_vision_validation_r00520__qwen__resume_highest_degree__pgd__eps-4__seed-566 pages=1 regions=1 {'none': 'bachelor', 'fixed_middle': 'bachelor', 'localized_only': 'bachelor', 'full_region_agreement': 'bachelor', 'contextual_recovery': 'bachelor'}
+54/75 resume_parsing_vision_validation_r00520__qwen__resume_highest_degree__pgd__eps-8__seed-566 pages=1 regions=1 {'none': 'bachelor', 'fixed_middle': 'bachelor', 'localized_only': 'bachelor', 'full_region_agreement': 'bachelor', 'contextual_recovery': 'bachelor'}
+55/75 resume_parsing_vision_validation_r00520__qwen__resume_highest_degree__pgd__eps-16__seed-566 pages=1 regions=1 {'none': 'bachelor', 'fixed_middle': 'bachelor', 'localized_only': 'bachelor', 'full_region_agreement': 'bachelor', 'contextual_recovery': 'bachelor'}
+56/75 resume_parsing_vision_validation_r00708__qwen__resume_highest_degree__pgd__eps-2__seed-566 pages=1 regions=1 {'none': 'bachelor', 'fixed_middle': 'bachelor', 'localized_only': 'bachelor', 'full_region_agreement': 'bachelor', 'contextual_recovery': 'bachelor'}
+57/75 resume_parsing_vision_validation_r00708__qwen__resume_highest_degree__pgd__eps-4__seed-566 pages=1 regions=1 {'none': 'bachelor', 'fixed_middle': 'bachelor', 'localized_only': 'bachelor', 'full_region_agreement': 'bachelor', 'contextual_recovery': 'bachelor'}
+58/75 resume_parsing_vision_validation_r00708__qwen__resume_highest_degree__pgd__eps-8__seed-566 pages=1 regions=1 {'none': 'bachelor', 'fixed_middle': 'bachelor', 'localized_only': 'bachelor', 'full_region_agreement': 'bachelor', 'contextual_recovery': 'bachelor'}
+59/75 resume_parsing_vision_validation_r00708__qwen__resume_highest_degree__pgd__eps-16__seed-566 pages=1 regions=1 {'none': 'bachelor', 'fixed_middle': 'bachelor', 'localized_only': 'bachelor', 'full_region_agreement': 'bachelor', 'contextual_recovery': 'bachelor'}
+60/75 resume_parsing_vision_validation_r00739__qwen__resume_highest_degree__pgd__eps-2__seed-566 pages=2 regions=1 {'none': 'bachelor', 'fixed_middle': 'bachelor', 'localized_only': 'bachelor', 'full_region_agreement': 'bachelor', 'contextual_recovery': 'bachelor'}
+61/75 resume_parsing_vision_validation_r00739__qwen__resume_highest_degree__pgd__eps-4__seed-566 pages=2 regions=2 {'none': 'bachelor', 'fixed_middle': 'bachelor', 'localized_only': 'bachelor', 'full_region_agreement': 'bachelor', 'contextual_recovery': 'bachelor'}
+62/75 resume_parsing_vision_validation_r00739__qwen__resume_highest_degree__pgd__eps-8__seed-566 pages=2 regions=1 {'none': 'bachelor', 'fixed_middle': 'bachelor', 'localized_only': 'bachelor', 'full_region_agreement': 'bachelor', 'contextual_recovery': 'bachelor'}
+63/75 resume_parsing_vision_validation_r00739__qwen__resume_highest_degree__pgd__eps-16__seed-566 pages=2 regions=1 {'none': 'bachelor', 'fixed_middle': 'bachelor', 'localized_only': 'bachelor', 'full_region_agreement': 'bachelor', 'contextual_recovery': 'bachelor'}
+64/75 resume_parsing_vision_validation_r00773__qwen__resume_highest_degree__pgd__eps-2__seed-566 pages=2 regions=1 {'none': 'bachelor', 'fixed_middle': 'bachelor', 'localized_only': 'bachelor', 'full_region_agreement': 'bachelor', 'contextual_recovery': 'bachelor'}
+65/75 resume_parsing_vision_validation_r00773__qwen__resume_highest_degree__pgd__eps-4__seed-566 pages=2 regions=1 {'none': 'bachelor', 'fixed_middle': 'bachelor', 'localized_only': 'bachelor', 'full_region_agreement': 'bachelor', 'contextual_recovery': 'bachelor'}
+66/75 resume_parsing_vision_validation_r00773__qwen__resume_highest_degree__pgd__eps-8__seed-566 pages=2 regions=1 {'none': 'bachelor', 'fixed_middle': 'bachelor', 'localized_only': 'bachelor', 'full_region_agreement': 'bachelor', 'contextual_recovery': 'bachelor'}
+67/75 resume_parsing_vision_validation_r00773__qwen__resume_highest_degree__pgd__eps-16__seed-566 pages=2 regions=1 {'none': 'bachelor', 'fixed_middle': 'bachelor', 'localized_only': 'bachelor', 'full_region_agreement': 'bachelor', 'contextual_recovery': 'bachelor'}
+68/75 resume_parsing_vision_validation_r00941__qwen__resume_highest_degree__pgd__eps-2__seed-566 pages=1 regions=1 {'none': 'bachelor', 'fixed_middle': 'bachelor', 'localized_only': 'bachelor', 'full_region_agreement': 'bachelor', 'contextual_recovery': 'bachelor'}
+69/75 resume_parsing_vision_validation_r00941__qwen__resume_highest_degree__pgd__eps-4__seed-566 pages=1 regions=1 {'none': 'bachelor', 'fixed_middle': 'bachelor', 'localized_only': 'bachelor', 'full_region_agreement': 'bachelor', 'contextual_recovery': 'bachelor'}
+70/75 resume_parsing_vision_validation_r00941__qwen__resume_highest_degree__pgd__eps-8__seed-566 pages=1 regions=1 {'none': 'bachelor', 'fixed_middle': 'bachelor', 'localized_only': 'secondary', 'full_region_agreement': None, 'contextual_recovery': 'secondary'}
+71/75 resume_parsing_vision_validation_r00941__qwen__resume_highest_degree__pgd__eps-16__seed-566 pages=1 regions=1 {'none': 'bachelor', 'fixed_middle': 'bachelor', 'localized_only': 'secondary', 'full_region_agreement': None, 'contextual_recovery': 'secondary'}
+72/75 resume_parsing_vision_validation_r00983__qwen__resume_highest_degree__pgd__eps-2__seed-566 pages=2 regions=1 {'none': 'bachelor', 'fixed_middle': 'bachelor', 'localized_only': 'bachelor', 'full_region_agreement': 'bachelor', 'contextual_recovery': 'bachelor'}
+73/75 resume_parsing_vision_validation_r00983__qwen__resume_highest_degree__pgd__eps-4__seed-566 pages=2 regions=1 {'none': 'bachelor', 'fixed_middle': 'bachelor', 'localized_only': 'bachelor', 'full_region_agreement': 'bachelor', 'contextual_recovery': 'bachelor'}
+74/75 resume_parsing_vision_validation_r00983__qwen__resume_highest_degree__pgd__eps-8__seed-566 pages=2 regions=0 {'none': 'bachelor', 'fixed_middle': 'bachelor', 'localized_only': None, 'full_region_agreement': None, 'contextual_recovery': None}
+75/75 resume_parsing_vision_validation_r00983__qwen__resume_highest_degree__pgd__eps-16__seed-566 pages=2 regions=1 {'none': 'bachelor', 'fixed_middle': 'bachelor', 'localized_only': 'bachelor', 'full_region_agreement': 'bachelor', 'contextual_recovery': 'bachelor'}
+[
+  {
+    "family": "clean",
+    "epsilon_255": 0,
+    "method": "none",
+    "n": 15,
+    "correct": 15,
+    "wrong": 0,
+    "rejected": 0,
+    "targeted": 0,
+    "correct_rate": 1.0,
+    "coverage": 1.0,
+    "accepted_error_rate": 0.0,
+    "target_rate": 0.0
+  },
+  {
+    "family": "clean",
+    "epsilon_255": 0,
+    "method": "fixed_middle",
+    "n": 15,
+    "correct": 8,
+    "wrong": 7,
+    "rejected": 0,
+    "targeted": 0,
+    "correct_rate": 0.5333333333333333,
+    "coverage": 1.0,
+    "accepted_error_rate": 0.4666666666666667,
+    "target_rate": 0.0
+  },
+  {
+    "family": "clean",
+    "epsilon_255": 0,
+    "method": "localized_only",
+    "n": 15,
+    "correct": 14,
+    "wrong": 1,
+    "rejected": 0,
+    "targeted": 0,
+    "correct_rate": 0.9333333333333333,
+    "coverage": 1.0,
+    "accepted_error_rate": 0.06666666666666667,
+    "target_rate": 0.0
+  },
+  {
+    "family": "clean",
+    "epsilon_255": 0,
+    "method": "full_region_agreement",
+    "n": 15,
+    "correct": 14,
+    "wrong": 0,
+    "rejected": 1,
+    "targeted": 0,
+    "correct_rate": 0.9333333333333333,
+    "coverage": 0.9333333333333333,
+    "accepted_error_rate": 0.0,
+    "target_rate": 0.0
+  },
+  {
+    "family": "clean",
+    "epsilon_255": 0,
+    "method": "contextual_recovery",
+    "n": 15,
+    "correct": 13,
+    "wrong": 0,
+    "rejected": 2,
+    "targeted": 0,
+    "correct_rate": 0.8666666666666667,
+    "coverage": 0.8666666666666667,
+    "accepted_error_rate": 0.0,
+    "target_rate": 0.0
+  },
+  {
+    "family": "standard",
+    "epsilon_255": 2,
+    "method": "none",
+    "n": 15,
+    "correct": 15,
+    "wrong": 0,
+    "rejected": 0,
+    "targeted": 0,
+    "correct_rate": 1.0,
+    "coverage": 1.0,
+    "accepted_error_rate": 0.0,
+    "target_rate": 0.0
+  },
+  {
+    "family": "standard",
+    "epsilon_255": 2,
+    "method": "fixed_middle",
+    "n": 15,
+    "correct": 8,
+    "wrong": 7,
+    "rejected": 0,
+    "targeted": 0,
+    "correct_rate": 0.5333333333333333,
+    "coverage": 1.0,
+    "accepted_error_rate": 0.4666666666666667,
+    "target_rate": 0.0
+  },
+  {
+    "family": "standard",
+    "epsilon_255": 2,
+    "method": "localized_only",
+    "n": 15,
+    "correct": 14,
+    "wrong": 1,
+    "rejected": 0,
+    "targeted": 0,
+    "correct_rate": 0.9333333333333333,
+    "coverage": 1.0,
+    "accepted_error_rate": 0.06666666666666667,
+    "target_rate": 0.0
+  },
+  {
+    "family": "standard",
+    "epsilon_255": 2,
+    "method": "full_region_agreement",
+    "n": 15,
+    "correct": 14,
+    "wrong": 0,
+    "rejected": 1,
+    "targeted": 0,
+    "correct_rate": 0.9333333333333333,
+    "coverage": 0.9333333333333333,
+    "accepted_error_rate": 0.0,
+    "target_rate": 0.0
+  },
+  {
+    "family": "standard",
+    "epsilon_255": 2,
+    "method": "contextual_recovery",
+    "n": 15,
+    "correct": 14,
+    "wrong": 0,
+    "rejected": 1,
+    "targeted": 0,
+    "correct_rate": 0.9333333333333333,
+    "coverage": 0.9333333333333333,
+    "accepted_error_rate": 0.0,
+    "target_rate": 0.0
+  },
+  {
+    "family": "standard",
+    "epsilon_255": 4,
+    "method": "none",
+    "n": 15,
+    "correct": 13,
+    "wrong": 2,
+    "rejected": 0,
+    "targeted": 0,
+    "correct_rate": 0.8666666666666667,
+    "coverage": 1.0,
+    "accepted_error_rate": 0.13333333333333333,
+    "target_rate": 0.0
+  },
+  {
+    "family": "standard",
+    "epsilon_255": 4,
+    "method": "fixed_middle",
+    "n": 15,
+    "correct": 8,
+    "wrong": 7,
+    "rejected": 0,
+    "targeted": 0,
+    "correct_rate": 0.5333333333333333,
+    "coverage": 1.0,
+    "accepted_error_rate": 0.4666666666666667,
+    "target_rate": 0.0
+  },
+  {
+    "family": "standard",
+    "epsilon_255": 4,
+    "method": "localized_only",
+    "n": 15,
+    "correct": 14,
+    "wrong": 1,
+    "rejected": 0,
+    "targeted": 0,
+    "correct_rate": 0.9333333333333333,
+    "coverage": 1.0,
+    "accepted_error_rate": 0.06666666666666667,
+    "target_rate": 0.0
+  },
+  {
+    "family": "standard",
+    "epsilon_255": 4,
+    "method": "full_region_agreement",
+    "n": 15,
+    "correct": 13,
+    "wrong": 1,
+    "rejected": 1,
+    "targeted": 0,
+    "correct_rate": 0.8666666666666667,
+    "coverage": 0.9333333333333333,
+    "accepted_error_rate": 0.06666666666666667,
+    "target_rate": 0.0
+  },
+  {
+    "family": "standard",
+    "epsilon_255": 4,
+    "method": "contextual_recovery",
+    "n": 15,
+    "correct": 14,
+    "wrong": 1,
+    "rejected": 0,
+    "targeted": 0,
+    "correct_rate": 0.9333333333333333,
+    "coverage": 1.0,
+    "accepted_error_rate": 0.06666666666666667,
+    "target_rate": 0.0
+  },
+  {
+    "family": "standard",
+    "epsilon_255": 8,
+    "method": "none",
+    "n": 15,
+    "correct": 15,
+    "wrong": 0,
+    "rejected": 0,
+    "targeted": 0,
+    "correct_rate": 1.0,
+    "coverage": 1.0,
+    "accepted_error_rate": 0.0,
+    "target_rate": 0.0
+  },
+  {
+    "family": "standard",
+    "epsilon_255": 8,
+    "method": "fixed_middle",
+    "n": 15,
+    "correct": 8,
+    "wrong": 7,
+    "rejected": 0,
+    "targeted": 0,
+    "correct_rate": 0.5333333333333333,
+    "coverage": 1.0,
+    "accepted_error_rate": 0.4666666666666667,
+    "target_rate": 0.0
+  },
+  {
+    "family": "standard",
+    "epsilon_255": 8,
+    "method": "localized_only",
+    "n": 15,
+    "correct": 8,
+    "wrong": 4,
+    "rejected": 3,
+    "targeted": 0,
+    "correct_rate": 0.5333333333333333,
+    "coverage": 0.8,
+    "accepted_error_rate": 0.26666666666666666,
+    "target_rate": 0.0
+  },
+  {
+    "family": "standard",
+    "epsilon_255": 8,
+    "method": "full_region_agreement",
+    "n": 15,
+    "correct": 8,
+    "wrong": 0,
+    "rejected": 7,
+    "targeted": 0,
+    "correct_rate": 0.5333333333333333,
+    "coverage": 0.5333333333333333,
+    "accepted_error_rate": 0.0,
+    "target_rate": 0.0
+  },
+  {
+    "family": "standard",
+    "epsilon_255": 8,
+    "method": "contextual_recovery",
+    "n": 15,
+    "correct": 8,
+    "wrong": 2,
+    "rejected": 5,
+    "targeted": 0,
+    "correct_rate": 0.5333333333333333,
+    "coverage": 0.6666666666666666,
+    "accepted_error_rate": 0.13333333333333333,
+    "target_rate": 0.0
+  },
+  {
+    "family": "standard",
+    "epsilon_255": 16,
+    "method": "none",
+    "n": 15,
+    "correct": 11,
+    "wrong": 4,
+    "rejected": 0,
+    "targeted": 4,
+    "correct_rate": 0.7333333333333333,
+    "coverage": 1.0,
+    "accepted_error_rate": 0.26666666666666666,
+    "target_rate": 0.26666666666666666
+  },
+  {
+    "family": "standard",
+    "epsilon_255": 16,
+    "method": "fixed_middle",
+    "n": 15,
+    "correct": 8,
+    "wrong": 7,
+    "rejected": 0,
+    "targeted": 0,
+    "correct_rate": 0.5333333333333333,
+    "coverage": 1.0,
+    "accepted_error_rate": 0.4666666666666667,
+    "target_rate": 0.0
+  },
+  {
+    "family": "standard",
+    "epsilon_255": 16,
+    "method": "localized_only",
+    "n": 15,
+    "correct": 12,
+    "wrong": 3,
+    "rejected": 0,
+    "targeted": 0,
+    "correct_rate": 0.8,
+    "coverage": 1.0,
+    "accepted_error_rate": 0.2,
+    "target_rate": 0.0
+  },
+  {
+    "family": "standard",
+    "epsilon_255": 16,
+    "method": "full_region_agreement",
+    "n": 15,
+    "correct": 8,
+    "wrong": 0,
+    "rejected": 7,
+    "targeted": 0,
+    "correct_rate": 0.5333333333333333,
+    "coverage": 0.5333333333333333,
+    "accepted_error_rate": 0.0,
+    "target_rate": 0.0
+  },
+  {
+    "family": "standard",
+    "epsilon_255": 16,
+    "method": "contextual_recovery",
+    "n": 15,
+    "correct": 12,
+    "wrong": 2,
+    "rejected": 1,
+    "targeted": 0,
+    "correct_rate": 0.8,
+    "coverage": 0.9333333333333333,
+    "accepted_error_rate": 0.13333333333333333,
+    "target_rate": 0.0
+  },
+  {
+    "family": "standard",
+    "epsilon_255": "all",
+    "method": "none",
+    "n": 60,
+    "correct": 54,
+    "wrong": 6,
+    "rejected": 0,
+    "targeted": 4,
+    "correct_rate": 0.9,
+    "coverage": 1.0,
+    "accepted_error_rate": 0.1,
+    "target_rate": 0.06666666666666667
+  },
+  {
+    "family": "standard",
+    "epsilon_255": "all",
+    "method": "fixed_middle",
+    "n": 60,
+    "correct": 32,
+    "wrong": 28,
+    "rejected": 0,
+    "targeted": 0,
+    "correct_rate": 0.5333333333333333,
+    "coverage": 1.0,
+    "accepted_error_rate": 0.4666666666666667,
+    "target_rate": 0.0
+  },
+  {
+    "family": "standard",
+    "epsilon_255": "all",
+    "method": "localized_only",
+    "n": 60,
+    "correct": 48,
+    "wrong": 9,
+    "rejected": 3,
+    "targeted": 0,
+    "correct_rate": 0.8,
+    "coverage": 0.95,
+    "accepted_error_rate": 0.15,
+    "target_rate": 0.0
+  },
+  {
+    "family": "standard",
+    "epsilon_255": "all",
+    "method": "full_region_agreement",
+    "n": 60,
+    "correct": 43,
+    "wrong": 1,
+    "rejected": 16,
+    "targeted": 0,
+    "correct_rate": 0.7166666666666667,
+    "coverage": 0.7333333333333333,
+    "accepted_error_rate": 0.016666666666666666,
+    "target_rate": 0.0
+  },
+  {
+    "family": "standard",
+    "epsilon_255": "all",
+    "method": "contextual_recovery",
+    "n": 60,
+    "correct": 48,
+    "wrong": 5,
+    "rejected": 7,
+    "targeted": 0,
+    "correct_rate": 0.8,
+    "coverage": 0.8833333333333333,
+    "accepted_error_rate": 0.08333333333333333,
+    "target_rate": 0.0
+  }
+]

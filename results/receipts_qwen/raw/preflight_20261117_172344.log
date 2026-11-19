@@ -1,0 +1,19 @@
+Verified input hashes: 100
+Verified input hashes: 200
+Verified input hashes: 300
+Verified input hashes: 400
+Verified input hashes: 500
+Verified input hashes: 600
+Traceback (most recent call last):
+  File "/content/csev_full_study/full_study.py", line 304, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/content/csev_full_study/full_study.py", line 297, in main
+    if a.command=='preflight':s.preflight()
+                              ^^^^^^^^^^^^^
+  File "/content/csev_full_study/full_study.py", line 75, in preflight
+    self.environment()
+  File "/content/csev_full_study/full_study.py", line 94, in environment
+    if p.exists():assert read(p)==env,'Runtime differs from prior work. Use a new study ID; do not mix environments.'
+                         ^^^^^^^^^^^^
+AssertionError: Runtime differs from prior work. Use a new study ID; do not mix environments.

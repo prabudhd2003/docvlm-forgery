@@ -1,0 +1,10 @@
+dataset_name,experiment_split,documents,usable,attack_eligible
+cord_v2,test,100,100,100
+cord_v2,train,800,798,798
+cord_v2,validation,100,100,100
+resume_parsing_vision,test,75,75,75
+resume_parsing_vision,train,850,850,842
+resume_parsing_vision,validation,75,75,75
+sroie,test,361,361,361
+sroie,train,500,500,500
+sroie,validation,126,126,126

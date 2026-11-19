@@ -1,0 +1,43 @@
+# Local datasets and caches. Keep the empty directory in Git.
+data/*
+!data/.gitkeep
+!data/collected_receipts/
+!data/annotations/
+!data/receipt_study/
+!data/processed/
+data/processed/**/*.png
+data/processed/**/*.jpg
+data/receipt_study/staging/
+data/receipt_study/source.tar
+data/receipt_study/*.zip
+.cache/
+
+# Large frozen input bundles (saved attacks). Keep on Drive / CARC, not in Git.
+inputs/
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+
+# Experiment artifacts and model files
+outputs/
+checkpoints/
+logs/
+*.ckpt
+*.pt
+*.pth
+*.safetensors
+
+# Notebook-generated files
+.ipynb_checkpoints/
+
+# Secrets and local environment files
+.env
+.env.*
+!.env.example
+
+# Python and macOS
+__pycache__/
+*.py[cod]
+.DS_Store
+

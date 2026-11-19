@@ -1,0 +1,120 @@
+{
+  "case_id": "clean_36",
+  "family": "clean",
+  "epsilon_255": 0,
+  "attack_target": null,
+  "record_id": "resume_parsing_vision/validation/r00638",
+  "clean_target": "master",
+  "page_count": 2,
+  "regions": [
+    {
+      "raw": "{\"boxes\": []}",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [],
+      "pairs": [],
+      "status": "no_education",
+      "attempts": [
+        {
+          "raw": "{\"boxes\": []}",
+          "status": "valid"
+        }
+      ],
+      "page": 0
+    },
+    {
+      "raw": "```json\n{\n  \"boxes\": [\n    {\n      \"left\": 302,\n      \"top\": 154,\n      \"right\": 749,\n      \"bottom\": 194\n    },\n    {\n      \"left\": 302,\n      \"top\": 227,\n      \"right\": 749,\n      \"bottom\": 247\n    },\n    {\n      \"left\": 302,\n      \"top\": 280,\n      \"right\": 749,\n      \"bottom\": 299\n    }\n  ]\n}\n```",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [
+        [
+          0,
+          230,
+          1242,
+          290
+        ],
+        [
+          0,
+          339,
+          1242,
+          369
+        ],
+        [
+          0,
+          418,
+          1242,
+          446
+        ]
+      ],
+      "pairs": [
+        [
+          [
+            0,
+            40,
+            1242,
+            651
+          ],
+          [
+            0,
+            0,
+            1242,
+            739
+          ]
+        ]
+      ],
+      "status": "ok",
+      "attempts": [
+        {
+          "raw": "```json\n{\n  \"boxes\": [\n    {\n      \"left\": 302,\n      \"top\": 154,\n      \"right\": 749,\n      \"bottom\": 194\n    },\n    {\n      \"left\": 302,\n      \"top\": 227,\n      \"right\": 749,\n      \"bottom\": 247\n    },\n    {\n      \"left\": 302,\n      \"top\": 280,\n      \"right\": 749,\n      \"bottom\": 299\n    }\n  ]\n}\n```",
+          "status": "valid"
+        }
+      ],
+      "page": 1
+    }
+  ],
+  "crop_count": 1,
+  "localization_valid": true,
+  "raw_answers": {
+    "full": "master",
+    "fixed": "bachelor",
+    "localized": "master",
+    "expanded": "master"
+  },
+  "methods": {
+    "none": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "fixed_middle": {
+      "prediction": "bachelor",
+      "correct": false,
+      "accepted": true,
+      "targeted": false
+    },
+    "localized_only": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "full_region_agreement": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "contextual_recovery": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    }
+  },
+  "elapsed_seconds": 7.766526341999906
+}

@@ -1,0 +1,63 @@
+{
+  "record_id": "resume_parsing_vision/validation/r00387",
+  "clean_target": "master",
+  "page_count": 2,
+  "regions": [
+    {
+      "page": 0,
+      "raw": "```json\n[\n  {\n    \"boxes\": [\n      [52, 1093, 420, 1116]\n    ]\n  }\n]\n```",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "status": "invalid",
+      "error": "list indices must be integers or slices, not str"
+    },
+    {
+      "page": 1,
+      "raw": "```json\n[\n\t{\"bbox_2d\": [50, 0, 340, 19], \"text_content\": \"Bachelor of Arts in Graphic Communication\"},\n\t{\"bbox_2d\": [458, 0, 531, 16], \"text_content\": \"2009 - 2011\"},\n\t{\"bbox_2d\": [49, 22, 335, 37], \"text_content\": \"Brookmere University, Leeds, United Kingdom\"},\n\t{\"bbox_2d\": [458, 49, 531, 65], \"text_content\": \"2006 - 2009\"},\n\t{\"bbox_2d\": [49, 70, 383, 85], \"text_content\": \"Diploma in Digital Media Foundations\"},\n\t{\"bbox_2d\": [458, 78, 531, 94], \"text_content\": \"Ashcombe Institute of Visual Studies, Sheffield, Latvia\"},\n]\n```",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "status": "invalid",
+      "error": "Expecting value: line 8 column 1 (char 518)"
+    }
+  ],
+  "crop_count": 0,
+  "localization_valid": false,
+  "raw_answers": {
+    "full": "master",
+    "fixed": "associate",
+    "localized": null,
+    "expanded": null
+  },
+  "methods": {
+    "none": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true
+    },
+    "fixed_middle": {
+      "prediction": "associate",
+      "correct": false,
+      "accepted": true
+    },
+    "localized_only": {
+      "prediction": null,
+      "correct": false,
+      "accepted": false
+    },
+    "full_region_agreement": {
+      "prediction": null,
+      "correct": false,
+      "accepted": false
+    },
+    "contextual_recovery": {
+      "prediction": null,
+      "correct": false,
+      "accepted": false
+    }
+  },
+  "elapsed_seconds": 12.37210941699999
+}

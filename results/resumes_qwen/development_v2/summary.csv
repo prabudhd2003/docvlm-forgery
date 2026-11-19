@@ -1,0 +1,6 @@
+method,n,correct,wrong,rejected
+none,15,15,0,0
+fixed_middle,15,8,7,0
+localized_only,15,9,0,6
+full_region_agreement,15,9,0,6
+contextual_recovery,15,9,0,6

@@ -1,0 +1,33 @@
+{
+  "inputs": "f014e1dbdd7745b735e3557444cb82394761039b7b674bb82097023c0ad680c8",
+  "script": "8d4c445d8cbfb7210c882f4de291eb73072ab69d0c30fce3ae9611239e998b86",
+  "policy": {
+    "version": "resume_development_parser_v2",
+    "minimum_height": 0.25,
+    "margin": 0.05,
+    "expansion": 0.05,
+    "max_height": 0.7,
+    "expanded_max_height": 0.85,
+    "max_regions_per_page": 4,
+    "max_crops_per_document": 8,
+    "localization_tokens": 384,
+    "fixed_band": [
+      0.2,
+      0.8
+    ]
+  },
+  "prompt": "Locate every region stating completed education qualifications or awarded degrees on this resume page. Include degree names, institutions and completion context; exclude work experience and skills. Return only JSON: {\"boxes\": [[left, top, right, bottom], ...]}. Use pixel coordinates on the displayed image of width {w} and height {h}. Return an empty boxes list if no education evidence is present. At most four boxes. Do not infer a degree or use outside knowledge.",
+  "gpu": "NVIDIA A100-SXM4-80GB",
+  "versions": {
+    "torch": "2.6.0+cu124",
+    "torchvision": "0.21.0+cu124",
+    "transformers": "5.17.0",
+    "Pillow": "12.3.0",
+    "numpy": "2.4.6",
+    "accelerate": "1.15.0",
+    "tokenizers": "0.23.2",
+    "huggingface_hub": "1.32.0",
+    "safetensors": "0.8.0"
+  },
+  "cuda": "12.4"
+}

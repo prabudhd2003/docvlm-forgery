@@ -1,0 +1,63 @@
+{
+  "record_id": "resume_parsing_vision/validation/r00018",
+  "clean_target": "master",
+  "page_count": 2,
+  "regions": [
+    {
+      "page": 0,
+      "raw": "There are no regions stating completed education qualifications or awarded degrees on this resume page.",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "status": "invalid",
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "page": 1,
+      "raw": "```json\n[\n    {\n        \"left\": 235,\n        \"top\": 342,\n        \"right\": 419,\n        \"bottom\": 360\n    },\n    {\n        \"left\": 235,\n        \"top\": 398,\n        \"right\": 419,\n        \"bottom\": 416\n    },\n    {\n        \"left\": 235,\n        \"top\": 464,\n        \"right\": 419,\n        \"bottom\": 482\n    }\n]\n```",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "status": "invalid",
+      "error": "list indices must be integers or slices, not str"
+    }
+  ],
+  "crop_count": 0,
+  "localization_valid": false,
+  "raw_answers": {
+    "full": "master",
+    "fixed": "postgraduate",
+    "localized": null,
+    "expanded": null
+  },
+  "methods": {
+    "none": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true
+    },
+    "fixed_middle": {
+      "prediction": "postgraduate",
+      "correct": false,
+      "accepted": true
+    },
+    "localized_only": {
+      "prediction": null,
+      "correct": false,
+      "accepted": false
+    },
+    "full_region_agreement": {
+      "prediction": null,
+      "correct": false,
+      "accepted": false
+    },
+    "contextual_recovery": {
+      "prediction": null,
+      "correct": false,
+      "accepted": false
+    }
+  },
+  "elapsed_seconds": 7.096075123999981
+}

@@ -1,0 +1,215 @@
+{
+  "record_id": "sroie/train/X51007339131",
+  "dataset": "sroie",
+  "family": "clean",
+  "epsilon": 0,
+  "clean_target": "12.40",
+  "attack_target": "124.00",
+  "input_sha256": "7ce72b5e734299ea3742077c6493210be1fbf32469c1a456972ac3917007a33a",
+  "methods": {
+    "none": {
+      "prediction": "12.40",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "jpeg": {
+      "prediction": "12.40",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "resize_vote": {
+      "prediction": "12.40",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "selective_multiview": {
+      "prediction": "12.40",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "semantic_consistency": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "ocr_only": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "evidence": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "fixed_band": {
+      "prediction": "12.40",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "band_answer": {
+      "prediction": "15.00",
+      "accepted": true,
+      "correct": false,
+      "targeted": false
+    },
+    "band_agreement": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "verified_recovery": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "smaller_expansion": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "taller_18": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "taller_24": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    }
+  },
+  "variants": {
+    "smaller_expansion": {
+      "boxes": [
+        [
+          0,
+          698,
+          623,
+          883
+        ],
+        [
+          0,
+          683,
+          623,
+          898
+        ]
+      ],
+      "answers": [
+        "15.00",
+        "12.40"
+      ]
+    },
+    "taller_18": {
+      "boxes": [
+        [
+          0,
+          652,
+          623,
+          929
+        ],
+        [
+          0,
+          606,
+          623,
+          975
+        ]
+      ],
+      "answers": [
+        "12.40",
+        "11.70"
+      ]
+    },
+    "taller_24": {
+      "boxes": [
+        [
+          0,
+          606,
+          623,
+          975
+        ],
+        [
+          0,
+          560,
+          623,
+          1021
+        ]
+      ],
+      "answers": [
+        "11.70",
+        "12.40"
+      ]
+    }
+  },
+  "crops": [
+    {
+      "box": [
+        0,
+        698,
+        623,
+        883
+      ],
+      "prediction": "15.00",
+      "raw": "15.00",
+      "reused": true
+    },
+    {
+      "box": [
+        0,
+        652,
+        623,
+        929
+      ],
+      "prediction": "12.40",
+      "raw": "12.40",
+      "reused": true
+    },
+    {
+      "box": [
+        0,
+        683,
+        623,
+        898
+      ],
+      "prediction": "12.40",
+      "raw": "12.40",
+      "reused": false
+    },
+    {
+      "box": [
+        0,
+        606,
+        623,
+        975
+      ],
+      "prediction": "11.70",
+      "raw": "11.70",
+      "reused": false
+    },
+    {
+      "box": [
+        0,
+        560,
+        623,
+        1021
+      ],
+      "prediction": "12.40",
+      "raw": "12.40",
+      "reused": false
+    }
+  ],
+  "elapsed_seconds": 1.1206034909999971
+}

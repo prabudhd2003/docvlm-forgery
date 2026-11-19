@@ -1,0 +1,165 @@
+{
+  "record_id": "resume_parsing_vision/validation/r00483",
+  "clean_target": "master",
+  "page_count": 2,
+  "regions": [
+    {
+      "page": 0,
+      "raw": "{\"boxes\": []}",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [],
+      "pairs": [],
+      "status": "no_education"
+    },
+    {
+      "page": 1,
+      "raw": "```json\n{\"boxes\": [[239, 750, 580, 780], [239, 780, 580, 810], [239, 810, 580, 840], [239, 840, 580, 870], [239, 870, 580, 900], [239, 900, 580, 930], [239, 930, 580, 960], [239, 960, 580, 990], [239, 990, 580, 1020], [239, 1020, 580, 1050], [239, 1050, 580, 1080], [239, 1080, 580, 1110], [239, 1110, 580, 1140], [239, 1140, 580, 1170]]}\n```",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [
+        [
+          0,
+          1120,
+          1242,
+          1165
+        ],
+        [
+          0,
+          1165,
+          1242,
+          1209
+        ],
+        [
+          0,
+          1209,
+          1242,
+          1254
+        ],
+        [
+          0,
+          1254,
+          1242,
+          1299
+        ],
+        [
+          0,
+          1299,
+          1242,
+          1344
+        ],
+        [
+          0,
+          1344,
+          1242,
+          1389
+        ],
+        [
+          0,
+          1389,
+          1242,
+          1433
+        ],
+        [
+          0,
+          1433,
+          1242,
+          1478
+        ],
+        [
+          0,
+          1478,
+          1242,
+          1523
+        ],
+        [
+          0,
+          1523,
+          1242,
+          1568
+        ],
+        [
+          0,
+          1568,
+          1242,
+          1613
+        ],
+        [
+          0,
+          1613,
+          1242,
+          1657
+        ],
+        [
+          0,
+          1657,
+          1242,
+          1702
+        ],
+        [
+          0,
+          1702,
+          1242,
+          1747
+        ]
+      ],
+      "pairs": [
+        [
+          [
+            0,
+            923,
+            1242,
+            1756
+          ],
+          [
+            0,
+            835,
+            1242,
+            1756
+          ]
+        ]
+      ],
+      "status": "ok"
+    }
+  ],
+  "crop_count": 1,
+  "localization_valid": true,
+  "raw_answers": {
+    "full": "master",
+    "fixed": "master",
+    "localized": "master",
+    "expanded": "master"
+  },
+  "methods": {
+    "none": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true
+    },
+    "fixed_middle": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true
+    },
+    "localized_only": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true
+    },
+    "full_region_agreement": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true
+    },
+    "contextual_recovery": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true
+    }
+  },
+  "elapsed_seconds": 14.135847462000015
+}

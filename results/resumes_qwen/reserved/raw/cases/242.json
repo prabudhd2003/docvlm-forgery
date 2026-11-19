@@ -1,0 +1,120 @@
+{
+  "case_id": "resume_parsing_vision_validation_r00787__qwen__resume_highest_degree__pgd__eps-8__seed-566",
+  "family": "standard",
+  "epsilon_255": 8,
+  "attack_target": "master",
+  "record_id": "resume_parsing_vision/validation/r00787",
+  "clean_target": "bachelor",
+  "page_count": 2,
+  "regions": [
+    {
+      "raw": "```json\n{\n  \"boxes\": [\n    {\n      \"left\": 92,\n      \"top\": 853,\n      \"right\": 750,\n      \"bottom\": 880\n    },\n    {\n      \"left\": 92,\n      \"top\": 880,\n      \"right\": 750,\n      \"bottom\": 897\n    },\n    {\n      \"left\": 92,\n      \"top\": 904,\n      \"right\": 750,\n      \"bottom\": 921\n    }\n  ]\n}\n```",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [
+        [
+          0,
+          1274,
+          1242,
+          1314
+        ],
+        [
+          0,
+          1314,
+          1242,
+          1339
+        ],
+        [
+          0,
+          1350,
+          1242,
+          1375
+        ]
+      ],
+      "pairs": [
+        [
+          [
+            0,
+            1074,
+            1242,
+            1582
+          ],
+          [
+            0,
+            986,
+            1242,
+            1670
+          ]
+        ]
+      ],
+      "status": "ok",
+      "attempts": [
+        {
+          "raw": "```json\n{\n  \"boxes\": [\n    {\n      \"left\": 92,\n      \"top\": 853,\n      \"right\": 750,\n      \"bottom\": 880\n    },\n    {\n      \"left\": 92,\n      \"top\": 880,\n      \"right\": 750,\n      \"bottom\": 897\n    },\n    {\n      \"left\": 92,\n      \"top\": 904,\n      \"right\": 750,\n      \"bottom\": 921\n    }\n  ]\n}\n```",
+          "status": "valid"
+        }
+      ],
+      "page": 0
+    },
+    {
+      "raw": "{\"boxes\": []}",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [],
+      "pairs": [],
+      "status": "no_education",
+      "attempts": [
+        {
+          "raw": "{\"boxes\": []}",
+          "status": "valid"
+        }
+      ],
+      "page": 1
+    }
+  ],
+  "crop_count": 1,
+  "localization_valid": true,
+  "raw_answers": {
+    "full": "bachelor",
+    "fixed": "postgraduate",
+    "localized": "bachelor",
+    "expanded": "bachelor"
+  },
+  "methods": {
+    "none": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "fixed_middle": {
+      "prediction": "postgraduate",
+      "correct": false,
+      "accepted": true,
+      "targeted": false
+    },
+    "localized_only": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "full_region_agreement": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "contextual_recovery": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    }
+  },
+  "elapsed_seconds": 9.289843564999956
+}

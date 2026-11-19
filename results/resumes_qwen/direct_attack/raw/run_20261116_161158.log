@@ -1,0 +1,114 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]
+Fetching 2 files: 100%|██████████| 2/2 [00:00<00:00, 1169.31it/s]
+
+Loading weights:   0%|          | 0/824 [00:00<?, ?it/s]
+Loading weights:  42%|████▏     | 343/824 [00:00<00:00, 3417.16it/s]
+Loading weights: 100%|██████████| 824/824 [00:00<00:00, 5339.93it/s]
+DONE 1/40 resume_parsing_vision/validation/r00474 eps=8 restart=0
+DONE 2/40 resume_parsing_vision/validation/r00474 eps=16 restart=0
+DONE 3/40 resume_parsing_vision/validation/r00373 eps=8 restart=0
+DONE 4/40 resume_parsing_vision/validation/r00373 eps=16 restart=0
+DONE 5/40 resume_parsing_vision/validation/r00291 eps=8 restart=0
+DONE 6/40 resume_parsing_vision/validation/r00291 eps=16 restart=0
+DONE 7/40 resume_parsing_vision/validation/r00496 eps=8 restart=0
+DONE 8/40 resume_parsing_vision/validation/r00496 eps=16 restart=0
+DONE 9/40 resume_parsing_vision/validation/r00842 eps=8 restart=0
+DONE 10/40 resume_parsing_vision/validation/r00842 eps=16 restart=0
+DONE 11/40 resume_parsing_vision/validation/r00793 eps=8 restart=0
+DONE 12/40 resume_parsing_vision/validation/r00793 eps=16 restart=0
+DONE 13/40 resume_parsing_vision/validation/r00201 eps=8 restart=0
+DONE 14/40 resume_parsing_vision/validation/r00201 eps=16 restart=0
+DONE 15/40 resume_parsing_vision/validation/r00063 eps=8 restart=0
+DONE 16/40 resume_parsing_vision/validation/r00063 eps=16 restart=0
+ATTACK 17/40 resume_parsing_vision/validation/r00599 eps=8 restart=0 target=master
+Traceback (most recent call last):
+  File "/content/resume_direct_attack_v1/resume_direct_attack.py", line 315, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/content/resume_direct_attack_v1/resume_direct_attack.py", line 291, in main
+    state=run_attack(clean,d['attack_target'],eps,restart,digest([sig,d['record_id'],eps,restart]),observe_fn,make_step(d['attack_target'],eps,diagnostics),ATTACK)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/resume_direct_attack_v1/resume_direct_attack.py", line 141, in run_attack
+    current,loss=step_fn(current,usable)
+                 ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/resume_direct_attack_v1/resume_direct_attack.py", line 265, in step
+    loss,_=cache[key].loss(views)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/resume_direct_attack_v1/src/attacks/qwen.py", line 137, in loss
+    output = self.wrapper.model(input_ids=self.ids, attention_mask=torch.ones_like(self.ids),
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/resume_direct_attack_v1/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/resume_direct_attack_v1/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/resume_direct_attack_v1/venv/lib/python3.11/site-packages/transformers/utils/generic.py", line 939, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/resume_direct_attack_v1/venv/lib/python3.11/site-packages/transformers/models/qwen2_5_vl/modeling_qwen2_5_vl.py", line 1378, in forward
+    outputs = self.model(
+              ^^^^^^^^^^^
+  File "/content/resume_direct_attack_v1/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/resume_direct_attack_v1/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/resume_direct_attack_v1/venv/lib/python3.11/site-packages/transformers/utils/generic.py", line 939, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/resume_direct_attack_v1/venv/lib/python3.11/site-packages/transformers/models/qwen2_5_vl/modeling_qwen2_5_vl.py", line 1248, in forward
+    outputs = self.language_model(
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/content/resume_direct_attack_v1/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/resume_direct_attack_v1/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/resume_direct_attack_v1/venv/lib/python3.11/site-packages/transformers/utils/generic.py", line 1068, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/resume_direct_attack_v1/venv/lib/python3.11/site-packages/transformers/utils/output_capturing.py", line 286, in wrapper
+    outputs = func(self, *args, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/resume_direct_attack_v1/venv/lib/python3.11/site-packages/transformers/models/qwen2_5_vl/modeling_qwen2_5_vl.py", line 868, in forward
+    hidden_states = decoder_layer(
+                    ^^^^^^^^^^^^^^
+  File "/content/resume_direct_attack_v1/venv/lib/python3.11/site-packages/transformers/modeling_layers.py", line 109, in __call__
+    return super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/resume_direct_attack_v1/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/resume_direct_attack_v1/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/resume_direct_attack_v1/venv/lib/python3.11/site-packages/transformers/models/qwen2_5_vl/modeling_qwen2_5_vl.py", line 765, in forward
+    hidden_states = self.mlp(hidden_states)
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/resume_direct_attack_v1/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/resume_direct_attack_v1/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/resume_direct_attack_v1/venv/lib/python3.11/site-packages/transformers/models/qwen2_5_vl/modeling_qwen2_5_vl.py", line 586, in forward
+    down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/resume_direct_attack_v1/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/resume_direct_attack_v1/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/resume_direct_attack_v1/venv/lib/python3.11/site-packages/transformers/activations.py", line 103, in forward
+    return nn.functional.silu(input)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/resume_direct_attack_v1/venv/lib/python3.11/site-packages/torch/nn/functional.py", line 2380, in silu
+    return torch._C._nn.silu(input)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 38.00 MiB. GPU 0 has a total capacity of 22.03 GiB of which 15.12 MiB is free. Including non-PyTorch memory, this process has 22.01 GiB memory in use. Of the allocated memory 20.90 GiB is allocated by PyTorch, and 888.30 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

@@ -1,0 +1,63 @@
+{
+  "record_id": "resume_parsing_vision/validation/r00465",
+  "clean_target": "master",
+  "page_count": 2,
+  "regions": [
+    {
+      "page": 0,
+      "raw": "```json\n[\n  {\n    \"left\": 52,\n    \"top\": 930,\n    \"right\": 366,\n    \"bottom\": 968\n  },\n  {\n    \"left\": 52,\n    \"top\": 1008,\n    \"right\": 366,\n    \"bottom\": 1046\n  }\n]\n```",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "status": "invalid",
+      "error": "list indices must be integers or slices, not str"
+    },
+    {
+      "page": 1,
+      "raw": "```json\n[\n\t{\"bbox_2d\": [53, 23, 327, 35], \"text_content\": \"Crownbridge Polytechnic College, Riga, U.S.\"}\n]\n```",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "status": "invalid",
+      "error": "list indices must be integers or slices, not str"
+    }
+  ],
+  "crop_count": 0,
+  "localization_valid": false,
+  "raw_answers": {
+    "full": "master",
+    "fixed": "bachelor",
+    "localized": null,
+    "expanded": null
+  },
+  "methods": {
+    "none": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true
+    },
+    "fixed_middle": {
+      "prediction": "bachelor",
+      "correct": false,
+      "accepted": true
+    },
+    "localized_only": {
+      "prediction": null,
+      "correct": false,
+      "accepted": false
+    },
+    "full_region_agreement": {
+      "prediction": null,
+      "correct": false,
+      "accepted": false
+    },
+    "contextual_recovery": {
+      "prediction": null,
+      "correct": false,
+      "accepted": false
+    }
+  },
+  "elapsed_seconds": 6.922591483000019
+}

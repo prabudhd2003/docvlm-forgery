@@ -1,0 +1,19 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]
+Fetching 2 files: 100%|██████████| 2/2 [00:00<00:00, 900.07it/s]
+
+Loading weights:   0%|          | 0/824 [00:00<?, ?it/s]
+Loading weights:  39%|███▉      | 325/824 [00:00<00:00, 3237.71it/s]
+Loading weights: 100%|██████████| 824/824 [00:00<00:00, 4531.42it/s]
+Adaptive collected_receipts/external_test/c00060 band_agreement 4 0
+Adaptive saved: /content/drive/MyDrive/CSCI 566 Project/test/csev_full_colab/full_study_results/receipt_bands_full_v1/adaptive/3271d1bbca99917022986eddc66ba6aff464117cc90abba472ee244db76d15f6
+Adaptive collected_receipts/external_test/c00060 band_agreement 4 1
+Adaptive saved: /content/drive/MyDrive/CSCI 566 Project/test/csev_full_colab/full_study_results/receipt_bands_full_v1/adaptive/bd8f7ada25eff4aa69be2755f5f84517698b5acf9cf7296cb09d8915eefc358e
+Adaptive collected_receipts/external_test/c00060 band_agreement 8 0
+Adaptive saved: /content/drive/MyDrive/CSCI 566 Project/test/csev_full_colab/full_study_results/receipt_bands_full_v1/adaptive/b76f52f7e0b5f2b0f4f7c1801aff70c7a9a3c1b3f47c9e9b1d01dae46ee34ca0
+Adaptive collected_receipts/external_test/c00060 band_agreement 8 1
+Adaptive saved: /content/drive/MyDrive/CSCI 566 Project/test/csev_full_colab/full_study_results/receipt_bands_full_v1/adaptive/e197271a5dba39792bcbfd34671cf25227f7c1cf832ec72243b336492a3caa61
+Adaptive collected_receipts/external_test/c00060 band_csev 4 0
+Adaptive saved: /content/drive/MyDrive/CSCI 566 Project/test/csev_full_colab/full_study_results/receipt_bands_full_v1/adaptive/7f13b8bbdc551a518bb18f49b49d9ea659f9d8a06806544ce2df825a0c3a0069
+Adaptive collected_receipts/external_test/c00060 band_csev 4 1

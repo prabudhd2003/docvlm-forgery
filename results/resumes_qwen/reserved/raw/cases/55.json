@@ -1,0 +1,154 @@
+{
+  "case_id": "clean_55",
+  "family": "clean",
+  "epsilon_255": 0,
+  "attack_target": null,
+  "record_id": "resume_parsing_vision/validation/r00930",
+  "clean_target": "master",
+  "page_count": 2,
+  "regions": [
+    {
+      "raw": "```json\n{\n  \"boxes\": [\n    {\n      \"left\": 92,\n      \"top\": 853,\n      \"right\": 774,\n      \"bottom\": 902\n    },\n    {\n      \"left\": 92,\n      \"top\": 902,\n      \"right\": 774,\n      \"bottom\": 951\n    }\n  ]\n}\n```",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [
+        [
+          0,
+          1274,
+          1242,
+          1347
+        ],
+        [
+          0,
+          1347,
+          1242,
+          1420
+        ]
+      ],
+      "pairs": [
+        [
+          [
+            0,
+            1091,
+            1242,
+            1603
+          ],
+          [
+            0,
+            1003,
+            1242,
+            1691
+          ]
+        ]
+      ],
+      "status": "ok",
+      "attempts": [
+        {
+          "raw": "```json\n{\n  \"boxes\": [\n    {\n      \"left\": 92,\n      \"top\": 853,\n      \"right\": 774,\n      \"bottom\": 902\n    },\n    {\n      \"left\": 92,\n      \"top\": 902,\n      \"right\": 774,\n      \"bottom\": 951\n    }\n  ]\n}\n```",
+          "status": "valid"
+        }
+      ],
+      "page": 0
+    },
+    {
+      "raw": "```json\n{\n  \"boxes\": [\n    {\n      \"left\": 52,\n      \"top\": 39,\n      \"right\": 78,\n      \"bottom\": 46\n    },\n    {\n      \"left\": 52,\n      \"top\": 52,\n      \"right\": 78,\n      \"bottom\": 59\n    },\n    {\n      \"left\": 52,\n      \"top\": 72,\n      \"right\": 78,\n      \"bottom\": 79\n    },\n    {\n      \"left\": 52,\n      \"top\": 90,\n      \"right\": 78,\n      \"bottom\": 97\n    }\n  ]\n}\n```",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [
+        [
+          0,
+          58,
+          1242,
+          69
+        ],
+        [
+          0,
+          78,
+          1242,
+          88
+        ],
+        [
+          0,
+          108,
+          1242,
+          118
+        ],
+        [
+          0,
+          134,
+          1242,
+          145
+        ]
+      ],
+      "pairs": [
+        [
+          [
+            0,
+            0,
+            1242,
+            439
+          ],
+          [
+            0,
+            0,
+            1242,
+            527
+          ]
+        ]
+      ],
+      "status": "ok",
+      "attempts": [
+        {
+          "raw": "```json\n{\n  \"boxes\": [\n    {\n      \"left\": 52,\n      \"top\": 39,\n      \"right\": 78,\n      \"bottom\": 46\n    },\n    {\n      \"left\": 52,\n      \"top\": 52,\n      \"right\": 78,\n      \"bottom\": 59\n    },\n    {\n      \"left\": 52,\n      \"top\": 72,\n      \"right\": 78,\n      \"bottom\": 79\n    },\n    {\n      \"left\": 52,\n      \"top\": 90,\n      \"right\": 78,\n      \"bottom\": 97\n    }\n  ]\n}\n```",
+          "status": "valid"
+        }
+      ],
+      "page": 1
+    }
+  ],
+  "crop_count": 2,
+  "localization_valid": true,
+  "raw_answers": {
+    "full": "master",
+    "fixed": "postgraduate",
+    "localized": "master",
+    "expanded": "master"
+  },
+  "methods": {
+    "none": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "fixed_middle": {
+      "prediction": "postgraduate",
+      "correct": false,
+      "accepted": true,
+      "targeted": false
+    },
+    "localized_only": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "full_region_agreement": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "contextual_recovery": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    }
+  },
+  "elapsed_seconds": 12.385388791999958
+}

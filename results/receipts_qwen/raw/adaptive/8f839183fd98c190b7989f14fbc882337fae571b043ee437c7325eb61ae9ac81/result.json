@@ -1,0 +1,72 @@
+{
+  "contract": "ab484df6b0e6b77aae2bdbde32f11aaccad0de83532c5ba18bc4a10c7600d745",
+  "record_id": "collected_receipts/external_test/c00060",
+  "method_attacked": "verified_recovery",
+  "epsilon": 4,
+  "restart": 1,
+  "queries": 100,
+  "steps": 100,
+  "runtime_seconds": 476.7079816749756,
+  "linf_255": 4,
+  "image_sha256": "218b9de8f3d3e16ce42543a6716cd72807625f1b1be8f342e31ed6565f06772a",
+  "methods": {
+    "band_agreement": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "band_csev": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "verified_recovery": {
+      "prediction": "98.60",
+      "accepted": true,
+      "correct": false,
+      "targeted": true
+    }
+  },
+  "observation": {
+    "full": "9.86",
+    "full_raw": "9.86",
+    "crop": "98.60",
+    "wide": "98.60",
+    "gap": null,
+    "box": [
+      0,
+      1168,
+      1339,
+      1473
+    ],
+    "expanded_box": [
+      0,
+      1092,
+      1339,
+      1549
+    ],
+    "control": [
+      0,
+      0,
+      1339,
+      305
+    ],
+    "reason": "crop_disagreement",
+    "localization_raw": "```json\n{\n    \"box\": [36, 702, 625, 724]\n}\n```",
+    "processor_size": [
+      700,
+      1372
+    ],
+    "tight_box": [
+      69,
+      1301,
+      1196,
+      1341
+    ],
+    "crop_raw": "98.60",
+    "wide_raw": "98.60"
+  },
+  "attack_note": "Bounded surrogate PGD plus verifier query search. Not an exhaustive adaptive attack or a robustness certificate."
+}

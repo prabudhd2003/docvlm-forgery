@@ -1,0 +1,87 @@
+{
+  "record_id": "resume_parsing_vision/validation/r00983",
+  "clean_target": "bachelor",
+  "page_count": 2,
+  "regions": [
+    {
+      "page": 0,
+      "raw": "```json\n[\n  {\n    \"left\": 235,\n    \"top\": 709,\n    \"right\": 370,\n    \"bottom\": 724\n  }\n]\n```",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [
+        [
+          0,
+          1059,
+          1242,
+          1081
+        ]
+      ],
+      "pairs": [
+        [
+          [
+            0,
+            850,
+            1242,
+            1289
+          ],
+          [
+            0,
+            762,
+            1242,
+            1377
+          ]
+        ]
+      ],
+      "status": "ok"
+    },
+    {
+      "page": 1,
+      "raw": "There are none.",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [],
+      "pairs": [],
+      "status": "no_education"
+    }
+  ],
+  "crop_count": 1,
+  "localization_valid": true,
+  "raw_answers": {
+    "full": "bachelor",
+    "fixed": "bachelor",
+    "localized": "bachelor",
+    "expanded": "bachelor"
+  },
+  "methods": {
+    "none": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true
+    },
+    "fixed_middle": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true
+    },
+    "localized_only": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true
+    },
+    "full_region_agreement": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true
+    },
+    "contextual_recovery": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true
+    }
+  },
+  "elapsed_seconds": 4.318433775000017
+}

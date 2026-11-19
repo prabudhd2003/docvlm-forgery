@@ -1,0 +1,71 @@
+Recovery-only schedule, part 2: {
+  "original_contract": "94243896cac09b6ae8273c24f86787d73e965461c60f38f73359fa419bbf11b8",
+  "method": "verified_recovery",
+  "document_ids": [
+    "collected_receipts/external_test/c00110",
+    "collected_receipts/external_test/c00103",
+    "collected_receipts/external_test/c00067",
+    "collected_receipts/external_test/c00082",
+    "collected_receipts/external_test/c00072"
+  ],
+  "epsilons": [
+    4,
+    8
+  ],
+  "restarts": [
+    0,
+    1
+  ],
+  "max_runs": 20,
+  "wall_seconds_per_session": 14400,
+  "launcher_sha256": "7a275330cdc59f47b788e791f422bb79709d3d3f966279afe200c76bf936b4f8",
+  "selection": "IDs six to ten in the original frozen order, completing the frozen ten-receipt list; not selected on outcomes. Only scheduling changes; original gradient, query, replay and checkpoint code retained."
+}
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]
+Fetching 2 files: 100%|██████████| 2/2 [00:00<00:00, 933.83it/s]
+
+Loading weights:   0%|          | 0/824 [00:00<?, ?it/s]
+Loading weights:  29%|██▊       | 235/824 [00:00<00:00, 2347.67it/s]
+Loading weights: 100%|██████████| 824/824 [00:00<00:00, 4928.94it/s]
+Adaptive collected_receipts/external_test/c00110 verified_recovery 4 0
+Adaptive saved: /content/drive/MyDrive/CSCI 566 Project/test/csev_full_colab/full_study_results/receipt_bands_full_v1/adaptive/d82c4d5237598c53133a2ca80cdad31914b3168fb388cff83d293581090600e8
+Adaptive collected_receipts/external_test/c00110 verified_recovery 4 1
+Adaptive saved: /content/drive/MyDrive/CSCI 566 Project/test/csev_full_colab/full_study_results/receipt_bands_full_v1/adaptive/223133ead7096232c9c8f3de41edbc41f012345a7b9fc9f41694a9546a325de0
+Adaptive collected_receipts/external_test/c00110 verified_recovery 8 0
+Adaptive saved: /content/drive/MyDrive/CSCI 566 Project/test/csev_full_colab/full_study_results/receipt_bands_full_v1/adaptive/73650a70a44d65fcb65f0f07fbee07105a644c5c949dfeef141d343dc708dfe8
+Adaptive collected_receipts/external_test/c00110 verified_recovery 8 1
+Adaptive saved: /content/drive/MyDrive/CSCI 566 Project/test/csev_full_colab/full_study_results/receipt_bands_full_v1/adaptive/e224ddabb2d31c59fcb9594902920443acd7a39366640984605f8f24dbc122e1
+Adaptive collected_receipts/external_test/c00103 verified_recovery 4 0
+Adaptive saved: /content/drive/MyDrive/CSCI 566 Project/test/csev_full_colab/full_study_results/receipt_bands_full_v1/adaptive/4406d49d603268f4c4df626f6bb8a01b735ab5bc0c328c05b4ea397d41816eaa
+Adaptive collected_receipts/external_test/c00103 verified_recovery 4 1
+Adaptive saved: /content/drive/MyDrive/CSCI 566 Project/test/csev_full_colab/full_study_results/receipt_bands_full_v1/adaptive/02b7793064655138d6354d1102400bac624361110ab1332a7d6c7c6da1cdff43
+Adaptive collected_receipts/external_test/c00103 verified_recovery 8 0
+Adaptive saved: /content/drive/MyDrive/CSCI 566 Project/test/csev_full_colab/full_study_results/receipt_bands_full_v1/adaptive/4d15c3d5cd8fbb7aabd9b101beecdc9816618bfa21b50844ac1105eaefb1caa2
+Adaptive collected_receipts/external_test/c00103 verified_recovery 8 1
+Adaptive saved: /content/drive/MyDrive/CSCI 566 Project/test/csev_full_colab/full_study_results/receipt_bands_full_v1/adaptive/705d16aaefb4ffcba6722bc4dc9a149dca8280f0ff78b7513dbeb2cff3e06970
+Adaptive collected_receipts/external_test/c00067 verified_recovery 4 0
+Adaptive saved: /content/drive/MyDrive/CSCI 566 Project/test/csev_full_colab/full_study_results/receipt_bands_full_v1/adaptive/c2662736dbcfe98ae6520f70d6e46a823f9848495830e7dea8dc88f4e3f87129
+Adaptive collected_receipts/external_test/c00067 verified_recovery 4 1
+Adaptive saved: /content/drive/MyDrive/CSCI 566 Project/test/csev_full_colab/full_study_results/receipt_bands_full_v1/adaptive/59121e55b11b3a4ada428fd044269e79a2c964afecb9f4d1595a7be7e1a29c6e
+Adaptive collected_receipts/external_test/c00067 verified_recovery 8 0
+Adaptive saved: /content/drive/MyDrive/CSCI 566 Project/test/csev_full_colab/full_study_results/receipt_bands_full_v1/adaptive/d64ed5ed8271dd549d7f098377f7ee329d0ac34adc47df6c2b69b48432344de1
+Adaptive collected_receipts/external_test/c00067 verified_recovery 8 1
+Adaptive saved: /content/drive/MyDrive/CSCI 566 Project/test/csev_full_colab/full_study_results/receipt_bands_full_v1/adaptive/4a7f5e62a680e2bb80d90a0e9267ef2a01d517ada115dce6201eb11ae4065c16
+Adaptive collected_receipts/external_test/c00082 verified_recovery 4 0
+Adaptive saved: /content/drive/MyDrive/CSCI 566 Project/test/csev_full_colab/full_study_results/receipt_bands_full_v1/adaptive/be65520e1b27bcff29b207cd4016ed4c34b70722a53247f8f670cb089dc61abf
+Adaptive collected_receipts/external_test/c00082 verified_recovery 4 1
+Adaptive saved: /content/drive/MyDrive/CSCI 566 Project/test/csev_full_colab/full_study_results/receipt_bands_full_v1/adaptive/71dea995381132feea8029c791f61e15d49e7aeac17ec3dcdb4cc0716f564546
+Adaptive collected_receipts/external_test/c00082 verified_recovery 8 0
+Adaptive saved: /content/drive/MyDrive/CSCI 566 Project/test/csev_full_colab/full_study_results/receipt_bands_full_v1/adaptive/606383150c0d69cb9f70e737b6650182db7c8e36a85a7837d92a0748c187a891
+Adaptive collected_receipts/external_test/c00082 verified_recovery 8 1
+Adaptive saved: /content/drive/MyDrive/CSCI 566 Project/test/csev_full_colab/full_study_results/receipt_bands_full_v1/adaptive/e5e4c53d0255591fc829efe9547695727018441e50c41cd36b67ec444160aa34
+Adaptive collected_receipts/external_test/c00072 verified_recovery 4 0
+Adaptive saved: /content/drive/MyDrive/CSCI 566 Project/test/csev_full_colab/full_study_results/receipt_bands_full_v1/adaptive/6abcc1781386bdf46a331b9d8e3640d781cd22d75a0231f5e48cd666aee4d9b2
+Adaptive collected_receipts/external_test/c00072 verified_recovery 4 1
+Adaptive saved: /content/drive/MyDrive/CSCI 566 Project/test/csev_full_colab/full_study_results/receipt_bands_full_v1/adaptive/a7a806db8a635316bb41fcc00acb6bccdf97d5c9af863cd5ea644be9db729843
+Adaptive collected_receipts/external_test/c00072 verified_recovery 8 0
+Adaptive saved: /content/drive/MyDrive/CSCI 566 Project/test/csev_full_colab/full_study_results/receipt_bands_full_v1/adaptive/1ba18c79b5aac5582f9e77d8926a63525ff76c452d95b2928d9a334916b100f6
+Adaptive collected_receipts/external_test/c00072 verified_recovery 8 1
+Adaptive saved: /content/drive/MyDrive/CSCI 566 Project/test/csev_full_colab/full_study_results/receipt_bands_full_v1/adaptive/608bbe934d2ce83d0b8e039e7a74c647e37fec4f3c2ae91e30c6eb2d5d363c25

@@ -1,0 +1,97 @@
+{
+  "case_id": "resume_parsing_vision_validation_r00481__qwen__resume_highest_degree__pgd__eps-2__seed-566",
+  "family": "standard",
+  "epsilon_255": 2,
+  "attack_target": "bachelor",
+  "record_id": "resume_parsing_vision/validation/r00481",
+  "clean_target": "associate",
+  "page_count": 1,
+  "regions": [
+    {
+      "raw": "```json\n{\n  \"boxes\": [\n    {\n      \"left\": 293,\n      \"top\": 562,\n      \"right\": 798,\n      \"bottom\": 578\n    },\n    {\n      \"left\": 293,\n      \"top\": 618,\n      \"right\": 798,\n      \"bottom\": 634\n    }\n  ]\n}\n```",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [
+        [
+          0,
+          839,
+          1242,
+          863
+        ],
+        [
+          0,
+          923,
+          1242,
+          947
+        ]
+      ],
+      "pairs": [
+        [
+          [
+            0,
+            632,
+            1242,
+            1155
+          ],
+          [
+            0,
+            544,
+            1242,
+            1243
+          ]
+        ]
+      ],
+      "status": "ok",
+      "attempts": [
+        {
+          "raw": "```json\n{\n  \"boxes\": [\n    {\n      \"left\": 293,\n      \"top\": 562,\n      \"right\": 798,\n      \"bottom\": 578\n    },\n    {\n      \"left\": 293,\n      \"top\": 618,\n      \"right\": 798,\n      \"bottom\": 634\n    }\n  ]\n}\n```",
+          "status": "valid"
+        }
+      ],
+      "page": 0
+    }
+  ],
+  "crop_count": 1,
+  "localization_valid": true,
+  "raw_answers": {
+    "full": "associate",
+    "fixed": "associate",
+    "localized": "associate",
+    "expanded": "associate"
+  },
+  "methods": {
+    "none": {
+      "prediction": "associate",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "fixed_middle": {
+      "prediction": "associate",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "localized_only": {
+      "prediction": "associate",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "full_region_agreement": {
+      "prediction": "associate",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "contextual_recovery": {
+      "prediction": "associate",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    }
+  },
+  "elapsed_seconds": 5.589894311999615
+}

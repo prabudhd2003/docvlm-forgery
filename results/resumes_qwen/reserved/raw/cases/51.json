@@ -1,0 +1,148 @@
+{
+  "case_id": "clean_51",
+  "family": "clean",
+  "epsilon_255": 0,
+  "attack_target": null,
+  "record_id": "resume_parsing_vision/validation/r00816",
+  "clean_target": "bachelor",
+  "page_count": 2,
+  "regions": [
+    {
+      "raw": "```json\n{\n  \"boxes\": [\n    {\n      \"left\": 52,\n      \"top\": 739,\n      \"right\": 712,\n      \"bottom\": 756\n    },\n    {\n      \"left\": 52,\n      \"top\": 756,\n      \"right\": 712,\n      \"bottom\": 773\n    },\n    {\n      \"left\": 52,\n      \"top\": 773,\n      \"right\": 712,\n      \"bottom\": 790\n    }\n  ]\n}\n```",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [
+        [
+          0,
+          1103,
+          1242,
+          1129
+        ],
+        [
+          0,
+          1129,
+          1242,
+          1154
+        ],
+        [
+          0,
+          1154,
+          1242,
+          1180
+        ]
+      ],
+      "pairs": [
+        [
+          [
+            0,
+            896,
+            1242,
+            1387
+          ],
+          [
+            0,
+            808,
+            1242,
+            1475
+          ]
+        ]
+      ],
+      "status": "ok",
+      "attempts": [
+        {
+          "raw": "```json\n{\n  \"boxes\": [\n    {\n      \"left\": 52,\n      \"top\": 739,\n      \"right\": 712,\n      \"bottom\": 756\n    },\n    {\n      \"left\": 52,\n      \"top\": 756,\n      \"right\": 712,\n      \"bottom\": 773\n    },\n    {\n      \"left\": 52,\n      \"top\": 773,\n      \"right\": 712,\n      \"bottom\": 790\n    }\n  ]\n}\n```",
+          "status": "valid"
+        }
+      ],
+      "page": 0
+    },
+    {
+      "raw": "```json\n{\n  \"boxes\": [\n    {\n      \"left\": 52,\n      \"top\": 69,\n      \"right\": 788,\n      \"bottom\": 83\n    },\n    {\n      \"left\": 52,\n      \"top\": 86,\n      \"right\": 788,\n      \"bottom\": 100\n    }\n  ]\n}\n```",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [
+        [
+          0,
+          103,
+          1242,
+          124
+        ],
+        [
+          0,
+          128,
+          1242,
+          149
+        ]
+      ],
+      "pairs": [
+        [
+          [
+            0,
+            0,
+            1242,
+            439
+          ],
+          [
+            0,
+            0,
+            1242,
+            527
+          ]
+        ]
+      ],
+      "status": "ok",
+      "attempts": [
+        {
+          "raw": "```json\n{\n  \"boxes\": [\n    {\n      \"left\": 52,\n      \"top\": 69,\n      \"right\": 788,\n      \"bottom\": 83\n    },\n    {\n      \"left\": 52,\n      \"top\": 86,\n      \"right\": 788,\n      \"bottom\": 100\n    }\n  ]\n}\n```",
+          "status": "valid"
+        }
+      ],
+      "page": 1
+    }
+  ],
+  "crop_count": 2,
+  "localization_valid": true,
+  "raw_answers": {
+    "full": "bachelor",
+    "fixed": "bachelor",
+    "localized": "bachelor",
+    "expanded": "bachelor"
+  },
+  "methods": {
+    "none": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "fixed_middle": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "localized_only": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "full_region_agreement": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "contextual_recovery": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    }
+  },
+  "elapsed_seconds": 11.466152985999997
+}

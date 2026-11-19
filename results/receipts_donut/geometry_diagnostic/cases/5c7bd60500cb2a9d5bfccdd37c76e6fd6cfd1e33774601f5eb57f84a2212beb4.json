@@ -1,0 +1,215 @@
+{
+  "record_id": "collected_receipts/external_test/c00020",
+  "dataset": "collected_receipts",
+  "family": "uniform_eot",
+  "epsilon": 16,
+  "clean_target": "12.06",
+  "attack_target": "120.60",
+  "input_sha256": "e888c8d32904dedac3bd2cfe3e2a0b092b02ee5c18a81f9893e6e7c4cceb35fe",
+  "methods": {
+    "none": {
+      "prediction": "12.06",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "jpeg": {
+      "prediction": "12.06",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "resize_vote": {
+      "prediction": "12.06",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "selective_multiview": {
+      "prediction": "12.06",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "semantic_consistency": {
+      "prediction": "12.06",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "ocr_only": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "evidence": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "fixed_band": {
+      "prediction": "12.06",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "band_answer": {
+      "prediction": "2.00",
+      "accepted": true,
+      "correct": false,
+      "targeted": false
+    },
+    "band_agreement": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "verified_recovery": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "smaller_expansion": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "taller_18": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "taller_24": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    }
+  },
+  "variants": {
+    "smaller_expansion": {
+      "boxes": [
+        [
+          0,
+          160,
+          1762,
+          513
+        ],
+        [
+          0,
+          138,
+          1762,
+          535
+        ]
+      ],
+      "answers": [
+        "2.00",
+        "32.00"
+      ]
+    },
+    "taller_18": {
+      "boxes": [
+        [
+          0,
+          138,
+          1762,
+          535
+        ],
+        [
+          0,
+          72,
+          1762,
+          601
+        ]
+      ],
+      "answers": [
+        "32.00",
+        "90037.00"
+      ]
+    },
+    "taller_24": {
+      "boxes": [
+        [
+          0,
+          72,
+          1762,
+          601
+        ],
+        [
+          0,
+          6,
+          1762,
+          667
+        ]
+      ],
+      "answers": [
+        "90037.00",
+        "25.00"
+      ]
+    }
+  },
+  "crops": [
+    {
+      "box": [
+        0,
+        160,
+        1762,
+        513
+      ],
+      "prediction": "2.00",
+      "raw": "2",
+      "reused": true
+    },
+    {
+      "box": [
+        0,
+        94,
+        1762,
+        579
+      ],
+      "prediction": "32.00",
+      "raw": "dress for le32",
+      "reused": true
+    },
+    {
+      "box": [
+        0,
+        138,
+        1762,
+        535
+      ],
+      "prediction": "32.00",
+      "raw": "dress for le32",
+      "reused": false
+    },
+    {
+      "box": [
+        0,
+        72,
+        1762,
+        601
+      ],
+      "prediction": "90037.00",
+      "raw": "inc. andi es ca 90037",
+      "reused": false
+    },
+    {
+      "box": [
+        0,
+        6,
+        1762,
+        667
+      ],
+      "prediction": "25.00",
+      "raw": "$25",
+      "reused": false
+    }
+  ],
+  "elapsed_seconds": 1.3507530250000173
+}

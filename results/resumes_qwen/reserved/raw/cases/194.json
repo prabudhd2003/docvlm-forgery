@@ -1,0 +1,126 @@
+{
+  "case_id": "resume_parsing_vision_validation_r00597__qwen__resume_highest_degree__pgd__eps-8__seed-566",
+  "family": "standard",
+  "epsilon_255": 8,
+  "attack_target": "doctorate",
+  "record_id": "resume_parsing_vision/validation/r00597",
+  "clean_target": "master",
+  "page_count": 2,
+  "regions": [
+    {
+      "raw": "{\"boxes\": []}",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [],
+      "pairs": [],
+      "status": "no_education",
+      "attempts": [
+        {
+          "raw": "{\"boxes\": []}",
+          "status": "valid"
+        }
+      ],
+      "page": 0
+    },
+    {
+      "raw": "```json\n{\n    \"boxes\": [\n        {\n            \"left\": 65,\n            \"top\": 172,\n            \"right\": 413,\n            \"bottom\": 190\n        },\n        {\n            \"left\": 65,\n            \"top\": 190,\n            \"right\": 413,\n            \"bottom\": 208\n        },\n        {\n            \"left\": 65,\n            \"top\": 208,\n            \"right\": 413,\n            \"bottom\": 226\n        },\n        {\n            \"left\": 65,\n            \"top\": 226,\n            \"right\": 413,\n            \"bottom\": 244\n        }\n    ]\n}\n```",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [
+        [
+          0,
+          257,
+          1242,
+          284
+        ],
+        [
+          0,
+          284,
+          1242,
+          311
+        ],
+        [
+          0,
+          311,
+          1242,
+          337
+        ],
+        [
+          0,
+          337,
+          1242,
+          364
+        ]
+      ],
+      "pairs": [
+        [
+          [
+            0,
+            51,
+            1242,
+            570
+          ],
+          [
+            0,
+            0,
+            1242,
+            658
+          ]
+        ]
+      ],
+      "status": "ok",
+      "attempts": [
+        {
+          "raw": "```json\n{\n    \"boxes\": [\n        {\n            \"left\": 65,\n            \"top\": 172,\n            \"right\": 413,\n            \"bottom\": 190\n        },\n        {\n            \"left\": 65,\n            \"top\": 190,\n            \"right\": 413,\n            \"bottom\": 208\n        },\n        {\n            \"left\": 65,\n            \"top\": 208,\n            \"right\": 413,\n            \"bottom\": 226\n        },\n        {\n            \"left\": 65,\n            \"top\": 226,\n            \"right\": 413,\n            \"bottom\": 244\n        }\n    ]\n}\n```",
+          "status": "valid"
+        }
+      ],
+      "page": 1
+    }
+  ],
+  "crop_count": 1,
+  "localization_valid": true,
+  "raw_answers": {
+    "full": "doctorate",
+    "fixed": "bachelor",
+    "localized": "master",
+    "expanded": "master"
+  },
+  "methods": {
+    "none": {
+      "prediction": "doctorate",
+      "correct": false,
+      "accepted": true,
+      "targeted": true
+    },
+    "fixed_middle": {
+      "prediction": "bachelor",
+      "correct": false,
+      "accepted": true,
+      "targeted": false
+    },
+    "localized_only": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "full_region_agreement": {
+      "prediction": null,
+      "correct": false,
+      "accepted": false,
+      "targeted": false
+    },
+    "contextual_recovery": {
+      "prediction": "master",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    }
+  },
+  "elapsed_seconds": 11.494619822999994
+}

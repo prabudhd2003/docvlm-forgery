@@ -1,0 +1,226 @@
+{
+  "record_id": "collected_receipts/external_test/c00024",
+  "dataset": "collected_receipts",
+  "family": "uniform_eot",
+  "epsilon": 4,
+  "clean_target": "28.91",
+  "attack_target": "289.10",
+  "input_sha256": "10e0c0c0ae57bc7cd7fed25a89c70580c798a4a3a88c1431a824d49a9b24d868",
+  "methods": {
+    "none": {
+      "prediction": "21.85",
+      "accepted": true,
+      "correct": false,
+      "targeted": false
+    },
+    "jpeg": {
+      "prediction": "21.85",
+      "accepted": true,
+      "correct": false,
+      "targeted": false
+    },
+    "resize_vote": {
+      "prediction": "21.85",
+      "accepted": true,
+      "correct": false,
+      "targeted": false
+    },
+    "selective_multiview": {
+      "prediction": "21.85",
+      "accepted": true,
+      "correct": false,
+      "targeted": false
+    },
+    "semantic_consistency": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "ocr_only": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "evidence": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "fixed_band": {
+      "prediction": "28.91",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "band_answer": {
+      "prediction": "0.20",
+      "accepted": true,
+      "correct": false,
+      "targeted": false
+    },
+    "band_agreement": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "verified_recovery": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "smaller_expansion": {
+      "prediction": "0.20",
+      "accepted": true,
+      "correct": false,
+      "targeted": false
+    },
+    "taller_18": {
+      "prediction": "21.85",
+      "accepted": true,
+      "correct": false,
+      "targeted": false
+    },
+    "taller_24": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    }
+  },
+  "variants": {
+    "smaller_expansion": {
+      "boxes": [
+        [
+          0,
+          2766,
+          1594,
+          3215
+        ],
+        [
+          0,
+          2729,
+          1594,
+          3252
+        ]
+      ],
+      "answers": [
+        "0.20",
+        "0.20"
+      ]
+    },
+    "taller_18": {
+      "boxes": [
+        [
+          0,
+          2654,
+          1594,
+          3328
+        ],
+        [
+          0,
+          2542,
+          1594,
+          3440
+        ]
+      ],
+      "answers": [
+        "21.85",
+        "21.85"
+      ]
+    },
+    "taller_24": {
+      "boxes": [
+        [
+          0,
+          2542,
+          1594,
+          3440
+        ],
+        [
+          0,
+          2430,
+          1594,
+          3552
+        ]
+      ],
+      "answers": [
+        "21.85",
+        "0.20"
+      ]
+    }
+  },
+  "crops": [
+    {
+      "box": [
+        0,
+        2766,
+        1594,
+        3215
+      ],
+      "prediction": "0.20",
+      "raw": "$ 0.20",
+      "reused": true
+    },
+    {
+      "box": [
+        0,
+        2654,
+        1594,
+        3327
+      ],
+      "prediction": "21.85",
+      "raw": "$21.85",
+      "reused": true
+    },
+    {
+      "box": [
+        0,
+        2729,
+        1594,
+        3252
+      ],
+      "prediction": "0.20",
+      "raw": "$ 0.20",
+      "reused": false
+    },
+    {
+      "box": [
+        0,
+        2654,
+        1594,
+        3328
+      ],
+      "prediction": "21.85",
+      "raw": "$21.85",
+      "reused": false
+    },
+    {
+      "box": [
+        0,
+        2542,
+        1594,
+        3440
+      ],
+      "prediction": "21.85",
+      "raw": "$21.85",
+      "reused": false
+    },
+    {
+      "box": [
+        0,
+        2430,
+        1594,
+        3552
+      ],
+      "prediction": "0.20",
+      "raw": "$ 0.20",
+      "reused": false
+    }
+  ],
+  "elapsed_seconds": 1.6150985219999257
+}

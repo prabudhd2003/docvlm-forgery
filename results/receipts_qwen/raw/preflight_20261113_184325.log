@@ -1,0 +1,13 @@
+Verified input hashes: 100
+Verified input hashes: 200
+Verified input hashes: 300
+Verified input hashes: 400
+Verified input hashes: 500
+Verified input hashes: 600
+{
+  "contract": "94243896cac09b6ae8273c24f86787d73e965461c60f38f73359fa419bbf11b8",
+  "documents": 120,
+  "saved_attack_records": 531,
+  "development_cases": 210,
+  "evaluation_cases": 441
+}

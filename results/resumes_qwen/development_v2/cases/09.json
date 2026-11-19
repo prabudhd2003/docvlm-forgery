@@ -1,0 +1,87 @@
+{
+  "record_id": "resume_parsing_vision/validation/r00065",
+  "clean_target": "bachelor",
+  "page_count": 2,
+  "regions": [
+    {
+      "page": 0,
+      "raw": "```json\n[\n  {\n    \"left\": 235,\n    \"top\": 900,\n    \"right\": 330,\n    \"bottom\": 915\n  }\n]\n```",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [
+        [
+          0,
+          1344,
+          1242,
+          1366
+        ]
+      ],
+      "pairs": [
+        [
+          [
+            0,
+            1136,
+            1242,
+            1575
+          ],
+          [
+            0,
+            1048,
+            1242,
+            1663
+          ]
+        ]
+      ],
+      "status": "ok"
+    },
+    {
+      "page": 1,
+      "raw": "There are no regions indicating completed education qualifications or awarded degrees on this resume page. The provided information includes language proficiency, certifications, job search preferences, and hobbies but does not mention any educational background. Therefore, there are no boxes to describe in terms of education.\n\n```json\n[]\n```",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [],
+      "pairs": [],
+      "status": "no_education"
+    }
+  ],
+  "crop_count": 1,
+  "localization_valid": true,
+  "raw_answers": {
+    "full": "bachelor",
+    "fixed": "associate",
+    "localized": "bachelor",
+    "expanded": "bachelor"
+  },
+  "methods": {
+    "none": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true
+    },
+    "fixed_middle": {
+      "prediction": "associate",
+      "correct": false,
+      "accepted": true
+    },
+    "localized_only": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true
+    },
+    "full_region_agreement": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true
+    },
+    "contextual_recovery": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true
+    }
+  },
+  "elapsed_seconds": 6.139832210999998
+}

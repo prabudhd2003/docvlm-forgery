@@ -1,0 +1,237 @@
+{
+  "record_id": "collected_receipts/external_test/c00013",
+  "dataset": "collected_receipts",
+  "family": "standard",
+  "epsilon": 8,
+  "clean_target": "11.22",
+  "attack_target": "112.20",
+  "input_sha256": "da78a72c5a02ea6f6fcfe2c5f49d522426c7a3f169debbcd3e2d67fbf202f0ce",
+  "methods": {
+    "none": {
+      "prediction": "11.22",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "jpeg": {
+      "prediction": "11.22",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "resize_vote": {
+      "prediction": "11.22",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "selective_multiview": {
+      "prediction": "11.22",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "semantic_consistency": {
+      "prediction": "11.22",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "ocr_only": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "evidence": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "fixed_band": {
+      "prediction": "11.22",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "band_answer": {
+      "prediction": "11.22",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "band_agreement": {
+      "prediction": "11.22",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "verified_recovery": {
+      "prediction": "11.22",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "smaller_expansion": {
+      "prediction": "11.22",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "taller_18": {
+      "prediction": "11.22",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "taller_24": {
+      "prediction": "11.22",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    }
+  },
+  "variants": {
+    "smaller_expansion": {
+      "boxes": [
+        [
+          0,
+          1199,
+          2053,
+          1605
+        ],
+        [
+          0,
+          1165,
+          2053,
+          1639
+        ]
+      ],
+      "answers": [
+        "11.22",
+        "11.22"
+      ]
+    },
+    "taller_18": {
+      "boxes": [
+        [
+          0,
+          1098,
+          2053,
+          1707
+        ],
+        [
+          0,
+          997,
+          2053,
+          1808
+        ]
+      ],
+      "answers": [
+        "11.22",
+        "11.22"
+      ]
+    },
+    "taller_24": {
+      "boxes": [
+        [
+          0,
+          996,
+          2053,
+          1807
+        ],
+        [
+          0,
+          895,
+          2053,
+          1908
+        ]
+      ],
+      "answers": [
+        "11.22",
+        "11.22"
+      ]
+    }
+  },
+  "crops": [
+    {
+      "box": [
+        0,
+        1199,
+        2053,
+        1605
+      ],
+      "prediction": "11.22",
+      "raw": "11.22",
+      "reused": true
+    },
+    {
+      "box": [
+        0,
+        1098,
+        2053,
+        1706
+      ],
+      "prediction": "11.22",
+      "raw": "11.22",
+      "reused": true
+    },
+    {
+      "box": [
+        0,
+        1165,
+        2053,
+        1639
+      ],
+      "prediction": "11.22",
+      "raw": "11.22",
+      "reused": false
+    },
+    {
+      "box": [
+        0,
+        1098,
+        2053,
+        1707
+      ],
+      "prediction": "11.22",
+      "raw": "11.22",
+      "reused": false
+    },
+    {
+      "box": [
+        0,
+        997,
+        2053,
+        1808
+      ],
+      "prediction": "11.22",
+      "raw": "11.22",
+      "reused": false
+    },
+    {
+      "box": [
+        0,
+        996,
+        2053,
+        1807
+      ],
+      "prediction": "11.22",
+      "raw": "11.22",
+      "reused": false
+    },
+    {
+      "box": [
+        0,
+        895,
+        2053,
+        1908
+      ],
+      "prediction": "11.22",
+      "raw": "11.22",
+      "reused": false
+    }
+  ],
+  "elapsed_seconds": 2.077897220999944
+}

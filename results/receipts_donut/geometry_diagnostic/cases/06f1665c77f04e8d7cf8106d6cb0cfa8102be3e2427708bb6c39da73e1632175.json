@@ -1,0 +1,226 @@
+{
+  "record_id": "sroie/train/X51005433541",
+  "dataset": "sroie",
+  "family": "clean",
+  "epsilon": 0,
+  "clean_target": "8.20",
+  "attack_target": "82.00",
+  "input_sha256": "e3aba7ea2fe4626d69d16b10ac8b9d2a45fe0af875a841c329f3d2db2da9d0a4",
+  "methods": {
+    "none": {
+      "prediction": "0.00",
+      "accepted": true,
+      "correct": false,
+      "targeted": false
+    },
+    "jpeg": {
+      "prediction": "0.00",
+      "accepted": true,
+      "correct": false,
+      "targeted": false
+    },
+    "resize_vote": {
+      "prediction": "0.00",
+      "accepted": true,
+      "correct": false,
+      "targeted": false
+    },
+    "selective_multiview": {
+      "prediction": "0.00",
+      "accepted": true,
+      "correct": false,
+      "targeted": false
+    },
+    "semantic_consistency": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "ocr_only": {
+      "prediction": "8.20",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "evidence": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "fixed_band": {
+      "prediction": "0.00",
+      "accepted": true,
+      "correct": false,
+      "targeted": false
+    },
+    "band_answer": {
+      "prediction": "8.20",
+      "accepted": true,
+      "correct": true,
+      "targeted": false
+    },
+    "band_agreement": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "verified_recovery": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "smaller_expansion": {
+      "prediction": null,
+      "accepted": false,
+      "correct": false,
+      "targeted": false
+    },
+    "taller_18": {
+      "prediction": "0.00",
+      "accepted": true,
+      "correct": false,
+      "targeted": false
+    },
+    "taller_24": {
+      "prediction": "0.00",
+      "accepted": true,
+      "correct": false,
+      "targeted": false
+    }
+  },
+  "variants": {
+    "smaller_expansion": {
+      "boxes": [
+        [
+          0,
+          506,
+          1080,
+          689
+        ],
+        [
+          0,
+          491,
+          1080,
+          704
+        ]
+      ],
+      "answers": [
+        "8.20",
+        "0.00"
+      ]
+    },
+    "taller_18": {
+      "boxes": [
+        [
+          0,
+          460,
+          1080,
+          735
+        ],
+        [
+          0,
+          414,
+          1080,
+          781
+        ]
+      ],
+      "answers": [
+        "0.00",
+        "0.00"
+      ]
+    },
+    "taller_24": {
+      "boxes": [
+        [
+          0,
+          415,
+          1080,
+          781
+        ],
+        [
+          0,
+          369,
+          1080,
+          827
+        ]
+      ],
+      "answers": [
+        "0.00",
+        "0.00"
+      ]
+    }
+  },
+  "crops": [
+    {
+      "box": [
+        0,
+        506,
+        1080,
+        689
+      ],
+      "prediction": "8.20",
+      "raw": "$8.20",
+      "reused": true
+    },
+    {
+      "box": [
+        0,
+        460,
+        1080,
+        735
+      ],
+      "prediction": "0.00",
+      "raw": "$0.00",
+      "reused": true
+    },
+    {
+      "box": [
+        0,
+        491,
+        1080,
+        704
+      ],
+      "prediction": "0.00",
+      "raw": "$0.00",
+      "reused": false
+    },
+    {
+      "box": [
+        0,
+        414,
+        1080,
+        781
+      ],
+      "prediction": "0.00",
+      "raw": "$0.00",
+      "reused": false
+    },
+    {
+      "box": [
+        0,
+        415,
+        1080,
+        781
+      ],
+      "prediction": "0.00",
+      "raw": "$0.00",
+      "reused": false
+    },
+    {
+      "box": [
+        0,
+        369,
+        1080,
+        827
+      ],
+      "prediction": "0.00",
+      "raw": "$0.00",
+      "reused": false
+    }
+  ],
+  "elapsed_seconds": 1.809361144000036
+}

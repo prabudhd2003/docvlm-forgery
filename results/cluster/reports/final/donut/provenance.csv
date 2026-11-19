@@ -1,0 +1,4 @@
+run,records,resumed,commit,GPU,torch,transformers
+donut_paper_full_validation_v1,121,0,9b55068ac2b76c5edd0a644a2aab27b0840ea18a,NVIDIA L40S,2.6.0+cu124,5.17.0
+donut_paper_full_eps8_16_validation_v1,242,0,9164e41815961179a1786c4bf2777ba0ccd88232,NVIDIA L40S,2.6.0+cu124,5.17.0
+donut_paper_full_eps2_4_validation_v1,242,0,284a0582af0ad8643331b98f5b9e9005662ec4ab,NVIDIA L40S,2.6.0+cu124,5.17.0

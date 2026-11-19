@@ -1,0 +1,91 @@
+{
+  "case_id": "resume_parsing_vision_validation_r00000__qwen__resume_highest_degree__pgd__eps-8__seed-566",
+  "family": "standard",
+  "epsilon_255": 8,
+  "attack_target": "master",
+  "record_id": "resume_parsing_vision/validation/r00000",
+  "clean_target": "bachelor",
+  "page_count": 2,
+  "regions": [
+    {
+      "raw": "```json\n{\n  \"boxes\": [\n    {\n      \"left\": 203,\n      \"top\": 95,\n      \"right\": 763,\n      \"bottom\": 1016\n    }\n  ]\n}\n```",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "status": "invalid",
+      "error": "Merged regions exceed size or count limits",
+      "attempts": [
+        {
+          "raw": "```json\n{\n  \"boxes\": [\n    {\n      \"left\": 312,\n      \"top\": 95,\n      \"right\": 768,\n      \"bottom\": 1018\n    }\n  ]\n}\n```",
+          "status": "invalid",
+          "error": "Merged regions exceed size or count limits"
+        },
+        {
+          "raw": "```json\n{\n  \"boxes\": [\n    {\n      \"left\": 203,\n      \"top\": 95,\n      \"right\": 763,\n      \"bottom\": 1016\n    }\n  ]\n}\n```",
+          "status": "invalid",
+          "error": "Merged regions exceed size or count limits"
+        }
+      ],
+      "page": 0
+    },
+    {
+      "raw": "{\"boxes\": []}",
+      "processed_size": [
+        840,
+        1176
+      ],
+      "boxes": [],
+      "pairs": [],
+      "status": "no_education",
+      "attempts": [
+        {
+          "raw": "{\"boxes\": []}",
+          "status": "valid"
+        }
+      ],
+      "page": 1
+    }
+  ],
+  "crop_count": 0,
+  "localization_valid": false,
+  "raw_answers": {
+    "full": "bachelor",
+    "fixed": "bachelor",
+    "localized": null,
+    "expanded": null
+  },
+  "methods": {
+    "none": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "fixed_middle": {
+      "prediction": "bachelor",
+      "correct": true,
+      "accepted": true,
+      "targeted": false
+    },
+    "localized_only": {
+      "prediction": null,
+      "correct": false,
+      "accepted": false,
+      "targeted": false
+    },
+    "full_region_agreement": {
+      "prediction": null,
+      "correct": false,
+      "accepted": false,
+      "targeted": false
+    },
+    "contextual_recovery": {
+      "prediction": null,
+      "correct": false,
+      "accepted": false,
+      "targeted": false
+    }
+  },
+  "elapsed_seconds": 6.522659113999907
+}

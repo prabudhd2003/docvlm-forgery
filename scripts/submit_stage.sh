@@ -1,0 +1,340 @@
+#!/usr/bin/env bash
+# Submit one checkpointed GPU shard or the five-worker Slurm array to USC CARC.
+#
+# Usage:
+#   bash scripts/submit_stage.sh STAGE USER_ID [CONFIG] [--dry-run]
+#   bash scripts/submit_stage.sh STAGE all [CONFIG] [--dry-run]
+#
+# Example:
+#   bash scripts/submit_stage.sh qwen_attack user1 configs/qwen_attack/receipt_active.json
+
+set -euo pipefail
+
+if [[ $# -lt 2 ]]; then
+  echo "Usage: bash scripts/submit_stage.sh STAGE USER_ID [CONFIG] [--dry-run]" >&2
+  exit 2
+fi
+
+STAGE="$1"
+USER_ID="$2"
+REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+source "$REPO_ROOT/scripts/lib/qwen_receipt_runtime.sh"
+PP_SCRATCH_ROOT="${PP_SCRATCH_ROOT:-/scratch1/${USER}/poisoned-paperwork}"
+CONFIG_PATH="$REPO_ROOT/configs/$STAGE/active.json"
+DRY_RUN=0
+ARRAY_MODE=0
+
+for arg in "${@:3}"; do
+  if [[ "$arg" == "--dry-run" ]]; then
+    DRY_RUN=1
+  else
+    CONFIG_PATH="$arg"
+  fi
+done
+
+case "$USER_ID" in
+  all)   NAME="team array"; WORKER_ID=0; ARRAY_MODE=1 ;;
+  user1) NAME="Prabudhd"; WORKER_ID=0 ;;
+  user2) NAME="Gary";     WORKER_ID=1 ;;
+  user3) NAME="Saaketh";  WORKER_ID=2 ;;
+  user4) NAME="Khalid";   WORKER_ID=3 ;;
+  user5) NAME="Shail";    WORKER_ID=4 ;;
+  *)
+    echo "Unknown user ID '$USER_ID'. Use all, user1, user2, user3, user4, or user5." >&2
+    exit 2
+    ;;
+esac
+
+GPU_TYPE=""
+CONSTRAINT=""
+CPUS=8
+MEMORY=""
+TIME_LIMIT=""
+
+case "$STAGE" in
+  baseline)
+    GPU_TYPE="l40s"; MEMORY="32G"; TIME_LIMIT="04:00:00" ;;
+  donut_attack)
+    GPU_TYPE="l40s"; MEMORY="48G"; TIME_LIMIT="08:00:00" ;;
+  qwen_attack)
+    GPU_TYPE="l40s"; MEMORY="64G"; TIME_LIMIT="04:00:00" ;;
+  final_protocol)
+    GPU_TYPE="l40s"; MEMORY="64G"; TIME_LIMIT="12:00:00" ;;
+  transfer_robustness)
+    GPU_TYPE="l40s"; MEMORY="48G"; TIME_LIMIT="08:00:00" ;;
+  eot_patch)
+    GPU_TYPE="l40s"; MEMORY="64G"; TIME_LIMIT="08:00:00" ;;
+  defenses)
+    GPU_TYPE="l40s"; MEMORY="64G"; TIME_LIMIT="08:00:00" ;;
+  jpeg_eot_attack)
+    GPU_TYPE="l40s"; MEMORY="64G"; TIME_LIMIT="12:00:00" ;;
+  *)
+    echo "Unknown stage '$STAGE'." >&2
+    echo "Choose: baseline, donut_attack, qwen_attack, transfer_robustness, eot_patch, defenses, jpeg_eot_attack" >&2
+    exit 2
+    ;;
+esac
+
+if [[ "$STAGE" == "qwen_attack" && "$CONFIG_PATH" == "$REPO_ROOT/configs/qwen_attack/active.json" ]]; then
+  echo "qwen_attack has two tracks; pass the track config explicitly:" >&2
+  echo "  bash scripts/submit_stage.sh qwen_attack $USER_ID configs/qwen_attack/receipt_active.json" >&2
+  echo "  bash scripts/submit_stage.sh qwen_attack $USER_ID configs/qwen_attack/resume_active.json" >&2
+  exit 2
+fi
+
+if [[ "$CONFIG_PATH" != /* ]]; then
+  CONFIG_PATH="$REPO_ROOT/$CONFIG_PATH"
+fi
+
+if [[ ! -f "$CONFIG_PATH" ]]; then
+  echo "Config not found: $CONFIG_PATH" >&2
+  echo "The stage owner must create configs/$STAGE/active.json before workers submit." >&2
+  exit 2
+fi
+
+IS_RECEIPT=0
+EXPECTED_GIT_SHA=""
+if pp_receipt_is_config "$CONFIG_PATH"; then
+  IS_RECEIPT=1
+  pp_receipt_validate_context "$REPO_ROOT" "$CONFIG_PATH" "" "submission"
+  CONFIG_PATH="$PP_VALIDATED_CONFIG"
+  EXPECTED_GIT_SHA="$PP_VALIDATED_GIT_SHA"
+  RUN_ID="$PP_CONFIG_RUN_ID"
+  TRACK="$PP_CONFIG_TRACK"
+  if [[ "$PP_CONFIG_STAGE" != "$STAGE" ]]; then
+    echo "Config stage '$PP_CONFIG_STAGE' does not match requested stage '$STAGE'." >&2
+    exit 2
+  fi
+  if [[ "$PP_CONFIG_MODE" == "smoke" ]]; then
+    echo "Receipt smoke must use scripts/submit_qwen_smoke.sh (one owner, one worker)." >&2
+    exit 2
+  fi
+  if [[ "$PP_CONFIG_READY_PRODUCTION" != "true" ]]; then
+    echo "Qwen-receipt production is gated." >&2
+    echo "Set ready_for_production=true only in a team-approved committed config." >&2
+    exit 1
+  fi
+else
+  CONFIG_CLASSIFICATION_STATUS=$?
+  if [[ "$CONFIG_CLASSIFICATION_STATUS" -ne 1 ]]; then
+    echo "Could not safely classify config: $CONFIG_PATH" >&2
+    exit "$CONFIG_CLASSIFICATION_STATUS"
+  fi
+fi
+
+if [[ "$IS_RECEIPT" -eq 0 && "$STAGE" == "qwen_attack" ]]; then
+  python3 -E -s - "$CONFIG_PATH" <<'PY'
+import json, pathlib, sys
+path = pathlib.Path(sys.argv[1])
+config = json.loads(path.read_text())
+if config.get("mode") != "smoke" and config.get("ready_for_production") is not True:
+    raise SystemExit(
+        "Qwen production is gated. Review the track smoke, freeze its settings, "
+        "and set ready_for_production=true in a committed config before submitting."
+    )
+PY
+fi
+
+if [[ "$IS_RECEIPT" -eq 0 ]]; then
+  RUN_ID="$(python3 -E -s - "$CONFIG_PATH" <<'PY'
+import json, pathlib, sys
+path = pathlib.Path(sys.argv[1])
+value = json.loads(path.read_text()).get("run_id")
+if not isinstance(value, str) or not value.strip():
+    raise SystemExit("Config must contain a non-empty string field named 'run_id'.")
+print(value)
+PY
+  )"
+
+  TRACK="$(python3 -E -s - "$CONFIG_PATH" <<'PY'
+import json, pathlib, sys
+print(json.loads(pathlib.Path(sys.argv[1]).read_text()).get("track") or "")
+PY
+  )"
+fi
+
+if [[ "$IS_RECEIPT" -eq 1 ]]; then
+  GPU_TYPE="l40s"
+  CONSTRAINT=""
+  MEMORY="64G"
+  TIME_LIMIT="12:00:00"
+fi
+
+if [[ "$STAGE" == "qwen_attack" && "$TRACK" == "collected_receipts" ]]; then
+  GPU_TYPE="l40s"
+  CONSTRAINT=""
+  MEMORY="64G"
+  TIME_LIMIT="08:00:00"
+fi
+
+if [[ "$IS_RECEIPT" -eq 1 ]]; then
+  umask 0002
+  LOG_DIR="$PP_RECEIPT_OUTPUT_ROOT/logs/$RUN_ID"
+else
+  LOG_DIR="$REPO_ROOT/logs"
+fi
+
+if [[ "$DRY_RUN" -eq 0 ]]; then
+  mkdir -p "$LOG_DIR"
+  [[ -d "$LOG_DIR" && -w "$LOG_DIR" ]] || {
+    echo "Log directory is not writable: $LOG_DIR" >&2
+    exit 1
+  }
+fi
+
+SBATCH_EXPORT="ALL,PP_REPO_ROOT=$REPO_ROOT,PP_STAGE=$STAGE,PP_RUN_ID=$RUN_ID,PP_CONFIG=$CONFIG_PATH,PP_USER_ID=$USER_ID,PP_WORKER_ID=$WORKER_ID,PP_NUM_WORKERS=5,PP_TRACK=$TRACK,PP_ARRAY_MODE=$ARRAY_MODE,PP_SCRATCH_ROOT=$PP_SCRATCH_ROOT"
+if [[ "$IS_RECEIPT" -eq 1 ]]; then
+  SBATCH_EXPORT+=",PP_EXPECTED_GIT_SHA=$EXPECTED_GIT_SHA,PP_PYTHON_BIN=$PP_PYTHON_BIN,PP_SHARED_ARTIFACT_ROOT=$PP_SHARED_ARTIFACT_ROOT,PP_RECEIPT_OUTPUT_ROOT=$PP_RECEIPT_OUTPUT_ROOT"
+fi
+
+SBATCH_ARGS=(
+  --parsable
+  --account=yzhao010_1531
+  --partition=gpu
+  --nodes=1
+  --ntasks=1
+  --cpus-per-task="$CPUS"
+  --mem="$MEMORY"
+  --time="$TIME_LIMIT"
+  --gpus-per-task="$GPU_TYPE:1"
+  --chdir="$REPO_ROOT"
+  --export="$SBATCH_EXPORT"
+)
+
+if [[ "$ARRAY_MODE" -eq 1 ]]; then
+  SBATCH_ARGS+=(
+    --array=0-4
+    --job-name="pp_${STAGE}${TRACK:+_$TRACK}"
+    --output="$LOG_DIR/%x_%A_%a.out"
+    --error="$LOG_DIR/%x_%A_%a.err"
+  )
+else
+  SBATCH_ARGS+=(
+    --job-name="pp_${STAGE}${TRACK:+_$TRACK}_w${WORKER_ID}"
+    --output="$LOG_DIR/%x_%j.out"
+    --error="$LOG_DIR/%x_%j.err"
+  )
+fi
+
+if [[ -n "$CONSTRAINT" ]]; then
+  SBATCH_ARGS+=(--constraint="$CONSTRAINT")
+fi
+
+echo "Stage: $STAGE"
+echo "Run: $RUN_ID${TRACK:+ (track: $TRACK)}"
+if [[ "$ARRAY_MODE" -eq 1 ]]; then
+  echo "Team submission: one Slurm array with worker shards 0-4"
+else
+  echo "Team member: $USER_ID ($NAME)"
+  echo "Worker shard: $WORKER_ID of 5"
+fi
+echo "GPU request: $GPU_TYPE ${CONSTRAINT:+($CONSTRAINT)}"
+echo "CPU/RAM/time: $CPUS CPUs, $MEMORY, $TIME_LIMIT"
+if [[ "$IS_RECEIPT" -eq 1 ]]; then
+  echo "Pinned commit: $EXPECTED_GIT_SHA"
+  echo "Python: $PP_PYTHON_BIN"
+  echo "Read-only artifacts: $PP_SHARED_ARTIFACT_ROOT"
+  echo "Shared receipt outputs: $PP_RECEIPT_OUTPUT_ROOT"
+fi
+
+if [[ "$DRY_RUN" -eq 1 ]]; then
+  printf 'mkdir -p %q\n' "$LOG_DIR"
+  printf 'sbatch'
+  printf ' %q' "${SBATCH_ARGS[@]}" "$REPO_ROOT/scripts/slurm/gpu_stage.sbatch"
+  printf '\n'
+  exit 0
+fi
+
+command -v sbatch >/dev/null 2>&1 || {
+  echo "sbatch is unavailable. Run this command from a USC CARC login node." >&2
+  exit 1
+}
+
+if [[ -n "$(git -C "$REPO_ROOT" status --porcelain)" ]]; then
+  echo "Submission requires a clean committed worktree." >&2
+  echo "Commit/push on the Mac, then pull that commit on CARC before submitting." >&2
+  exit 1
+fi
+
+if [[ "$STAGE" != "baseline" && "$IS_RECEIPT" -eq 0 && -d "/scratch1/${USER}" ]]; then
+  python3 "$REPO_ROOT/scripts/manage_carc_storage.py" \
+    --scratch-root "$PP_SCRATCH_ROOT" \
+    verify-run --stage "$STAGE" --run-id "$RUN_ID"
+fi
+
+(
+  cd "$REPO_ROOT"
+  source scripts/activate_paperwork.sh
+  export PYTHONPATH="$REPO_ROOT/src${PYTHONPATH:+:$PYTHONPATH}"
+  python scripts/preflight_stage.py --stage "$STAGE" --config "$CONFIG_PATH"
+  if [[ "$STAGE" == "final_protocol" ]]; then
+    python scripts/check_final_smoke.py --config "$CONFIG_PATH"
+  fi
+)
+
+if [[ "$STAGE" == "qwen_attack" || "$STAGE" == "jpeg_eot_attack" ]]; then
+  (
+    cd "$REPO_ROOT"
+    source scripts/activate_paperwork.sh
+    export PYTHONPATH="$REPO_ROOT/src${PYTHONPATH:+:$PYTHONPATH}"
+    python - <<'PY'
+import sys
+import lpips
+import numpy
+import pandas
+import PIL
+import torch
+import transformers
+
+if sys.version_info[:2] != (3, 11):
+    raise SystemExit(f"Qwen production requires Python 3.11; found {sys.version}")
+if not sys.executable.endswith("/.conda/envs/paperwork/bin/python"):
+    raise SystemExit(f"Qwen production is using the wrong interpreter: {sys.executable}")
+print(
+    "Qwen environment passed:",
+    f"python={sys.executable}",
+    f"torch={torch.__version__}",
+    f"transformers={transformers.__version__}",
+    f"pandas={pandas.__version__}",
+    f"numpy={numpy.__version__}",
+    f"pillow={PIL.__version__}",
+    f"lpips={getattr(lpips, '__version__', 'available')}",
+)
+PY
+    if [[ "$STAGE" == "qwen_attack" && "$TRACK" != "collected_receipts" ]]; then
+      python scripts/check_qwen_processor_parity.py --config "$CONFIG_PATH"
+    fi
+    if [[ "$STAGE" == "qwen_attack" ]]; then
+      python - "$CONFIG_PATH" "$REPO_ROOT" <<'PY'
+import importlib
+import json
+from pathlib import Path
+import sys
+
+from stages.qwen_attack import _validate
+
+config_path = Path(sys.argv[1])
+repo_root = Path(sys.argv[2])
+config = json.loads(config_path.read_text(encoding="utf-8"))
+_, module_name = _validate(config)
+module = importlib.import_module(module_name)
+preflight = getattr(module, "preflight", None)
+if preflight is None:
+    raise SystemExit(f"{module_name} does not provide the required CPU preflight")
+preflight(config, repo_root)
+print("QWEN PRODUCTION PREFLIGHT PASSED")
+PY
+    fi
+  )
+fi
+
+JOB_ID="$(sbatch "${SBATCH_ARGS[@]}" "$REPO_ROOT/scripts/slurm/gpu_stage.sbatch")"
+if [[ "$ARRAY_MODE" -eq 1 ]]; then
+  echo "Submitted five-worker Slurm array $JOB_ID"
+  echo "Monitor: squeue -j $JOB_ID"
+  echo "Logs:    $LOG_DIR/pp_${STAGE}${TRACK:+_$TRACK}_${JOB_ID}_TASK.out"
+  exit 0
+fi
+echo "Submitted Slurm job $JOB_ID"
+echo "Monitor: squeue -j $JOB_ID"
+echo "Logs:    tail -f $LOG_DIR/pp_${STAGE}${TRACK:+_$TRACK}_w${WORKER_ID}_${JOB_ID}.out"
