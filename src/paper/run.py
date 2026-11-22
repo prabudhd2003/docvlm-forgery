@@ -128,10 +128,10 @@ def run_task(name: str, task: int, per_task: int):
     failures = 0
     try:
         for i, u in enumerate(todo):
-            for need in experiments.readers_needed(u):
-                if need not in R:
-                    R[need] = readers.load_reader(need, cfg)
             try:
+                for need in experiments.readers_needed(u):
+                    if need not in R:
+                        R[need] = readers.load_reader(need, cfg)
                 rec = experiments.execute(u, R, cfg, clean_pages, extras)
                 rec["contract"] = cid
                 write_json(out / "records" / f"{u['unit_id']}.json", rec)

@@ -8,6 +8,8 @@ cd "$PP_REPO_ROOT"
 source scripts/activate_paperwork.sh
 export PYTHONPATH="$PP_REPO_ROOT/src${PYTHONPATH:+:$PYTHONPATH}"
 export TOKENIZERS_PARALLELISM=false
+export HF_HUB_OFFLINE=1
+export TRANSFORMERS_OFFLINE=1
 umask 0002
 
 echo "job ${SLURM_JOB_ID:-?} task $SLURM_ARRAY_TASK_ID exp $PP_EXP host $(hostname) commit $(git rev-parse --short HEAD)"
