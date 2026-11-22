@@ -128,7 +128,7 @@
     "mem": "64G",
     "time": "04:00:00",
     "concurrency": 8,
-    "units_per_task": 25,
+    "units_per_task": 400,
     "cpu_partition": "main"
   }
 }

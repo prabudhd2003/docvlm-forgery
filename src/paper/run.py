@@ -124,6 +124,9 @@ def run_task(name: str, task: int, per_task: int):
         extras["lpips"] = lpips.LPIPS(net="alex").eval().to("cuda" if torch is not None and torch.cuda.is_available() else "cpu")
     clean_ids = sorted({u["record_id"] for u in todo})
     clean_pages = documents.load_pages(clean_ids)
+    suffix_readers = [set() for _ in range(len(todo) + 1)]
+    for j in range(len(todo) - 1, -1, -1):
+        suffix_readers[j] = suffix_readers[j + 1] | set(experiments.readers_needed(todo[j]))
     R: dict = {}
     failures = 0
     try:
@@ -146,6 +149,8 @@ def run_task(name: str, task: int, per_task: int):
                 print(f"ERROR {u['unit_id']}: {exc!r}", flush=True)
                 if type(exc).__name__ == "OutOfMemoryError" and torch is not None:
                     torch.cuda.empty_cache()
+            for nm in [k for k in R if k not in suffix_readers[i + 1]]:
+                R.pop(nm).unload()
     finally:
         for r in R.values():
             r.unload()
