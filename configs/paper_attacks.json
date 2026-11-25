@@ -251,7 +251,7 @@
   },
   "ocr_surrogate": {
     "model_id": "microsoft/trocr-base-printed",
-    "revision": "PIN_IN_E0"
+    "revision": "93450be3f1ed40a930690d951ef3932687cc1892"
   },
   "locator_steps": 100,
   "locator_subtotal_prompt": "Locate the subtotal and its label on this receipt. Exclude the final total, tax, cash and change. Return only JSON {\"box\":[left,top,right,bottom]} using coordinates from 0 to 1000 relative to the full image. If absent return {\"box\":null}.",
