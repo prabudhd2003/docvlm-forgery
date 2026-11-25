@@ -1,0 +1,16 @@
+{
+  "experiment": "E4dev",
+  "directory": "E4dev",
+  "units": "58b4131a5a2029fc60c92eadf7e242a4dbcaf8eb838b9e2901c696c11a4a3705",
+  "config": "c29cef734092b2b29bc977d44bc2c29785d63bbb36699a584a70cd138c467092",
+  "code": "c2da00277951eabd91f026bb4fc4dbe7675d644823ce2f97bdd598d47690321d",
+  "sets": "0013b93179c3ea1fc1ad624706ba88669fe1db2f017028b773ed56f430c571cc",
+  "manifests": {
+    "course_rdev": "3fb1adfee6cf7d43ffc70216bef2e24db96e0886bd23b255311d24e15f7bce03"
+  },
+  "policy": null,
+  "git": {
+    "commit": "625d8f46ba15f53325a17bf48ba86ecf2c6e3fd3",
+    "dirty": false
+  }
+}
