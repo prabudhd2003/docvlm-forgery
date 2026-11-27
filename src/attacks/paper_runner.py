@@ -275,7 +275,7 @@ def submit(name, smoke=False, dry=False):
     logs = out / "logs"
     logs.mkdir(parents=True, exist_ok=True)
     s = cfg["slurm"]
-    command = ["sbatch", f"--job-name=attack_{name}", f"--partition={s['partition']}", f"--gres={s['gres']}",
+    command = ["sbatch", f"--job-name=attack_{name}", f"--partition={s['partition']}", f"--gres={s['gres']}", *([f"--constraint={s['constraint']}"] if s.get("constraint") else []),
                f"--cpus-per-task={s['cpus']}", f"--mem={s['mem']}", f"--time={s['time']}", "--requeue",
                f"--array={','.join(map(str, indices))}%{s['concurrency']}", f"--output={logs}/%A_%a.out",
                f"--export=ALL,PP_ATTACK_RUN={name},PP_REPO_ROOT={ROOT}",

@@ -217,7 +217,7 @@ def submit(name: str, per_task: int, dry: bool, tasks: str | None):
     logs = exp_dir(name) / "logs"
     logs.mkdir(parents=True, exist_ok=True)
     cpu_only = name.split("_")[0] == "E8"
-    gpu = [] if cpu_only else [f"--gres={cfg['gres']}"]
+    gpu = [] if cpu_only else [f"--gres={cfg['gres']}"] + ([f"--constraint={cfg['constraint']}"] if cfg.get("constraint") else [])
     partition = cfg.get("cpu_partition", "main") if cpu_only else cfg["partition"]
     cmd = ["sbatch", f"--job-name=pp_{name}", f"--partition={partition}", *gpu, f"--cpus-per-task={cfg['cpus']}",
            f"--mem={cfg['mem']}", f"--time={cfg['time']}", f"--array={array}%{cfg['concurrency']}", "--requeue",

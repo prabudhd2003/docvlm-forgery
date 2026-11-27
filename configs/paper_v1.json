@@ -123,12 +123,13 @@
   ],
   "slurm": {
     "partition": "gpu",
-    "gres": "gpu:l40s:1",
+    "gres": "gpu:1",
     "cpus": 8,
     "mem": "64G",
     "time": "04:00:00",
     "concurrency": 8,
     "units_per_task": 400,
-    "cpu_partition": "main"
+    "cpu_partition": "main",
+    "constraint": "l40s|a40|a100-80gb"
   }
 }
