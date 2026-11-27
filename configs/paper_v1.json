@@ -41,12 +41,12 @@
       "box_space": "none"
     },
     "OCR": {
-      "kind": "tesseract",
-      "executable": "/home1/pkandpal/.conda/envs/paperwork-ocr-v1/bin/tesseract",
-      "tessdata_dir": "/home1/pkandpal/.conda/envs/paperwork-ocr-v1/share/tessdata",
-      "language": "eng+ind",
-      "psm": 3,
-      "revision": "tesseract-5.5.3",
+      "kind": "paddle",
+      "python": "/home1/pkandpal/.conda/envs/paperwork-paddle/bin/python",
+      "paddleocr": "3.7.0",
+      "paddlepaddle": "3.3.1",
+      "threads": 4,
+      "revision": "paddleocr-3.7.0/paddlepaddle-3.3.1/PP-OCRv6_medium",
       "box_space": "none"
     }
   },

@@ -201,7 +201,95 @@ class TesseractReader:
         pass
 
 
-KINDS = {"qwen25": QwenReader, "hf_chat": HFChatReader, "donut": DonutReader, "tesseract": TesseractReader}
+def _rows_text(items) -> str:
+    """Words whose vertical centre is within half the median word height of a row's first
+    word share that row; rows top to bottom, words left to right."""
+    import statistics
+
+    if not items:
+        return ""
+    h = statistics.median(float(i[2]) for i in items) or 1.0
+    items = sorted(items, key=lambda i: i[0])
+    rows = [[items[0]]]
+    for it in items[1:]:
+        if abs(it[0] - rows[-1][0][0]) <= 0.5 * h:
+            rows[-1].append(it)
+        else:
+            rows.append([it])
+    return "\n".join(" ".join(str(t) for *_, t in sorted(r, key=lambda i: i[1])) for r in rows)
+
+
+class PaddleReader:
+    """PaddleOCR (CPU) on a cropped band, in a separate process and conda env.
+
+    Paddle never shares a process or CUDA with torch. Words are grouped into rows so a
+    label and its amount stay on one line for ``ocr_receipt_total``. Non-differentiable;
+    the D8 gradient term uses the TrOCR stand-in, success is always checked here.
+    """
+
+    box_space = "none"
+
+    def __init__(self, name, spec, gen):
+        import json
+        import os
+        import subprocess
+        from pathlib import Path
+
+        self.name, self.proc = name, None
+        python = Path(os.path.expanduser(spec["python"]))
+        if not python.exists():
+            raise RuntimeError(f"PaddleOCR python not found: {python} (create env paperwork-paddle, see env/paddle-requirements.lock.txt)")
+        env = {k: v for k, v in os.environ.items() if k not in ("PYTHONPATH", "PYTHONHOME")}
+        env.update(OMP_NUM_THREADS=str(spec.get("threads", 4)), FLAGS_use_mkldnn="0",
+                   CUDA_VISIBLE_DEVICES="", PYTHONNOUSERSITE="1")
+        self.proc = subprocess.Popen([str(python), "-u", str(ROOT / "src" / "paper" / "paddle_worker.py")],
+                                     stdin=subprocess.PIPE, stdout=subprocess.PIPE, text=True, bufsize=1, env=env)
+        hello = json.loads(self._line())
+        want = {"paddleocr": spec["paddleocr"], "paddlepaddle": spec["paddlepaddle"]}
+        got = {k: hello.get(k) for k in want}
+        if got != want:
+            self.unload()
+            raise RuntimeError(f"PaddleOCR versions {got} differ from the pinned {want}")
+        self.settings = {"engine": "paddleocr", "python": str(python), **got, "layout": "rows",
+                         "threads": spec.get("threads", 4), "revision": spec["revision"]}
+
+    def _line(self):
+        line = self.proc.stdout.readline()
+        if not line:
+            raise RuntimeError(f"PaddleOCR worker exited (code {self.proc.poll()}); see stderr in the job log")
+        return line
+
+    def read(self, pages, prompt=None, max_new_tokens=None):
+        import json
+        import tempfile
+
+        texts = []
+        for page in pages:
+            with tempfile.NamedTemporaryFile(suffix=".png") as tmp:
+                page.convert("RGB").save(tmp.name)
+                self.proc.stdin.write(json.dumps({"path": tmp.name}) + "\n")
+                self.proc.stdin.flush()
+                reply = json.loads(self._line())
+            if "error" in reply:
+                raise RuntimeError(f"PaddleOCR failed: {reply['error'][:300]}")
+            texts.append(_rows_text(reply["items"]))
+        return "\n".join(texts)
+
+    def box_frame(self, image):
+        raise NotImplementedError("OCR does not localize")
+
+    def unload(self):
+        proc, self.proc = self.proc, None
+        if proc is not None and proc.poll() is None:
+            try:
+                proc.stdin.close()
+                proc.wait(timeout=30)
+            except Exception:
+                proc.kill()
+
+
+KINDS = {"qwen25": QwenReader, "hf_chat": HFChatReader, "donut": DonutReader,
+         "tesseract": TesseractReader, "paddle": PaddleReader}
 
 
 def load_reader(name: str, cfg: dict | None = None):
@@ -247,13 +335,13 @@ def _pin(cfg):
     from huggingface_hub import model_info
 
     for name, spec in cfg["readers"].items():
-        if spec["kind"] == "tesseract":
+        if spec["kind"] in ("tesseract", "paddle"):
             continue
         info = model_info(spec["model_id"])
         flag = "" if spec["revision"] == info.sha else "   <- update configs/paper_v1.json"
         print(f"{name:4s} {spec['model_id']:45s} {info.sha}{flag}")
     spec = cfg["readers"].get("OCR")
-    if spec:
+    if spec and spec["kind"] == "tesseract":
         import shutil
         import subprocess
         from pathlib import Path
