@@ -15,6 +15,15 @@ from models.donut import pil_to_rgb_tensor
 from paper.common import digest, sha256_bytes, sha256_file
 
 
+def same_pixels(a, b):
+    """Same 8-bit image. k/255 can differ by one float ulp between NumPy and CUDA
+    division, so compare on the 0..255 grid; off-grid values never match."""
+    a, b = a.detach().float() * 255, b.detach().float() * 255
+    if a.shape != b.shape or (a - a.round()).abs().max() > 1e-3 or (b - b.round()).abs().max() > 1e-3:
+        return False
+    return torch.equal(a.round(), b.round())
+
+
 def atomic_state(path, state):
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -91,7 +100,7 @@ have each received a separate 100-query search.
         output, images = save_reload(values, clean, directory, epsilon)
         for value, original, page in zip(values, clean, output):
             expected = project_linf(value.detach(), original, epsilon, quantize=True)
-            if not torch.equal(pil_to_rgb_tensor(page, original.device), expected):
+            if not same_pixels(pil_to_rgb_tensor(page, original.device), expected):
                 raise RuntimeError("saved/reloaded PNG is not the candidate")
         return output, images
 

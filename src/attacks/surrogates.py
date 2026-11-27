@@ -146,11 +146,25 @@ class TargetObjective:
         # Do not retain clean pixel tensors in every objective cache.
         self.prefix = {k: v for k, v in self.prefix.items() if k != "pixel_values"}
 
-    def _logits(self, pixels, grad_page=None):
-        clear_rope(self.model)
-        batch = {k: v for k, v in self.prefix.items() if k not in ("input_ids", "attention_mask", "token_type_ids")}
+    def _batch(self, pixels):
+        """Teacher-forced inputs. Per-token prefix tensors (Qwen's mm_token_type_ids in
+        transformers 5.x) are extended over the appended target tokens as text (0)."""
+        n = self.prefix["input_ids"].shape[1]
+        extra = self.ids.shape[1] - n
+        batch = {}
+        for k, v in self.prefix.items():
+            if k in ("input_ids", "attention_mask", "token_type_ids", "pixel_values"):
+                continue
+            if torch.is_tensor(v) and v.dim() == 2 and v.shape[0] == 1 and v.shape[1] == n:
+                v = torch.cat([v, v.new_zeros((1, extra))], dim=1)
+            batch[k] = v
         batch.update(input_ids=self.ids, attention_mask=torch.ones_like(self.ids),
                      pixel_values=pixels.to(self.model.dtype), use_cache=False)
+        return batch
+
+    def _logits(self, pixels, grad_page=None):
+        clear_rope(self.model)
+        batch = self._batch(pixels)
         with checkpoint_mode(self.model), pagewise_vision(self.model, self.counts, self.grids, grad_page):
             # Only answer-position logits are kept, avoiding a large retained
             # sequence-by-vocabulary tensor after this forward returns.
@@ -176,9 +190,7 @@ class TargetObjective:
         approx_mean = float((approx - official.to(approx)).abs().mean())
         # Independent real processor reference, no feature splitting/checkpoint mode.
         clear_rope(self.model)
-        batch = {k: v for k, v in self.prefix.items() if k not in ("input_ids", "attention_mask", "token_type_ids")}
-        batch.update(input_ids=self.ids, attention_mask=torch.ones_like(self.ids),
-                     pixel_values=official.to(self.model.dtype), use_cache=False)
+        batch = self._batch(official)
         reference = self.model(**batch, logits_to_keep=self.positions).logits.float().cpu()
         gap = float((self._logits(exact).float().cpu() - reference).abs().max())
         split_gap = float((self._logits(exact, 0).float().cpu() - reference).abs().max())

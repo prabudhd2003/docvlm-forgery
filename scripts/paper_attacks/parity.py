@@ -22,6 +22,7 @@ def main():
     from attacks.surrogates import make_objective, page_gradients
     from attacks.donut import project_linf
     from attacks.qwen import save_reload
+    from attacks.paper_optimizer import same_pixels
     from models.donut import pil_to_rgb_tensor
     from paper import documents, sets
     from paper.common import RESULTS_DIR, digest, environment, load_config, write_json
@@ -73,7 +74,7 @@ def main():
             with tempfile.TemporaryDirectory(prefix="paper_parity_") as tmp:
                 reloaded, images = save_reload(updated, xs, Path(tmp), 8)
                 for x, page in zip(updated, reloaded):
-                    if not torch.equal(x.detach(), pil_to_rgb_tensor(page, x.device)):
+                    if not same_pixels(x, pil_to_rgb_tensor(page, x.device)):
                         raise RuntimeError("PNG reload changed E0 candidate")
                 raw = reader.read(reloaded, cfg["prompts"][task])
             torch.cuda.synchronize()
